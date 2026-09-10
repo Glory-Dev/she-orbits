@@ -1,22 +1,22 @@
 {
   "types": [
     {
-      "id": "program",
+      "id": "programs",
       "label": "Programs",
       "desc": "Flagship educational pathways bringing students, researchers, and professionals together across the global space ecosystem."
     },
     {
-      "id": "course",
+      "id": "courses",
       "label": "Courses",
       "desc": "Focused technical courses bridging programming, remote sensing, and space systems fundamentals."
     },
     {
-      "id": "internship",
+      "id": "internships",
       "label": "Internships",
       "desc": "Internship placements are coming soon. Sign up via Contact to hear when applications open."
     },
     {
-      "id": "fellowship",
+      "id": "fellowships",
       "label": "Fellowships",
       "desc": "Fellowship pathways are coming soon. Check back for research and leadership fellowship openings."
     },
@@ -26,37 +26,37 @@
       "desc": "Coming soon..."
     },
     {
-      "id": "competition-challenge",
+      "id": "competitions-challenges",
       "label": "Competitions & Challenges",
       "desc": "Global challenges and hackathons that turn ideas into portfolio-ready work."
     },
     {
-      "id": "event",
+      "id": "events",
       "label": "Events",
       "desc": "Community celebrations, outreach campaigns, and international space awareness events."
     },
     {
-      "id": "talk-panel",
+      "id": "talks-panels",
       "label": "Talks & Panels",
       "desc": "Panel conversations with space leaders are coming soon."
     },
     {
-      "id": "webinar",
+      "id": "webinars",
       "label": "Webinars",
       "desc": "Coming soon..."
     },
     {
-      "id": "workshop",
+      "id": "workshops",
       "label": "Workshops",
       "desc": "Short, intensive sessions on astronomy, medicine, and professional space skills."
     },
     {
-      "id": "conference",
+      "id": "conferences",
       "label": "Conferences",
       "desc": ""
     },
     {
-      "id": "mission-simulation",
+      "id": "missions-simulations",
       "label": "Missions Simulations",
       "desc": "Coming soon..."
     },
@@ -70,7 +70,7 @@
     {
       "slug": "she-orbits-summer-school-2026",
       "title": "SHE ORBITS Summer School 2026", 
-      "type": "internship",
+      "type": "internships",
       "lifecycle": "ongoing",
       "image": "../assets/images/services/services-img-1.png",
       "description": "The SHE ORBITS Summer School is our flagship international educational program, bringing together students, researchers, and professionals from around the world for an immersive nine-week journey through the most exciting fields of space science and engineering. Designed by leading experts, the program combines technical lectures, interactive workshops, research discussions, and collaborative projects to provide participants with both theoretical knowledge and practical skills.",
@@ -97,7 +97,7 @@
     {
       "slug": "space-law-cohort-2",
       "title": "Space Law – Cohort 2",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-2.png",
       "description": "Space Law Cohort 2 provides participants with a comprehensive understanding of the legal, regulatory, and ethical frameworks governing activities in outer space. Through expert-led sessions and case studies, participants explore international treaties, commercial space law, resource utilization, satellite governance, sustainability, and emerging policy challenges shaping the future of the global space sector.",
@@ -121,7 +121,7 @@
     {
       "slug": "astronomy-astrophysics-workshop",
       "title": "Astronomy & Astrophysics Workshop",
-      "type": "workshop",
+      "type": "workshops",
       "lifecycle": "upcoming",
       "image": "../assets/images/services/services-img-3.jpg",
       "description": "An intensive workshop introducing participants to the fundamentals of astronomy and modern astrophysics.",
@@ -143,7 +143,7 @@
     {
       "slug": "space-medicine-program",
       "title": "Space Medicine Program",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "upcoming",
       "image": "../assets/images/services/services-img-4.jpg",
       "description": "Explore the medical and physiological challenges associated with human spaceflight, microgravity effects, and healthcare for lunar and Mars exploration.",
@@ -165,7 +165,7 @@
     {
       "slug": "she-orbits-ambassadors-program",
       "title": "SHE ORBITS Ambassadors Program",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "upcoming",
       "image": "../assets/images/services/services-img-5.png",
       "description": "A global leadership initiative designed to empower passionate students and young professionals to represent SHE ORBITS within their universities, organizations, and local communities.",
@@ -187,7 +187,7 @@
     {
       "slug": "artemis-ii-program",
       "title": "ARTEMIS II Program",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "upcoming",
       "image": "../assets/images/services/services-img-6.png",
       "description": "A specialized educational and industrial program inspired by NASA's Artemis missions and the future of human lunar exploration.",
@@ -209,7 +209,7 @@
     {
       "slug": "satellite-data-processing-planetek",
       "title": "Satellite Data Processing with Planetek Italia",
-      "type": "course",
+      "type": "courses",
       "lifecycle": "upcoming",
       "image": "../assets/images/services/services-img-7.jpg",
       "description": "Advanced training program in collaboration with Planetek Italia covering professional satellite data processing and geospatial analysis.",
@@ -231,7 +231,7 @@
     {
       "slug": "world-space-week-2026",
       "title": "World Space Week 2026",
-      "type": "event",
+      "type": "events",
       "lifecycle": "upcoming",
       "image": "../assets/images/services/services-img-8.jpg",
       "description": "As part of the world's largest annual celebration of space science and technology, SHE ORBITS will host educational and networking activities during World Space Week 2026.",
@@ -253,7 +253,7 @@
     {
       "slug": "nasa-space-apps-challenge",
       "title": "NASA Space Apps Challenge",
-      "type": "competition-challenge",
+      "type": "competitions-challenges",
       "lifecycle": "upcoming",
       "image": "../assets/images/36.png",
       "description": "SHE ORBITS will organize participation in the NASA Space Apps Challenge, the world's largest global hackathon addressing real-world challenges using NASA's open data.",
@@ -275,7 +275,7 @@
     {
       "slug": "python-for-orbital-mechanics",
       "title": "Python for Orbital Mechanics",
-      "type": "course",
+      "type": "courses",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-10.jpg",
       "description": "A specialized technical course combining Python programming with orbital mechanics, enabling participants to model, simulate, and visualize satellite trajectories and solve real aerospace engineering problems.",
@@ -297,7 +297,7 @@
     {
       "slug": "ai-data-science-space-exploration",
       "title": "AI & Data Science in Space Exploration",
-      "type": "course",
+      "type": "courses",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-11.jpg",
       "description": "A technical course exploring how artificial intelligence, machine learning, and data science are transforming space exploration, satellite systems, and modern mission operations.",
@@ -319,7 +319,7 @@
     {
       "slug": "her-cosmic-hour",
       "title": "Her Cosmic Hour",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-12.png",
       "description": "SHE ORBITS’ flagship series connecting women with inspiring leaders across the global space sector through conversations, talks, panels, and interactive sessions.",
@@ -328,7 +328,7 @@
     {
       "slug": "innovation-lab",
       "title": "Innovation Lab",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-13.png",
       "description": "An interdisciplinary innovation program where participants transform ideas into practical space-related solutions through research, engineering, creativity, and collaborative problem-solving.",
@@ -337,7 +337,7 @@
     {
       "slug": "outreach-series",
       "title": "Outreach Series",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-14.png",
       "description": "A global science communication initiative making space education more accessible through expert talks, webinars, seminars, awareness campaigns, and educational events.",
@@ -346,7 +346,7 @@
     {
       "slug": "space-law-cohort-1",
       "title": "Space Law Program Cohort 1",
-      "type": "program",
+      "type": "programs",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-15.png",
       "description": "An introductory program exploring the legal, regulatory, ethical, and policy frameworks shaping space activities, satellite operations, exploration, and the emerging commercial space industry.",
@@ -355,7 +355,7 @@
     {
       "slug": "introduction-to-remote-sensing",
       "title": "Introduction to Remote Sensing",
-      "type": "course",
+      "type": "courses",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-16.png",
       "description": "A foundational Earth observation course developed in collaboration with Planetek Italia, introducing satellite remote sensing, geospatial analysis, image interpretation, and real-world applications.",
@@ -364,7 +364,7 @@
     {
       "slug": "interdisciplinary-spring-school",
       "title": "Interdisciplinary Spring School",
-      "type": "internship",
+      "type": "internships",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-17.png",
       "description": "A five-week multidisciplinary space program combining expert-led learning, technical applications, collaborative projects, and exploration of key space science and engineering disciplines.",
@@ -373,7 +373,7 @@
     {
       "slug": "world-space-week-2025",
       "title": "World Space Week 2025",
-      "type": "event",
+      "type": "events",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-18.png",
       "description": "A seven-day international SHE ORBITS initiative combining space education, inspiration, technical learning, community engagement, and the official launch of its global community.",
@@ -382,7 +382,7 @@
     {
       "slug": "seec",
       "title": "SEEC (Space Exploration Educators Conference)",
-      "type": "conference",
+      "type": "conferences",
       "lifecycle": "past",
       "image": "../assets/images/services/services-img-19.jpg",
       "description": "SHE ORBITS received a fully funded invitation to attend SEEC 2026 in Texas, connecting with NASA professionals, astronauts, educators, researchers, and global space-education leaders.",
@@ -391,7 +391,7 @@
     {
       "slug": "fellowships-coming-soon",
       "title": "Fellowships Coming Soon",
-      "type": "fellowship",
+      "type": "fellowships",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/fellowships.jpeg",
       "description": "Research and leadership fellowships are being prepared. Contact SHE ORBITS to express interest.",
@@ -442,7 +442,7 @@
     {
       "slug": "missions-simulations-coming-soon",
       "title": "Missions & Simulations",
-      "type": "mission-simulation",
+      "type": "missions-simulations",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/missions-simulations.jpeg",
       "description": "",
@@ -458,9 +458,9 @@
       "detail": ""
     },
     {
-      "slug": "webinar",
+      "slug": "webinars",
       "title": "Webinars (Coming soon)",
-      "type": "webinar",
+      "type": "webinars",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/webinars.jpeg",
       "description": "",
@@ -469,7 +469,7 @@
     {
       "slug": "talks-panels-coming-soon",
       "title": "Talks & Panels Coming Soon",
-      "type": "talk-panel",
+      "type": "talks-panels",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/talks-panels.jpeg",
       "description": "",
