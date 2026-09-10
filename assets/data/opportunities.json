@@ -1,0 +1,479 @@
+{
+  "types": [
+    {
+      "id": "program",
+      "label": "Programs",
+      "desc": "Flagship educational pathways bringing students, researchers, and professionals together across the global space ecosystem."
+    },
+    {
+      "id": "course",
+      "label": "Courses",
+      "desc": "Focused technical courses bridging programming, remote sensing, and space systems fundamentals."
+    },
+    {
+      "id": "internship",
+      "label": "Internships",
+      "desc": "Internship placements are coming soon. Sign up via Contact to hear when applications open."
+    },
+    {
+      "id": "fellowship",
+      "label": "Fellowships",
+      "desc": "Fellowship pathways are coming soon. Check back for research and leadership fellowship openings."
+    },
+    {
+      "id": "research",
+      "label": "Research Programs",
+      "desc": "Coming soon..."
+    },
+    {
+      "id": "competition-challenge",
+      "label": "Competitions & Challenges",
+      "desc": "Global challenges and hackathons that turn ideas into portfolio-ready work."
+    },
+    {
+      "id": "event",
+      "label": "Events",
+      "desc": "Community celebrations, outreach campaigns, and international space awareness events."
+    },
+    {
+      "id": "talk-panel",
+      "label": "Talks & Panels",
+      "desc": "Panel conversations with space leaders are coming soon."
+    },
+    {
+      "id": "webinar",
+      "label": "Webinars",
+      "desc": "Coming soon..."
+    },
+    {
+      "id": "workshop",
+      "label": "Workshops",
+      "desc": "Short, intensive sessions on astronomy, medicine, and professional space skills."
+    },
+    {
+      "id": "conference",
+      "label": "Conferences",
+      "desc": ""
+    },
+    {
+      "id": "mission-simulation",
+      "label": "Missions Simulations",
+      "desc": "Coming soon..."
+    },
+    {
+      "id": "astronaut-training",
+      "label": "Astronaut Training",
+      "desc": "Coming soon..."
+    }
+  ],
+  "opportunities": [
+    {
+      "slug": "she-orbits-summer-school-2026",
+      "title": "SHE ORBITS Summer School 2026", 
+      "type": "internship",
+      "lifecycle": "ongoing",
+      "image": "../assets/images/services/services-img-1.png",
+      "description": "The SHE ORBITS Summer School is our flagship international educational program, bringing together students, researchers, and professionals from around the world for an immersive nine-week journey through the most exciting fields of space science and engineering. Designed by leading experts, the program combines technical lectures, interactive workshops, research discussions, and collaborative projects to provide participants with both theoretical knowledge and practical skills.",
+      "detail": "Designed by leading experts, the Summer School combines technical lectures, interactive workshops, research discussions, and collaborative projects. Curriculum spans orbits, black holes, autonomous spacecraft and AI, space robotics, astronomy and astrophysics, astrobiology and exoplanets, space law and policy, quantum mechanics in space, and multi-body dynamics and control.",
+      "topics": [
+        "9 weeks of specialized space education",
+        "International speakers and industry experts",
+        "Hands-on projects and research activities",
+        "Certificate of Completion",
+        "Global networking opportunities"
+      ],
+      "sessions": [
+        "Week 1 – Orbits",
+        "Week 2 – Black Holes",
+        "Week 3 – Autonomous Spacecraft, Formation Flying & AI",
+        "Week 4 – Space Robotics & On-Orbit Servicing",
+        "Week 5 – Astronomy & Astrophysics",
+        "Week 6 – Astrobiology & Exoplanets",
+        "Week 7 – Space Law & Policy",
+        "Week 8 – Quantum Mechanics in Space",
+        "Week 9 – Multi-Body Dynamics & Control"
+      ]
+    },
+    {
+      "slug": "space-law-cohort-2",
+      "title": "Space Law – Cohort 2",
+      "type": "program",
+      "lifecycle": "ongoing",
+      "image": "../assets/images/services/services-img-2.png",
+      "description": "Space Law Cohort 2 provides participants with a comprehensive understanding of the legal, regulatory, and ethical frameworks governing activities in outer space. Through expert-led sessions and case studies, participants explore international treaties, commercial space law, resource utilization, satellite governance, sustainability, and emerging policy challenges shaping the future of the global space sector.",
+      "detail": "Through expert-led sessions and case studies, participants explore international treaties, commercial space law, resource utilization, satellite governance, sustainability, and emerging policy challenges shaping the future of the global space sector.",
+      "topics": [
+        "International Space Law",
+        "Outer Space Treaty",
+        "Commercial Space Regulations",
+        "Space Sustainability",
+        "Lunar & Asteroid Resource Governance",
+        "Ethics in Space Exploration",
+        "Policy Development"
+      ],
+      "sessions": [
+        "Expert-led lectures",
+        "Treaty and case study workshops",
+        "Policy development clinics",
+        "Cohort showcase"
+      ]
+    },
+    {
+      "slug": "astronomy-astrophysics-workshop",
+      "title": "Astronomy & Astrophysics Workshop",
+      "type": "workshop",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/services-img-3.jpg",
+      "description": "An intensive workshop introducing participants to the fundamentals of astronomy and modern astrophysics.",
+      "detail": "An intensive workshop introducing participants to the fundamentals of astronomy and modern astrophysics. The workshop explores stellar evolution, galaxies, black holes, cosmology, exoplanets, observational astronomy, and current discoveries that are transforming our understanding of the universe. Participants will engage in interactive sessions led by experts while learning about modern astronomical research techniques.",
+      "topics": [
+        "Stellar evolution and galaxies",
+        "Black holes and cosmology",
+        "Exoplanets and planetary systems",
+        "Observational astronomy",
+        "Modern astronomical research techniques"
+      ],
+      "sessions": [
+        "Foundations of modern astronomy",
+        "Cosmology and deep space",
+        "Interactive observation and analysis",
+        "Astrophysics research capstone"
+      ]
+    },
+    {
+      "slug": "space-medicine-program",
+      "title": "Space Medicine Program",
+      "type": "program",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/services-img-4.jpg",
+      "description": "Explore the medical and physiological challenges associated with human spaceflight, microgravity effects, and healthcare for lunar and Mars exploration.",
+      "detail": "The Space Medicine Program explores the medical and physiological challenges associated with human spaceflight. Participants will study the effects of microgravity, radiation, isolation, and long-duration missions on human health while learning about astronaut healthcare, biomedical monitoring, countermeasures, and the future of medicine for lunar and Mars exploration.",
+      "topics": [
+        "Microgravity physiology",
+        "Radiation and astronaut health",
+        "Biomedical monitoring",
+        "Countermeasures",
+        "Lunar and Mars medicine"
+      ],
+      "sessions": [
+        "Foundations of space medicine",
+        "Case studies from human spaceflight",
+        "Countermeasure design workshop",
+        "Capstone briefing"
+      ]
+    },
+    {
+      "slug": "she-orbits-ambassadors-program",
+      "title": "SHE ORBITS Ambassadors Program",
+      "type": "program",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/services-img-5.png",
+      "description": "A global leadership initiative designed to empower passionate students and young professionals to represent SHE ORBITS within their universities, organizations, and local communities.",
+      "detail": "The SHE ORBITS Ambassadors Program is a global leadership initiative designed to empower passionate students and young professionals to represent SHE ORBITS within their universities, organizations, and local communities. Ambassadors will lead outreach activities, organize educational events, promote space awareness, build local partnerships, and inspire the next generation of space professionals while developing leadership, communication, and project management skills.",
+      "topics": [
+        "Leadership and outreach",
+        "Community partnerships",
+        "Event organization",
+        "Space awareness campaigns",
+        "Project management"
+      ],
+      "sessions": [
+        "Ambassador onboarding",
+        "Outreach toolkit training",
+        "Local activation planning",
+        "Global ambassador summit"
+      ]
+    },
+    {
+      "slug": "artemis-ii-program",
+      "title": "ARTEMIS II Program",
+      "type": "program",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/services-img-6.png",
+      "description": "A specialized educational and industrial program inspired by NASA's Artemis missions and the future of human lunar exploration.",
+      "detail": "The ARTEMIS II Program is a specialized educational and industrial program inspired by NASA's Artemis missions and the future of human lunar exploration. Participants will explore the technologies, mission architecture, lunar operations, life support systems, navigation, habitat design, and scientific objectives that will shape humanity's return to the Moon and pave the way for future Mars missions.",
+      "topics": [
+        "NASA Artemis missions & lunar exploration",
+        "Mission architecture & lunar operations",
+        "Life support systems & navigation",
+        "Habitat design & lunar base concepts",
+        "Scientific objectives & Mars pathway"
+      ],
+      "sessions": [
+        "Artemis mission architecture & flight profile",
+        "Lunar surface operations & life support",
+        "Navigation, guidance & orbital mechanics",
+        "Habitat design & lunar science capstone"
+      ]
+    },
+    {
+      "slug": "satellite-data-processing-planetek",
+      "title": "Satellite Data Processing with Planetek Italia",
+      "type": "course",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/services-img-7.jpg",
+      "description": "Advanced training program in collaboration with Planetek Italia covering professional satellite data processing and geospatial analysis.",
+      "detail": "Developed in collaboration with Planetek Italia, this advanced training program builds upon the fundamentals of Earth observation by introducing participants to professional satellite data processing and geospatial analysis techniques. The program covers satellite image preprocessing, classification, change detection, GIS integration, environmental monitoring, and real-world applications of Earth observation data using industry-standard methodologies and tools.",
+      "topics": [
+        "Satellite image preprocessing & calibration",
+        "Classification & change detection algorithms",
+        "GIS integration & spatial data workflows",
+        "Environmental monitoring applications",
+        "Real-world Earth observation data analytics"
+      ],
+      "sessions": [
+        "Earth observation fundamentals & data acquisition",
+        "Satellite preprocessing & radiometric calibration",
+        "Classification & geospatial analysis labs",
+        "Applied environmental monitoring capstone"
+      ]
+    },
+    {
+      "slug": "world-space-week-2026",
+      "title": "World Space Week 2026",
+      "type": "event",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/services-img-8.jpg",
+      "description": "As part of the world's largest annual celebration of space science and technology, SHE ORBITS will host educational and networking activities during World Space Week 2026.",
+      "detail": "As part of the world's largest annual celebration of space science and technology, SHE ORBITS will host a series of educational and networking activities during World Space Week 2026. The program will feature keynote speakers, technical workshops, panel discussions, outreach campaigns, and interactive events that celebrate innovation, diversity, and the role of space in improving life on Earth.",
+      "topics": [
+        "Keynote speakers",
+        "Technical workshops",
+        "Panel discussions",
+        "Outreach campaigns",
+        "Interactive community events"
+      ],
+      "sessions": [
+        "Opening ceremony",
+        "Technical workshop series",
+        "Global panel discussions",
+        "Closing celebration"
+      ]
+    },
+    {
+      "slug": "nasa-space-apps-challenge",
+      "title": "NASA Space Apps Challenge",
+      "type": "competition-challenge",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/36.png",
+      "description": "SHE ORBITS will organize participation in the NASA Space Apps Challenge, the world's largest global hackathon addressing real-world challenges using NASA's open data.",
+      "detail": "SHE ORBITS will organize participation in the NASA Space Apps Challenge, the world's largest global hackathon. Participants will collaborate in multidisciplinary teams to develop innovative solutions addressing real-world challenges using NASA's open data, scientific resources, and emerging technologies. The event encourages creativity, teamwork, problem-solving, and innovation while connecting participants with a global community of scientists, engineers, designers, and innovators.",
+      "topics": [
+        "NASA open data and scientific resources",
+        "Multidisciplinary team collaboration",
+        "Creative problem-solving",
+        "Emerging technologies and prototyping",
+        "Global networking with space professionals"
+      ],
+      "sessions": [
+        "Hackathon kickoff & team formation",
+        "NASA data & mentor office hours",
+        "Solution prototyping sprint",
+        "Project showcase & judging"
+      ]
+    },
+    {
+      "slug": "python-for-orbital-mechanics",
+      "title": "Python for Orbital Mechanics",
+      "type": "course",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-10.jpg",
+      "description": "A specialized technical course combining Python programming with orbital mechanics, enabling participants to model, simulate, and visualize satellite trajectories and solve real aerospace engineering problems.",
+      "detail": "Python for Orbital Mechanics is a specialized technical course designed to bridge programming and aerospace engineering. Participants develop practical Python skills while exploring orbital mechanics, satellite trajectories, mission planning, numerical methods, simulation, and data visualization. Through hands-on exercises and aerospace applications, learners build computational models and apply programming techniques to real-world orbital engineering scenarios, preparing them for further study and technical work within the space sector.",
+      "topics": [
+        "Orbital mechanics",
+        "Satellite trajectories",
+        "Numerical methods",
+        "Data visualization",
+        "Mission planning"
+      ],
+      "sessions": [
+        "Python foundations for aerospace",
+        "Orbit simulation labs",
+        "Trajectory challenge",
+        "Capstone model review"
+      ]
+    },
+    {
+      "slug": "ai-data-science-space-exploration",
+      "title": "AI & Data Science in Space Exploration",
+      "type": "course",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-11.jpg",
+      "description": "A technical course exploring how artificial intelligence, machine learning, and data science are transforming space exploration, satellite systems, and modern mission operations.",
+      "detail": "AI & Data Science in Space Exploration introduces participants to the growing role of artificial intelligence, machine learning, and data analytics across the space sector. The course combines foundational concepts with practical aerospace applications, including satellite imagery, remote sensing, predictive analytics, autonomous spacecraft, and intelligent mission planning. Participants develop an understanding of how data-driven technologies can address complex aerospace challenges and support scientific research, satellite operations, and the future of commercial space missions.",
+      "topics": [
+        "Machine learning for space",
+        "Satellite imagery analysis",
+        "Predictive analytics",
+        "Autonomous systems",
+        "Mission planning"
+      ],
+      "sessions": [
+        "AI foundations",
+        "Remote sensing datasets",
+        "Autonomy case studies",
+        "Applied project demo"
+      ]
+    },
+    {
+      "slug": "her-cosmic-hour",
+      "title": "Her Cosmic Hour",
+      "type": "program",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-12.png",
+      "description": "SHE ORBITS’ flagship series connecting women with inspiring leaders across the global space sector through conversations, talks, panels, and interactive sessions.",
+      "detail": "Her Cosmic Hour is SHE ORBITS’ flagship inspirational and educational program dedicated to highlighting the achievements, experiences, and leadership journeys of women across the global space sector. Through keynote talks, fireside conversations, panel discussions, and interactive sessions, participants connect with astronauts, engineers, scientists, entrepreneurs, researchers, and policymakers. The program aims to inspire women to pursue opportunities in STEM and aerospace while creating meaningful connections, expanding professional networks, and showcasing diverse pathways into the space industry."
+    },
+    {
+      "slug": "innovation-lab",
+      "title": "Innovation Lab",
+      "type": "program",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-13.png",
+      "description": "An interdisciplinary innovation program where participants transform ideas into practical space-related solutions through research, engineering, creativity, and collaborative problem-solving.",
+      "detail": "Innovation Lab is an interdisciplinary research and innovation program designed to transform ideas into impactful solutions for space and related industries. Participants identify real-world challenges, conduct research, develop concepts, and work collaboratively toward practical solutions using engineering principles, emerging technologies, and systems thinking. The program emphasizes innovation, design thinking, teamwork, entrepreneurship, and project development, empowering participants to move from ideas to tangible solutions and contribute to the evolving global space economy."
+    },
+    {
+      "slug": "outreach-series",
+      "title": "Outreach Series",
+      "type": "program",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-14.png",
+      "description": "A global science communication initiative making space education more accessible through expert talks, webinars, seminars, awareness campaigns, and educational events.",
+      "detail": "The Outreach Series is SHE ORBITS’ global science communication initiative connecting students, educators, professionals, and the wider public with experts from the space sector. Through webinars, seminars, public lectures, awareness campaigns, and educational events, the series explores topics including space science, aerospace engineering, astronomy, Earth observation, and emerging technologies. The initiative seeks to increase scientific literacy, encourage curiosity, and make high-quality space education more accessible to learners from diverse backgrounds around the world."
+    },
+    {
+      "slug": "space-law-cohort-1",
+      "title": "Space Law Program Cohort 1",
+      "type": "program",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-15.png",
+      "description": "An introductory program exploring the legal, regulatory, ethical, and policy frameworks shaping space activities, satellite operations, exploration, and the emerging commercial space industry.",
+      "detail": "The Space Law Program provides participants with a comprehensive introduction to the legal, regulatory, ethical, and policy frameworks governing activities beyond Earth. Through expert-led sessions and case studies, participants explore international space treaties, commercial space regulations, satellite governance, liability, space sustainability, resource utilization, and emerging legal challenges. The program also examines the evolving legal landscape surrounding lunar exploration, private spaceflight, and future human settlements, providing participants with a foundation for understanding the policies shaping the rapidly expanding global space industry."
+    },
+    {
+      "slug": "introduction-to-remote-sensing",
+      "title": "Introduction to Remote Sensing",
+      "type": "course",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-16.png",
+      "description": "A foundational Earth observation course developed in collaboration with Planetek Italia, introducing satellite remote sensing, geospatial analysis, image interpretation, and real-world applications.",
+      "detail": "Developed in collaboration with Planetek Italia, Introduction to Remote Sensing introduces participants to the fundamentals of Earth observation and satellite remote sensing. Participants explore satellite imaging, geospatial analysis, image interpretation, environmental monitoring, disaster management, and climate-related applications while gaining practical exposure to industry-relevant datasets and methodologies. The course demonstrates how remote sensing and Earth observation technologies support scientific research, environmental protection, sustainable development, and informed decision-making across multiple sectors."
+    },
+    {
+      "slug": "interdisciplinary-spring-school",
+      "title": "Interdisciplinary Spring School",
+      "type": "internship",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-17.png",
+      "description": "A five-week multidisciplinary space program combining expert-led learning, technical applications, collaborative projects, and exploration of key space science and engineering disciplines.",
+      "detail": "The Interdisciplinary Spring School is an intensive five-week multidisciplinary educational experience designed to provide participants with a broad foundation in modern space science and engineering. The program combines theoretical learning with practical applications, expert-led sessions, collaborative activities, and project-based work across multiple disciplines. <br><br>Participants explore spacecraft systems, mission architecture, satellite technologies, orbital mechanics, programming and simulation, geospatial intelligence, Earth observation, artificial intelligence, autonomous spacecraft, formation flying, life-support systems, space habitats, electronics, communications, space medicine, and mission design. By bringing these disciplines together within one integrated learning experience, the Spring School helps participants understand how different areas of space science and engineering connect within real missions while preparing them for advanced learning, research, and future careers in the global space sector. <style>  .course-content {    font-family: Arial, sans-serif;    color: #e2e8f0;    line-height: 1.5;  }    .course-content h2 {    color: #f7fafc;    font-size: 24px;    font-weight: bold;    margin-bottom: 16px;    border-bottom: 1px solid #4a5568;    padding-bottom: 8px;  }    .course-content h3 {    color: #63b3ed;    font-size: 18px;    font-weight: bold;    margin-top: 24px;    margin-bottom: 8px;  }    .course-content h4 {    color: #edf2f7;    font-size: 15px;    font-weight: bold;    margin-top: 14px;    margin-bottom: 6px;  }    .course-content p {    font-size: 14px;    color: #cbd5e0;    margin-bottom: 12px;  }    .course-content strong {    color: #90cdf4;  }</style><div class='course-content'>  <br><br><h2>WEEKLY COURSE STRUCTURE & TOPIC DETAILS</h2>  <h3>WEEK 1 Space Systems & Human Context</h3>  <p><strong>Theme:</strong> Understanding how space missions are built and who they are built for</p>  <h4>Class 1 Introduction to Space Missions & Architecture</h4>  <p>Participants are introduced to different types of space missions, including Earth observation, communication, navigation, and exploration missions[cite: 1]. The session explains the space segment, ground segment, and user segment, emphasizing end-to-end mission thinking[cite: 1].</p>  <h4>Class 2 Satellite Subsystems & Space Technology</h4>  <p>This session explores the major satellite subsystems such as power, thermal control, communication, attitude determination and control, and payload systems[cite: 1]. Real engineering trade-offs are discussed to show how mission requirements shape system design[cite: 1].</p>  <h4>Class 3 Programming for Simulation (Absolute Beginners)</h4>  <p>Participants learn the basics of programming using Python or MATLAB, focusing on computational thinking, plotting, and simple simulations[cite: 1]. No prior coding experience is required[cite: 1].</p>  <h4>Class 4 Humans in Space: Space Biology Foundations</h4>  <p>This class introduces how the human body responds to microgravity[cite: 1]. Topics include fluid shifts, muscle and bone changes, and why space biology and medicine are essential for safe human spaceflight[cite: 1].</p>  <h3>WEEK 2 Orbits, Earth & Geospatial Intelligence</h3>  <p><strong>Theme:</strong> How satellites move around Earth and observe our planet</p>  <h4>Class 5 Orbital Mechanics (Conceptual & Visual)</h4>  <p>Participants learn why satellites orbit Earth, the differences between LEO, MEO, and GEO, and how velocity and energy shape orbital motion, using visual and intuitive explanations[cite: 1].</p>  <h4>Class 6 Orbit Propagation & Space Environment</h4>  <p>This session covers orbital elements, coordinate frames, and environmental effects such as atmospheric drag and gravitational perturbations, building a foundation for understanding real mission constraints[cite: 1].</p>  <h4>Class 7 Orbit Simulation & Ground Track</h4>  <p>Participants simulate satellite orbits and visualize ground tracks, learning how orbital motion translates into Earth coverage and geospatial applications[cite: 1].</p>  <h4>Class 8 Space Medicine: Microgravity Effects & Countermeasures</h4>  <p>This class focuses on health challenges faced by astronauts, including muscle atrophy, bone loss, and radiation exposure, along with countermeasures used on the International Space Station[cite: 1].</p>  <h3>WEEK 3 Intelligent Space Systems & Life Support</h3>  <p><strong>Theme:</strong> Autonomy, coordination, and sustaining life beyond Earth</p>  <h4>Class 9 Autonomous & Intelligent Space Systems</h4>  <p>Participants explore why autonomy is critical in modern space missions, including rule-based systems, basic AI concepts, and smart satellite constellations[cite: 1].</p>  <h4>Class 10 Spacecraft Formation Flying</h4>  <p>This focused session introduces multi-satellite missions where spacecraft operate in coordinated formations[cite: 1]. Applications in Earth observation and deep-space missions are discussed conceptually[cite: 1].</p>  <h4>Class 11 Life Support Systems & Space Habitats</h4>  <p>Participants learn how air, water, and food systems are managed in space, and how closed-loop life support systems enable long-duration missions to the Moon and Mars[cite: 1].</p>  <h4>Class 12 Geospatial Intelligence & Space Data Applications</h4>  <p>This class connects satellite data to real-world applications such as climate monitoring, disaster response, urban planning, and environmental analysis[cite: 1].</p>  <h3>WEEK 4 Space Electronics & Future Human Missions</h3>  <p><strong>Theme:</strong> From understanding concepts to applying knowledge</p>  <h4>Class 13 Space Medicine & Future Human Missions</h4>  <p>Participants explore challenges of future Moon and Mars missions, including radiation exposure, psychological health, artificial gravity concepts, and open research questions[cite: 1].</p>  <h4>Class 14 Space Electronics & Communication Systems</h4>  <p>Participants are introduced to sensors, onboard electronics, and communication systems, understanding how hardware and software work together in space missions[cite: 1].</p>  <h3>WEEK 5 Mission Design, Research & Mini Projects</h3>  <h4>Class 15 Space Mission Design & Research Methodology</h4>  <p>This session explains how space missions and research projects are designed, how research questions are framed, and how to read and understand scientific papers[cite: 1].</p>  <h4>Class 16 Mini Project Presentations & Mentoring</h4>  <p>In the final session, participants present their mini projects and receive feedback and mentoring from the SHE ORBITS team, along with guidance on future learning pathways[cite: 1].</p></div>"
+    },
+    {
+      "slug": "world-space-week-2025",
+      "title": "World Space Week 2025",
+      "type": "event",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-18.png",
+      "description": "A seven-day international SHE ORBITS initiative combining space education, inspiration, technical learning, community engagement, and the official launch of its global community.",
+      "detail": "<br><br><video controls width='100%' src='../../assets/videos/world-space-week.mp4'></video><br><br> <u><strong>Format: Online Campaign · Conference · Workshop · Space Challenge · Community Launch <strong></u> <br><br> SHE ORBITS marked World Space Week 2025 with a seven-day international initiative created to officially introduce SHE ORBITS to the world, grow its visibility, and establish its first global community of women passionate about space, STEM, innovation, and exploration. <br> Rather than limiting the celebration to a single event, SHE ORBITS designed a complete week-long experience combining education, inspiration, interaction, technical learning, and community building. <br><br><br> <h4 style='color: white'>The 7-Day Journey</h4>Day 1 — Launch Day<br>SHE ORBITS officially launched its digital presence and opened applications for its upcoming programs. The day introduced the company's mission, vision, and future direction while inviting the first members of the SHE ORBITS community to become part of its journey.<br><br>Day 2 — Space Heroes Day<br>Participants explored the stories of astronauts, scientists, engineers, and pioneers who shaped humanity's journey into space. The day focused particularly on inspiring role models and demonstrating the many different pathways through which people can contribute to the space sector.<br><br>Day 3 — Roadmap & Interest Day<br>SHE ORBITS presented its vision for a structured Space Learning Journey, showing how participants could progress from foundational STEM knowledge to AI, technical projects, research, leadership, and careers in the space industry. An interest form was also introduced to understand the community's interests and future learning needs.<br><br>Day 4 — Introductory Conference<br>The central live event of the week brought together the emerging SHE ORBITS community with speakers and guests from the international space ecosystem. The conference introduced SHE ORBITS in greater depth, explored opportunities in space and STEM, and created an open space for discussion, questions, and connection.<br><br>Day 5 — Interactive Workshop<br>Participants moved from inspiration to hands-on learning through an interactive STEM/space workshop. The experience combined structured educational content with practical activities and technical demonstrations, giving participants an opportunity to engage directly with space-related concepts and tools.<br><br>Day 6 — Space Challenge<br>The community came together for an interactive challenge centered on the question: “What shaped your space journey?” Participants shared a book, project, idea, thought, or theory that influenced their interest in space. The challenge encouraged creativity, personal storytelling, and community interaction, with winners receiving opportunities to participate in future SHE ORBITS programs.<br><br>Day 7 — Closing Vision & Community Launch<br>The week concluded by reflecting on the journey, sharing the program's achievements and community growth, and presenting the future vision of SHE ORBITS. The closing also marked the launch of the SHE ORBITS community space on Discord, creating a continuing environment for connection, learning, collaboration, and future opportunities.<br><br><br><h4 style='color: white'>Beyond One Week</h4>World Space Week 2025 was designed not simply as a celebration of space, but as the beginning of a community.<br><br>Across seven days, SHE ORBITS moved from launch → inspiration → education → connection → hands-on learning → participation → community, laying the foundation for a long-term ecosystem dedicated to helping women explore opportunities across space and STEM.<br><br>World Space Week 2025 became the starting point of the SHE ORBITS journey — bringing together the first community of women ready to learn, build, lead, and shape the future of space. <br><br>  "
+    },
+    {
+      "slug": "seec",
+      "title": "SEEC (Space Exploration Educators Conference)",
+      "type": "conference",
+      "lifecycle": "past",
+      "image": "../assets/images/services/services-img-19.jpg",
+      "description": "SHE ORBITS received a fully funded invitation to attend SEEC 2026 in Texas, connecting with NASA professionals, astronauts, educators, researchers, and global space-education leaders.",
+      "detail": "SHE ORBITS was honored with a fully funded, all-expenses-paid invitation to attend the Space Exploration Educators Conference (SEEC) 2026 in Texas, hosted by Space Center Houston, the official visitor center of NASA’s Johnson Space Center. <br> Held from February 5–7, 2026, the conference brought together educators, NASA professionals, astronauts, researchers, industry experts, and space-education organizations from around the world. <br> SHE ORBITS participated in the conference and was represented in the United States, engaging with international leaders across space exploration, STEM education, experiential learning, Earth observation, leadership, and global collaboration. The experience provided valuable strategic insights and opportunities to connect SHE ORBITS’ mission with the broader international space-education ecosystem. <br> This invitation represented an important recognition of SHE ORBITS’ growing international presence and its work to expand access to space education and opportunities for women from emerging and non-traditional space-faring communities. <br> Through opportunities such as SEEC, SHE ORBITS continues to build bridges between emerging space communities and the global space industry—creating pathways for the next generation of women to enter, contribute to, and ultimately help shape the future of the space sector."
+    },
+    {
+      "slug": "fellowships-coming-soon",
+      "title": "Fellowships Coming Soon",
+      "type": "fellowship",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/fellowships.jpeg",
+      "description": "Research and leadership fellowships are being prepared. Contact SHE ORBITS to express interest.",
+      "detail": "Upcoming fellowship pathways will pair participants with mentors, research teams, and industry partners across the SHE ORBITS network. Check back or reach out via Contact to be notified when applications open.",
+      "topics": [
+        "Mentorship",
+        "Research",
+        "Leadership",
+        "Industry exposure"
+      ],
+      "sessions": [
+        "Interest registration",
+        "Program announcement",
+        "Application window",
+        "Fellow onboarding"
+      ]
+    },
+    {
+      "slug": "panels-coming-soon",
+      "title": "Panels Coming Soon",
+      "type": "panels",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/talks-panels.jpeg",
+      "description": "Conversations with women leaders across aerospace, policy, research, and commercial space are coming soon.",
+      "detail": "Upcoming panels will feature astronauts, engineers, scientists, entrepreneurs, policymakers, and researchers. Stay connected through Discord and Contact for announcement dates.",
+      "topics": [
+        "Leadership",
+        "Career pathways",
+        "Networking",
+        "Inspiration"
+      ],
+      "sessions": [
+        "Announcement",
+        "Live panel",
+        "Audience Q&A",
+        "Networking"
+      ]
+    },
+    {
+      "slug": "research-coming-soon",
+      "title": "Research Programs Coming Soon",
+      "type": "research",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/research-programs.jpeg",
+      "description": "",
+      "detail": ""
+    },
+    {
+      "slug": "missions-simulations-coming-soon",
+      "title": "Missions & Simulations",
+      "type": "mission-simulation",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/missions-simulations.jpeg",
+      "description": "",
+      "detail": ""
+    },
+    {
+      "slug": "astronaut-training",
+      "title": "Astronaut Training",
+      "type": "astronaut-training",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/astronaut-training.jpeg",
+      "description": "",
+      "detail": ""
+    },
+    {
+      "slug": "webinar",
+      "title": "Webinars",
+      "type": "webinar",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/webinars.jpeg",
+      "description": "",
+      "detail": ""
+    },
+    {
+      "slug": "talks-panels-coming-soon",
+      "title": "Talks & Panels Coming Soon",
+      "type": "talk-panel",
+      "lifecycle": "upcoming",
+      "image": "../assets/images/services/talks-panels.jpeg",
+      "description": "",
+      "detail": ""
+    }
+  ]
+}

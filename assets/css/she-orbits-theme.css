@@ -1,0 +1,250 @@
+/* SHE ORBITS comfy space theme — loaded after styles.css */
+
+:root {
+  --bs-primary: #6366f1;
+  --bs-primary-rgb: 99, 102, 241;
+  --bs-secondary: #0a0e27;
+  --bs-secondary-rgb: 10, 14, 39;
+  --bs-light-gray: #f3f4f8;
+  --bs-light-gray-rgb: 243, 244, 248;
+  /* Readable body/heading text on light sections — not lavender */
+  --bs-dark: #1f2a2e;
+  --bs-dark-rgb: 31, 42, 46;
+  --bs-body-color: rgba(31, 42, 46, 0.82);
+  --bs-body-color-rgb: 31, 42, 46;
+  --bs-heading-color: #1f2a2e;
+  --bs-link-color: #1f2a2e;
+  --bs-link-color-rgb: 31, 42, 46;
+  --bs-link-hover-color: #6366f1;
+  --bs-link-hover-color-rgb: 99, 102, 241;
+  --bs-focus-ring-color: rgba(99, 102, 241, 0.25);
+  --so-accent-lavender: #a5b4fc;
+  --so-accent-muted: #8aa3e0;
+  --so-charcoal: #1f2a2e;
+  --so-warm-white: #f3f4f8;
+}
+
+.bg-primary,
+.btn-primary,
+.round-36.bg-primary,
+.round-45.bg-primary,
+.round-52.bg-primary,
+.round-64.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.text-dark,
+.text-dark.text-opacity-70,
+.text-dark.text-opacity-75 {
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity, 1)) !important;
+}
+
+.border-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  color: #fff !important;
+}
+
+.bg-light-gray {
+  background-color: var(--bs-light-gray) !important;
+}
+
+/* Light content sections: default paragraphs to readable charcoal */
+.about-content p,
+.mission-section p,
+.vision-section p,
+.values-section p,
+.stats-facts p,
+.faq-contact p,
+.get-in-touch p,
+body {
+  color: var(--bs-body-color);
+}
+
+.about-content h1,
+.about-content h2,
+.about-content h3,
+.about-content h4,
+.mission-section h1,
+.mission-section h2,
+.mission-section h3,
+.vision-section h1,
+.vision-section h2,
+.vision-section h3,
+.values-section h1,
+.values-section h2,
+.values-section h3,
+.values-section h4,
+.stats-facts h2,
+.faq-contact h2 {
+  color: var(--bs-heading-color);
+}
+
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .featured-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+.featured-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid rgba(138, 163, 224, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(165, 180, 252, 0.45);
+  box-shadow: 0 18px 36px rgba(10, 14, 39, 0.28);
+}
+
+.featured-project-image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #0a0e27;
+}
+
+.featured-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.featured-project-card:hover .featured-project-image img {
+  transform: scale(1.04);
+}
+
+.featured-project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 39, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-project-card:hover .featured-project-overlay {
+  opacity: 1;
+}
+
+.featured-project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  flex: 1;
+}
+
+.featured-project-title {
+  color: var(--so-charcoal);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  min-height: 3rem;
+}
+
+.featured-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.featured-project-tags .badge {
+  border-color: rgba(99, 102, 241, 0.25) !important;
+  color: var(--so-charcoal) !important;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.banner-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-section .banner-hero-copy {
+  max-width: 36rem;
+}
+
+/*
+ * Navbar stays with the user (fixed).
+ * Logo stays in the hero top-right (Asmaa) and scrolls away with the hero.
+ */
+header.header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1040;
+}
+
+.banner-section .banner-hero-logo {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.25rem;
+  z-index: 3;
+  display: block;
+  width: 96px;
+  line-height: 0;
+}
+
+.banner-section .banner-hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .banner-section .banner-hero-logo {
+    top: 1.35rem;
+    right: 1.75rem;
+    width: 112px;
+  }
+
+  /* Pill navbar stays centered; logo lives in the hero, not the header */
+  .header .header-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .header .desktop-nav {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .header .header-wrapper > .d-flex.ms-auto {
+    display: none !important;
+  }
+}
+

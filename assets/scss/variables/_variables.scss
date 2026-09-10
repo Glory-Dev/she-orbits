@@ -1,0 +1,229 @@
+// ----------------------------------------------
+// SHE ORBITS — Comfy Space Palette
+// ----------------------------------------------
+
+$white: #fff !default;
+$space-navy: #0A0E27 !default;
+$space-slate: #111827 !default;
+$space-indigo: #6366f1 !default;
+$space-indigo-hover: #4f46e5 !default;
+$space-lavender: #8AA3E0 !default;
+$space-lavender-light: #a5b4fc !default;
+$cosmic-purple-soft: #9D4EDD !default;
+$warm-off-white: #F3F4F8 !default;
+$soft-charcoal: #1f2a2e !default;
+
+$gray-100: rgba(138, 163, 224, 0.12) !default;
+$gray-200: $space-slate !default;
+$gray-300: rgba(138, 163, 224, 0.6) !default;
+$gray-400: rgba(243, 244, 248, 0.78) !default;
+$gray-500: $soft-charcoal !default;
+$black: #000 !default;
+
+// Legacy names kept for imports; cyan is not used as primary
+$cosmic-purple: $cosmic-purple-soft !default;
+$nebula-cyan: $space-lavender !default;
+$stardust: #E0B0FF !default;
+
+$primary: $space-indigo !default;
+$secondary: $space-navy !default;
+$light: $gray-100 !default;
+$muted: $gray-300 !default;
+$dark: $soft-charcoal !default;
+$dark-light: $gray-400 !default;
+$light-gray: #f3f4f8 !default;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "dark": $dark,
+  "muted": $muted,
+  "dark-light": $dark-light,
+  "light-gray": $light-gray,
+) !default;
+
+// Spacer
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: 20px,
+  7: 30px,
+  8: 40px,
+  9: 44px,
+  10: 80px,
+  11: 96px,
+  12: 160px,
+) !default;
+
+$utilities: () !default;
+$utilities: (
+  "width": (
+    property: width,
+    class: w,
+    values: (
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      70: 70%,
+      75: 75%,
+      85: 85%,
+      100: 100%,
+      auto: auto,
+    ),
+  ),
+);
+
+$min-contrast-ratio: 1.7 !default;
+$enable-negative-margins: true !default;
+$enable-shadows: true !default;
+
+$text-muted: $muted !default;
+$grid-gutter-width: 32px !default;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+$font-weight-base: $font-weight-normal;
+
+$btn-padding-y: 4px !default;
+$btn-padding-x: 4px !default;
+$btn-color: $soft-charcoal !default;
+$btn-link-color: $soft-charcoal !default;
+$btn-font-weight: 700 !default;
+$btn-border-radius: 56px !default;
+$btn-box-shadow: unset !default;
+$btn-font-size: 18px !default;
+$btn-border-radius-lg: 9px !default;
+
+$font-family-sans-serif: "Manrope", sans-serif !default;
+
+$font-sizes: (
+  1: 10px,
+  2: 12px,
+  3: 14px,
+  4: 16px,
+  5: 18px,
+  6: 20px,
+  7: 24px,
+  8: 28px,
+  9: 32px,
+  10: 36px,
+  11: 40px,
+  12: 48px,
+  13: 56px,
+  14: 60px,
+  15: 72px,
+  16: 128px,
+  17: 290px,
+) !default;
+$font-size-base: 1rem !default;
+
+$h1-font-size: 128px !default;
+$h2-font-size: 48px !default;
+$h3-font-size: 36px !default;
+$h4-font-size: 28px !default;
+$h5-font-size: 18px !default;
+$h6-font-size: 16px !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$body-bg: $space-navy !default;
+$body-color: $gray-400 !default;
+$headings-color: $soft-charcoal !default;
+$headings-font-weight: 700 !default;
+
+$border-color: rgba(138, 163, 224, 0.18) !default;
+
+$box-shadow: 0px 1px 3px rgba($black, 0.15) !default;
+$box-shadow-sm: 0px 6px 8px -6px rgba($black, 0.15) !default;
+$box-shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+  0px 4px 6px -2px rgba(16, 24, 40, 0.03) !default;
+$box-shadow-inset: unset !default;
+
+$card-title-color: $soft-charcoal !default;
+$card-subtitle-color: var(--bs-body-color) !default;
+$card-spacer-y: 30px !default;
+$card-spacer-x: 30px !default;
+$card-spacer-y: 48px !default;
+$card-spacer-x: 48px !default;
+$card-border-radius: 0 !default;
+$card-border-width: 0px !default;
+
+$border-radius: 8px !default;
+$border-radius-sm: 20px !default;
+$border-radius-lg: 24px !default;
+
+$badge-font-size: 16px !default;
+$badge-font-weight: 500 !default;
+$badge-padding-y: 8px !default;
+$badge-padding-x: 16px !default;
+$badge-border-radius: $btn-border-radius;
+
+$tooltip-font-size: 12px !default;
+$tooltip-bg: $soft-charcoal;
+
+$form-label-color: $space-lavender;
+$form-label-font-weight: 600;
+$form-select-indicator-padding: 38px;
+$form-select-border-radius: 7px !default;
+$form-select-box-shadow: unset !default;
+$input-border-radius: 0 !default;
+$input-group-addon-bg: $gray-300 !default;
+$input-group-addon-border-color: $light !default;
+$input-border-color: 0 !default;
+$input-bg: transparent !default;
+$input-color: $gray-300 !default;
+$input-padding-y: 14px;
+$input-padding-x: 0;
+$form-check-input-width: 1.313em;
+$form-check-min-height: 1.313em;
+$form-check-input-border: 1.25px solid $soft-charcoal;
+$form-check-input-checked-bg-color: var(--bs-primary);
+
+$dropdown-border-radius: $border-radius-lg !default;
+$dropdown-min-width: 380px !default;
+$dropdown-border-width: 0 !default;
+$dropdown-item-padding-y: 10px !default;
+$dropdown-link-hover-bg: $gray-100 !default;
+$dropdown-link-active-bg: $gray-100;
+$dropdown-link-active-color: $soft-charcoal;
+$link-color: $soft-charcoal !default;
+$link-hover-color: $primary !default;
+
+$accordion-padding-y: 28px;
+$accordion-padding-x: 0;
+$accordion-button-color: $soft-charcoal;
+$accordion-body-padding-y: 1rem;
+$accordion-border-color: $border-color;
+$accordion-button-active-bg: transparent !default;
+$accordion-button-active-color: $soft-charcoal;
+$accordion-icon-color: #0000008a;
+$accordion-icon-active-color: #0000008a;
+$accordion-button-icon: url("../images/svgs/icon-plus.svg");
+$accordion-button-active-icon: url("../images/svgs/icon-x.svg");
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1680px,
+) !default;
+
+$hr-border-color: $border-color !default;
+$hr-opacity: 1 !default;

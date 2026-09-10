@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHE ORBITS - Contact Us | Connect With Our Team</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg?v=she-orbits-2" />
+  <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/she-orbits-theme.css?v=she-orbits-10" />
+
+  <style>
+    .header {
+      background: transparent !important;
+      border-top: none !important;
+    }
+
+    /* Override primary colors to grey */
+    /* Custom submenu styles */
+    .has-submenu {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .has-submenu::after {
+      content: "▼";
+      font-size: 10px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+
+    .has-submenu.show::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .submenu {
+      display: none;
+      padding-left: 20px;
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border-left: 2px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .submenu::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .submenu::-webkit-scrollbar-track {
+      background: rgba(99, 102, 241, 0.1);
+      border-radius: 2px;
+    }
+
+    .submenu::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 2px;
+    }
+
+    .submenu::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 102, 241, 0.6);
+    }
+
+    .submenu.show {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 8px !important;
+    }
+
+    .submenu .fw-bold {
+      font-size: 11px !important;
+      margin-bottom: 6px !important;
+      margin-top: 8px !important;
+    }
+
+    .submenu a {
+      transition: all 0.3s ease;
+      display: block;
+      padding: 3px 0;
+      font-size: 14px !important;
+    }
+
+    .submenu a:hover {
+      color: #6366f1 !important;
+      transform: translateX(5px);
+    }
+
+    .contact-form-tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.35rem;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .contact-form-tab {
+      border: 0;
+      background: transparent;
+      color: var(--bs-heading-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 999px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .contact-form-tab.active {
+      background: #6366f1;
+      color: #fff;
+    }
+
+    .contact-form-tab:focus-visible {
+      outline: 2px solid #6366f1;
+      outline-offset: 2px;
+    }
+
+    /* Contact form styles */
+    .form-control {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #e5e7eb;
+      border-radius: 0;
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      background: transparent;
+      border-bottom-color: #6366f1;
+      box-shadow: none;
+      outline: none;
+    }
+
+    .form-label {
+      color: #374151;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 15px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-color: #6366f1;
+    }
+
+    /* ============================================
+   DESKTOP DARK PILL MENU - Shows on screens >= 992px
+============================================ */
+    .desktop-nav {
+      display: none;
+    }
+
+    @media (min-width: 992px) {
+      .header .btn-group {
+        display: none !important;
+      }
+
+      .desktop-nav {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .desktop-nav-container {
+        display: flex;
+        align-items: center;
+        background: rgba(30, 41, 59, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.5rem 0.75rem;
+        gap: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .desktop-nav .nav-item {
+        position: relative;
+      }
+
+      .desktop-nav .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0.85rem 1.25rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        border-radius: 40px;
+      }
+
+      .desktop-nav .nav-link:hover {
+        color: #a5b4fc;
+      }
+
+      .desktop-nav .nav-link .dropdown-arrow {
+        font-size: 8px;
+        transition: transform 0.3s ease;
+        margin-left: 4px;
+        color: #ffffff;
+      }
+
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
+      .desktop-nav .dropdown-menu-desktop {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        min-width: 240px;
+        background: rgba(30, 41, 59, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 0.75rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+      }
+
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-menu-desktop {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .desktop-nav .dropdown-section-title {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #a5b4fc;
+      }
+
+      .desktop-nav .dropdown-item {
+        display: block;
+        padding: 0.6rem 1.25rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .desktop-nav .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        padding-left: 1.5rem;
+      }
+
+      .desktop-nav .dropdown-menu-desktop.dropdown-menu-opportunities {
+        /* min-width: 440px; */
+        padding: 0.75rem 0.5rem;
+        display: flex;
+        gap: 0;
+      }
+
+      .desktop-nav .dropdown-menu-opportunities .dropdown-column {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .desktop-nav .dropdown-menu-opportunities .dropdown-column+.dropdown-column {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .desktop-nav .dropdown-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 0.5rem 1rem;
+      }
+
+      .desktop-nav .nav-cta {
+        margin-left: 0.5rem;
+        padding: 0.85rem 1.75rem;
+        background: rgba(99, 102, 241, 0.8);
+        color: #fff !important;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .desktop-nav .nav-cta:hover {
+        background: rgba(165, 180, 252, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        color: #fff !important;
+      }
+    }
+
+    .header .dropdown-item-wrapper {
+      position: relative;
+    }
+
+    .header .dropdown-submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 140px;
+      background: #fff;
+      /* match your dropdown's background */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      z-index: 10;
+      flex-direction: column;
+    }
+
+    .header .dropdown-item-wrapper:hover .dropdown-submenu {
+      display: flex;
+    }
+
+    .header .dropdown-subitem {
+      display: block;
+      padding: 8px 16px;
+      white-space: nowrap;
+      color: inherit;
+      /* match your existing link color */
+      text-decoration: none;
+    }
+
+    .header .dropdown-subitem:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .header .submenu-item-wrapper {
+      position: relative;
+    }
+
+    .header .submenu-flyout {
+      display: none;
+    }
+
+    /* .submenu-item-wrapper {
+      position: relative;
+    }
+
+    .submenu-flyout {
+      display: none;
+      position: static;
+      min-width: unset;
+      width: 100%;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      padding-left: 1rem;
+      z-index: auto;
+    }
+
+    .submenu-item-wrapper:hover .submenu-flyout {
+      display: block;
+    }
+
+    .submenu-flyout li a {
+      padding: 6px 16px;
+      white-space: nowrap;
+    }
+
+    .submenu-flyout li a:hover {
+      background: rgba(0, 0, 0, 0.05);
+    } */
+
+    .program-card-description-clamp {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header border-4 border-primary border-top w-100">
+    <div class="container">
+      <div class="header-wrapper d-flex align-items-center justify-content-between">
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="desktop-nav">
+          <div class="desktop-nav-container">
+            <div class="nav-item"><a href="../" class="nav-link">Home</a></div>
+            <div class="nav-item"><a href="../about/" class="nav-link">About</a></div>
+            <div class="nav-item"><a href="../mission-vision/" class="nav-link">Mission & Vision</a></div>
+            <div class="nav-item has-dropdown">
+              <a href="../opportunities/" class="nav-link">Opportunities <span class="dropdown-arrow">▼</span></a>
+              <div class="dropdown-menu-desktop dropdown-menu-opportunities">
+                <div class="dropdown-column">
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#programs">Programs</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#programs">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#programs">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#programs">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#courses">Courses</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#courses">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#courses">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#courses">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#internships">Internships</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#internships">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#internships">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#internships">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#fellowships">Fellowships</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#fellowships">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#fellowships">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#fellowships">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#research">Research Programs</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#research">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#research">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#research">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#competitions-challenges">Competitions &
+                      Challenges</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#competitions-challenges">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#competitions-challenges">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#competitions-challenges">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#events">Events</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#events">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#events">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#events">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#talks-panels">Talks & Panels</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#talks-panels">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#talks-panels">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#talks-panels">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#webinars">Webinars</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#webinars">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#webinars">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#webinars">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#workshops">Workshops</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#workshops">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#workshops">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#workshops">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#conferences">Conferences</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#conferences">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#conferences">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#conferences">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#missions-simulations">Missions & Simulations</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#missions-simulations">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#missions-simulations">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#missions-simulations">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#astronaut-training">Astronaut Trainings</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#astronaut-training">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#astronaut-training">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#astronaut-training">Previous</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item"><a href="../sectors/" class="nav-link">Sectors</a></div>
+            <div class="nav-item"><a href="../contact/" class="nav-link">Contact</a></div>
+            <div class="nav-item"><a href="../contact/" class="nav-link nav-cta">Apply Now</a></div>
+          </div>
+        </nav>
+
+        <!-- MOBILE HAMBURGER MENU -->
+
+        <div class="d-flex align-items-center gap-4 ms-auto">
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item"><a href="./" aria-current="true"
+                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Home</a></li>
+                    <li class="header-item"><a href="../about/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">About</a></li>
+                    <li class="header-item"><a href="../mission-vision/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Mission & Vision</a></li>
+                    <li class="header-item">
+                      <a href="../opportunities/" class="header-link hstack gap-2 fs-7 fw-bold text-dark has-submenu"
+                        onclick="toggleSubmenu(event)"><img src="../assets/images/svgs/secondary-leaf.svg" alt=""
+                          width="20" height="20" class="img-fluid animate-spin">Opportunities</a>
+                      <ul class="submenu list-unstyled ps-4 mt-2">
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#programs">Programs</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#programs">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#programs">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#programs">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#courses">Courses</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#courses">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#courses">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#courses">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#internships">Internships</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#internships">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#internships">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#internships">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#fellowships">Fellowships</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#fellowships">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#fellowships">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#fellowships">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#research">Research Programs</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#research">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#research">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#research">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#competitions-challenges">Competitions & Challenges</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#competitions-challenges">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#competitions-challenges">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#competitions-challenges">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#events">Events</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#events">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#events">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#events">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#talks-panels">Talks & Panels</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#talks-panels">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#talks-panels">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#talks-panels">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#webinars">Webinars</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#webinars">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#webinars">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#webinars">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#workshops">Workshops</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#workshops">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#workshops">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#workshops">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#conferences">Conferences</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#conferences">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#conferences">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#conferences">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#missions-simulations">Missions &
+                            Simulations</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#missions-simulations">Ongoing</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#missions-simulations">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#missions-simulations">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#astronaut-training">Astronaut
+                            Trainings</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#astronaut-training">Ongoing</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#astronaut-training">Upcoming</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#astronaut-training">Previous</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="header-item"><a href="../sectors/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Sectors</a></li>
+                    <li class="header-item"><a href="../contact/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!--  Page Wrapper -->
+  <div class="page-wrapper overflow-hidden">
+
+    <!--  Banner Section -->
+    <section class="banner-section position-relative d-flex align-items-end min-vh-100">
+      <a href="./" class="banner-hero-logo" aria-label="SHE ORBITS home">
+        <img src="../assets/images/logos/logo-light.svg?v=she-orbits-8" alt="SHE ORBITS" width="112" height="34">
+      </a>
+
+      <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+        <source src="../assets/images/backgrounds/72.mp4" type="video/mp4" />
+      </video>
+      <div class="container">
+        <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
+          <div class="row align-items-center">
+            <div class="col-xl-6">
+              <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
+                data-aos-duration="1000">
+                <img src="../assets/images/svgs/primary-leaf.svg" alt="" class="img-fluid animate-spin">
+                <p class="mb-0 text-white fs-5 text-opacity-70">Ready to join our <span class="text-white">global
+                    community of future space leaders</span>? Let's connect and start your journey to the stars.</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <h1 class="mb-0 fs-16 text-white lh-1">Contact Us</h1>
+            <a href="javascript:void(0)" class="p-1 ps-7 bg-white rounded-pill">
+              <span class="bg-primary round-52 rounded-circle d-flex align-items-center justify-content-center">
+                <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="container">
+        <div class="row gap-7 gap-xl-0 mb-8">
+          <div class="col-xl-4 col-xxl-4">
+            <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+              data-aos-duration="1000">
+              <span
+                class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">01</span>
+              <hr class="border-line">
+              <span class="badge text-bg-dark">Get in Touch</span>
+            </div>
+          </div>
+          <div class="col-xl-8 col-xxl-7">
+            <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+              <h2 class="mb-0">Connect With SHE ORBITS</h2>
+              <p class="fs-5 mb-0">Have questions about our programs? Want to partner with us? Interested in supporting
+                our mission? We're here to help learners reach for the stars.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Email Contact -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <div class="contact-card">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="round-64 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px;">
+                  <iconify-icon icon="lucide:mail" class="fs-5 text-primary"></iconify-icon>
+                </div>
+                <div>
+                  <h5 class="mb-2 text-dark">Email Us</h5>
+                  <p class="mb-3 text-dark text-opacity-70">We respond within 24-48 hours</p>
+                  <a href="mailto:contact@sheorbitscompany.com"
+                    class="text-primary fw-bold text-decoration-none">contact@sheorbitscompany.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone Contact -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div class="contact-card">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="round-64 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px;">
+                  <iconify-icon icon="lucide:phone" class="fs-5 text-primary"></iconify-icon>
+                </div>
+                <div>
+                  <h5 class="mb-2 text-dark">Call Us</h5>
+                  <p class="mb-3 text-dark text-opacity-70">Mon-Fri, 9 AM - 6 PM EST</p>
+                  <a href="tel:+201014717368" class="text-primary fw-bold text-decoration-none">+20 (101) 471-7368</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Global Reach -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <div class="contact-card">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="round-64 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px;">
+                  <iconify-icon icon="lucide:globe" class="fs-5 text-primary"></iconify-icon>
+                </div>
+                <div>
+                  <h5 class="mb-2 text-dark">Global Reach</h5>
+                  <p class="mb-3 text-dark text-opacity-70">Programs available worldwide</p>
+                  <p class="mb-0 text-primary fw-bold">90+ Countries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Get in touch Section -->
+    <section id="partner" class="get-in-touch py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-10">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">02</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Apply Now</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0" id="contactFormHeading">Join Our Programs</h2>
+                    <p class="fs-5 mb-0 text-opacity-70" id="contactFormIntro">Tell us about yourself and your space
+                      aspirations. We'll match you with the perfect program to launch your journey.</p>
+                    <div class="contact-form-tabs" role="tablist" aria-label="Contact form type">
+                      <button type="button" class="contact-form-tab active" id="contactTabParticipant" role="tab"
+                        aria-selected="true" aria-controls="participantFormPanel">Apply as Participant</button>
+                      <button type="button" class="contact-form-tab" id="contactTabPartner" role="tab"
+                        aria-selected="false" aria-controls="partnerFormPanel">Partner With Us</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between gap-7 gap-xl-0">
+            <div class="col-xl-3">
+              <div class="d-flex flex-column gap-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <div>
+                  <h5 class="mb-3 text-dark" id="contactSidebarTitle">Why Join SHE ORBITS?</h5>
+                  <ul class="list-unstyled d-flex flex-column gap-3 mb-0" id="contactSidebarList">
+                    <li class="hstack gap-2"><iconify-icon icon="lucide:check-circle"
+                        class="text-primary fs-6"></iconify-icon><span class="fs-6">Global Community</span></li>
+                    <li class="hstack gap-2"><iconify-icon icon="lucide:check-circle"
+                        class="text-primary fs-6"></iconify-icon><span class="fs-6">Expert Mentorship</span></li>
+                    <li class="hstack gap-2"><iconify-icon icon="lucide:check-circle"
+                        class="text-primary fs-6"></iconify-icon><span class="fs-6">Real Space Projects</span></li>
+                    <li class="hstack gap-2"><iconify-icon icon="lucide:check-circle"
+                        class="text-primary fs-6"></iconify-icon><span class="fs-6">Career Pathways</span></li>
+                    <li class="hstack gap-2"><iconify-icon icon="lucide:check-circle"
+                        class="text-primary fs-6"></iconify-icon><span class="fs-6">Scholarships Available</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-8">
+              <div id="participantFormPanel" role="tabpanel" aria-labelledby="contactTabParticipant">
+                <div id="participantFormSuccess" class="alert alert-success d-none mb-4" tabindex="-1" role="status">
+                  Thank you for your application. We'll review your details and respond within 24–48 hours.
+                </div>
+                <form id="participantForm" class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200"
+                  data-aos-duration="1000" novalidate>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Full Name *</label>
+                        <input type="text" class="form-control" name="fullName" placeholder="Your Name" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Email Address *</label>
+                        <input type="email" class="form-control" name="email" placeholder="your@email.com" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Age *</label>
+                        <input type="number" class="form-control" name="age" placeholder="Enter your age" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Country *</label>
+                        <input type="text" class="form-control" name="country" placeholder="Your Country" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="form-label fw-bold mb-2 text-dark">Program Interest *</label>
+                    <select class="form-control" id="programInterestSelect" name="programInterest" required>
+                      <option value="">Select a Program/Sector</option>
+                      <option value="stem-bootcamp">STEM for Space Bootcamp</option>
+                      <option value="space-medicine">Space Medicine</option>
+                      <option value="satellite-design">Satellite Design & CubeSats</option>
+                      <option value="space-agriculture">Space Agriculture</option>
+                      <option value="ai-space">AI & Data Science in Space</option>
+                      <option value="astronomy">Astrophysics & Astronomy</option>
+                      <option value="space-law">Space Law & Policy</option>
+                      <option value="mars-mission">Mars Mission Planning</option>
+                      <option value="robotics">Space Robotics</option>
+                      <option value="other">Other (please specify)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label fw-bold mb-2 text-dark">Tell Us About Your Space Dreams *</label>
+                    <textarea class="form-control" name="spaceDreams"
+                      placeholder="Why do you want to join SHE ORBITS? What are your goals in space exploration?"
+                      rows="5" required></textarea>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="newsletter" value="yes" id="newsletter">
+                    <label class="form-check-label" for="newsletter">I'd like to receive updates about SHE ORBITS
+                      programs and opportunities</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 justify-content-center text-white">
+                    <span class="btn-text">Submit Application</span>
+                    <iconify-icon icon="lucide:arrow-up-right"
+                      class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                  </button>
+                  <div id="formStatus" class="mt-2"></div>
+                </form>
+              </div>
+
+              <div id="partnerFormPanel" class="d-none" role="tabpanel" aria-labelledby="contactTabPartner"
+                aria-hidden="true">
+                <div id="partnerFormSuccess" class="alert alert-success d-none mb-4" tabindex="-1" role="status">
+                  Thank you for your partnership inquiry. Our team will reach out within 24–48 hours.
+                </div>
+                <form id="partnerForm" class="d-flex flex-column gap-7" novalidate>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerOrgName">Organization Name *</label>
+                      <input type="text" class="form-control" id="partnerOrgName" name="organization"
+                        placeholder="Your organization" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerContactName">Contact Name *</label>
+                      <input type="text" class="form-control" id="partnerContactName" name="contactName"
+                        placeholder="Primary contact" required>
+                    </div>
+                  </div>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerEmail">Email Address *</label>
+                      <input type="email" class="form-control" id="partnerEmail" name="email"
+                        placeholder="partnerships@example.org" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerType">Partnership Type *</label>
+                      <select class="form-control" id="partnerType" name="partnershipType" required>
+                        <option value="">Select partnership type</option>
+                        <option value="school-university">School / University</option>
+                        <option value="space-agency">Space Agency</option>
+                        <option value="company">Company</option>
+                        <option value="ngo">NGO / Foundation</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="form-label fw-bold mb-2 text-dark" for="partnerMessage">How would you like to partner?
+                      *</label>
+                    <textarea class="form-control" id="partnerMessage" name="message"
+                      placeholder="Tell us about sponsorship, mentorship, programs, or collaboration ideas." rows="5"
+                      required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 justify-content-center text-white">
+                    <span class="btn-text">Submit Partnership Inquiry</span>
+                    <iconify-icon icon="lucide:arrow-up-right"
+                      class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">03</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">FAQs</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-9">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Frequently Asked Questions</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Learn more about our programs, admission requirements, and how
+                      SHE ORBITS is creating pathways for women to lead in the global space industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-xl-8">
+              <div class="accordion accordion-flush" id="accordionFlushExample" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">What
+                      is SHE ORBITS?</button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">SHE ORBITS is a global space company dedicated to
+                      empowering the next generation of innovators through education, research, innovation, and
+                      international collaboration across the space sector. Our mission is to create accessible
+                      opportunities that inspire individuals to contribute to the future of space exploration and
+                      technology.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Who
+                      can apply to SHE ORBITS programs?</button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Our programs are open to women and girls from all
+                      backgrounds who are passionate about space and STEM. We offer programs for high school students,
+                      university students, and professionals looking to transition into aerospace careers. No prior
+                      space experience required - just curiosity and commitment!</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseEight" aria-expanded="false"
+                      aria-controls="flush-collapseEight">Are
+                      your programs
+                      available internationally?</button>
+                  </h2>
+                  <div id="flush-collapseEight" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes. SHE ORBITS is an international company with
+                      participants from more than 60 countries. Most of our educational programs, workshops, and events
+                      are delivered online, allowing learners worldwide to participate.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">Do
+                      participants receive certificates?</button>
+                  </h2>
+                  <div id="flush-collapseNine" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes. Participants who successfully complete the
+                      program requirements receive an official SHE ORBITS Certificate of Completion. Some programs may
+                      also include additional recognition for outstanding performance or project excellence.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">Are
+                      the programs free?</button>
+                  </h2>
+                  <div id="flush-collapseTen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Many of our initiatives are offered free of charge
+                      to expand access to high-quality space education. Some specialized programs may have different
+                      participation models, which will always be announced in advance.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseEleven" aria-expanded="false"
+                      aria-controls="flush-collapseEleven">How
+                      can I become
+                      a SHE ORBITS Ambassador?</button>
+                  </h2>
+                  <div id="flush-collapseEleven" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Applications for the SHE ORBITS Ambassadors Program
+                      open periodically throughout the year. Ambassadors represent SHE ORBITS in their universities and
+                      communities by organizing events, promoting space education, and supporting our global
+                      initiatives.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+                      aria-controls="flush-collapseTwelve">Can
+                      I join more
+                      than one program?</button>
+                  </h2>
+                  <div id="flush-collapseTwelve" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Absolutely. Participants are encouraged to join
+                      multiple programs and explore different sectors based on their interests and career goals.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThirteen" aria-expanded="false"
+                      aria-controls="flush-collapseThirteen">Does SHE
+                      ORBITS conduct research?</button>
+                  </h2>
+                  <div id="flush-collapseThirteen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes. SHE ORBITS supports research and innovation
+                      across multiple disciplines, including artificial intelligence, satellite technologies, Earth
+                      observation, orbital mechanics, space medicine, cybersecurity, sustainability, and future space
+                      exploration. We actively encourage participants to engage in research projects and collaborative
+                      initiatives.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+                      aria-controls="flush-collapseFourteen">How can I
+                      collaborate with SHE ORBITS?</button>
+                  </h2>
+                  <div id="flush-collapseFourteen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">We welcome collaborations with universities,
+                      research institutions, companies, nonprofits, and industry experts. Partnership opportunities
+                      include educational programs, research projects, workshops, conferences, outreach initiatives, and
+                      strategic collaborations.</div>
+                  </div>
+                </div>
+                <div class="accordion-item ">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFifteen" aria-expanded="false"
+                      aria-controls="flush-collapseFifteen">How do I stay
+                      informed about upcoming
+                      opportunities?</button>
+                  </h2>
+                  <div id="flush-collapseFifteen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Follow SHE ORBITS on our official social media
+                      platforms and regularly visit our website to receive updates on new programs, research
+                      initiatives, workshops, conferences, competitions, and global opportunities. Still have questions?
+                      Email contact@sheorbitscompany.com — we typically respond within 48 hours.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">What
+                      kind of projects will I work on?</button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Participants work on real space missions including
+                      satellite design and launch, Mars habitat development, asteroid mining research, and space
+                      medicine experiments. You'll have hands-on experience with mission control operations, data
+                      analysis from active satellites, and collaborative projects with international space agencies.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Do
+                      you offer scholarships or financial aid?</button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes! We offer full and partial scholarships based on
+                      merit and need. Over 60% of our participants receive some form of financial assistance. We also
+                      have partnerships with corporations and space agencies that sponsor talented women. Our goal is to
+                      ensure financial barriers don't prevent anyone from reaching the stars.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">What
+                      career opportunities are available after completing the program?</button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Our graduates work at leading space agencies (NASA,
+                      ESA, ISRO), private space companies (SpaceX, Blue Origin, Virgin Galactic), and research
+                      institutions worldwide. Career paths include satellite engineering, mission planning, space
+                      medicine, astrobiology, and space policy. With our 95% job placement rate, you'll be
+                      well-positioned for your dream space career.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">How
+                      long are the programs and can I participate remotely?</button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Programs range from 6-week intensive bootcamps to
+                      2-year comprehensive training programs. We offer both on-site programs at our state-of-the-art
+                      facilities and hybrid options combining online learning with periodic hands-on sessions.
+                      International participants can join our virtual labs and collaborate on global projects through
+                      our digital platform.</div>
+                  </div>
+                </div>
+                <div class="accordion-item border-bottom">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseLast" aria-expanded="false"
+                      aria-controls="flush-collapseLast">Still
+                      have questions?</button>
+                  </h2>
+                  <div id="flush-collapseLast" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">
+                      Our team is here to help.
+                      <br> 📧 Email: <a
+                        href="https://mailto:contact@sheorbitscompany.com">contact@sheorbitscompany.com</a>
+                      <br> 💬 Response time: Within 48 hours
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Organizations Section hidden until real partner logos are provided. -->
+    <section class="partners-section py-5 py-lg-11 py-xl-12 d-none" aria-hidden="true">
+      <div class="container">
+        <div class="text-center mb-8" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <span class="badge text-bg-dark mb-3">Our Network</span>
+          <h2 class="mb-4">Partner Organizations</h2>
+          <p class="fs-5 text-muted mb-0">Collaborating with leading space agencies, universities, and organizations
+            worldwide</p>
+        </div>
+        <div class="row align-items-center justify-content-center g-5">
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="partner-logo p-3"><img src="../assets/images/logos/partner-placeholder.png" alt="NASA"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="partner-logo p-3"><img src="../assets/images/logos/partner-placeholder.png" alt="ESA"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="partner-logo p-3"><img src="../assets/images/logos/partner-placeholder.png" alt="SpaceX"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="250">
+            <div class="partner-logo p-3"><img src="../assets/images/logos/partner-placeholder.png" alt="ISRO"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="partner-logo p-3"><img src="../assets/images/logos/partner-placeholder.png" alt="MIT"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="350">
+            <div class="partner-logo p-3"><img src="../assets/images/logos/partner-placeholder.png" alt="UN"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Professional Footer -->
+  <footer class="footer" style="background: linear-gradient(180deg, #111827 0%, #374151 100%); color: #fff;">
+    <div class="container py-6 py-lg-7">
+      <div class="row gy-5 align-items-start justify-content-between">
+
+        <!-- Logo and Brand -->
+        <div class="col-lg-4 text-center text-lg-start">
+          <img src="../assets/images/logos/logo-light.svg?v=she-orbits-2" alt="SHE ORBITS" height="120" class="mb-4">
+          <p class="text-white-50" style="font-size: 15px; line-height: 1.8;">
+            Empowering women to lead humanity's journey to the stars. We are a pioneering space company dedicated to
+            breaking barriers and creating opportunities for women in aerospace technology, research, and exploration.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-lg-4 text-center">
+          <h6 class="text-uppercase fw-semibold mb-4" style="letter-spacing: 1px; color: #E5E7EB;">Explore</h6>
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <ul class="list-unstyled text-start mb-0">
+              <li><a href="../" class="footer-link">Home</a></li>
+              <li><a href="../about/" class="footer-link">About</a></li>
+              <li><a href="../mission-vision/" class="footer-link">Mission & Vision</a></li>
+              <li><a href="../sectors/" class="footer-link">Sectors</a></li>
+              <li><a href="../contact/" class="footer-link">Contact</a></li>
+            </ul>
+            <ul class="list-unstyled text-start mb-0">
+              <li><a class="footer-link fw-bold" href="../opportunities/#programs">Programs</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#courses">Courses</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#internships">Internships</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#fellowships">Fellowships</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#research">Research Programs</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#competitions-challenges">Competitions &
+                  Challenges</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#events">Events</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#talks-panels">Talks & Panels</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#webinars">Webinars</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#workshops">Workshops</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#conferences">Conferences</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#missions-simulations">Missions &
+                  Simulations</a></li>
+              <li><a class="footer-link fw-bold" href="../opportunities/#astronaut-training">Astronaut Trainings</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact and Social -->
+        <div class="col-lg-3 text-center text-lg-end">
+          <h6 class="text-uppercase fw-semibold mb-4" style="letter-spacing: 1px; color: #E5E7EB;">Stay Connected with
+            SHE ORBITS</h6>
+          <p class="mb-1"><a href="mailto:contact@sheorbitscompany.com"
+              class="footer-link">contact@sheorbitscompany.com</a></p>
+          <p class="mb-3"><a href="tel:+201014717368" class="footer-link">+20 (101) 471-7368</a></p>
+          <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+            <a href="https://www.instagram.com/she.orbits" class="social-icon" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+            <a href="https://www.linkedin.com/company/she-orbits" class="social-icon" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+            <a href="https://discord.com/invite/JucgMJ76wS" class="social-icon" target="_blank"
+              rel="noopener noreferrer" aria-label="Discord"><iconify-icon icon="mdi:discord"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-top border-white border-opacity-10 mt-5 pt-3 text-center">
+        <p class="mb-0 text-white-50 small">
+          © 2025 <span style="color:#E5E7EB;">SHE ORBITS</span>. All Rights Reserved | Empowering Girls to Reach for the
+          Stars 🚀
+        </p>
+      </div>
+    </div>
+
+    <style>
+      .footer {
+        position: relative;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+      }
+
+      .footer-link {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+      }
+
+      .footer-link:hover {
+        color: #D1D5DB;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: rgba(165, 180, 252, 0.15);
+        color: #a5b4fc;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        font-size: 20px;
+      }
+
+      .social-icon:hover {
+        background: rgba(165, 180, 252, 0.35);
+        transform: translateY(-3px);
+      }
+
+      .footer h6 {
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+
+        .footer img {
+          height: 80px;
+        }
+
+        .footer-link {
+          font-size: 15px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .footer {
+          padding-top: 5rem;
+          padding-bottom: 4rem;
+        }
+      }
+    </style>
+  </footer>
+
+  <div class="get-template hstack gap-2">
+    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
+      id="scrollToTopBtn">
+      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-white"></iconify-icon>
+    </button>
+  </div>
+
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="../assets/libs/aos-master/dist/aos.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <script src="../assets/js/liquid-effect-pro.js"></script>
+
+  <script>
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const link = event.currentTarget;
+      const submenu = link.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu')) {
+        submenu.classList.toggle('show');
+        link.classList.toggle('show');
+      }
+    }
+  </script>
+  <script src="../assets/js/opportunities-site.js"></script>
+  <script src="../assets/js/contact-site.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      SheOrbitsContact.init();
+      var params = new URLSearchParams(window.location.search);
+      var program = params.get('program');
+      var intent = params.get('intent');
+      if (program) {
+        SheOrbitsContact.setActiveTab('participant');
+        SheOrbitsOpportunities.prefillContactForm(program, intent);
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("participantForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const submitBtn = form.querySelector("button[type=submit]");
+      const status = document.getElementById("formStatus");
+      const formData = new FormData(form);
+
+      submitBtn.disabled = true;
+      status.textContent = "Submitting...";
+
+      fetch("https://script.google.com/macros/s/AKfycbziuf8_V1CGqHe9ryenHrOF-tHGWlCHqQB5vb_8L7O0Ycn9DDcYKTy3mivUhj79Ic5Y/exec", {
+        method: "POST",
+        body: formData
+      })
+        .then(() => {
+          status.textContent = "Thank you! Your application has been submitted.";
+          form.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          status.textContent = "Something went wrong. Please try again or email us directly.";
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
+
+</body>
+
+</html>

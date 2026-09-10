@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""Update Opportunities navigation across HTML pages."""
+
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+HTML_DIR = ROOT / "html"
+
+DESKTOP_DROPDOWN = """<div class="nav-item has-dropdown">
+            <a href="programs.html" class="nav-link">Opportunities <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu-desktop dropdown-menu-opportunities">
+              <div class="dropdown-column">
+                <div class="dropdown-section-title">Ongoing</div>
+                <a href="programs.html#ongoing-programs" class="dropdown-item">Programs</a>
+                <a href="programs.html#ongoing-courses" class="dropdown-item">Courses</a>
+                <a href="programs.html#ongoing-fellowships" class="dropdown-item">Fellowships</a>
+                <a href="programs.html#ongoing-internships" class="dropdown-item">Internships</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="dropdown-section-title">Upcoming</div>
+                <a href="programs.html#upcoming-panels" class="dropdown-item">Panels</a>
+                <a href="programs.html#upcoming-competitions" class="dropdown-item">Competitions</a>
+                <a href="programs.html#upcoming-events" class="dropdown-item">Events</a>
+                <a href="programs.html#upcoming-conferences" class="dropdown-item">Conferences</a>
+                <a href="programs.html#upcoming-workshops" class="dropdown-item">Workshops</a>
+              </div>
+            </div>
+          </div>"""
+
+MOBILE_SUBMENU = """<ul class="submenu list-unstyled ps-4 mt-2">
+                      <li class="fw-bold text-primary fs-8">Ongoing</li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#ongoing-programs">Programs</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#ongoing-courses">Courses</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#ongoing-fellowships">Fellowships</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#ongoing-internships">Internships</a></li>
+                      <li class="fw-bold text-primary fs-8 mt-2">Upcoming</li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#upcoming-panels">Panels</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#upcoming-competitions">Competitions</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#upcoming-events">Events</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#upcoming-conferences">Conferences</a></li>
+                      <li><a class="text-dark text-decoration-none" href="programs.html#upcoming-workshops">Workshops</a></li>
+                    </ul>"""
+
+FOOTER_OPPORTUNITIES = """<li><a href="programs.html" class="footer-link fw-bold">Opportunities</a></li>
+              <li><span class="footer-link text-white-50" style="font-size: 0.75rem; letter-spacing: 0.08em;">ONGOING</span></li>
+              <li><a href="programs.html#ongoing-programs" class="footer-link">Programs</a></li>
+              <li><a href="programs.html#ongoing-courses" class="footer-link">Courses</a></li>
+              <li><a href="programs.html#ongoing-fellowships" class="footer-link">Fellowships</a></li>
+              <li><a href="programs.html#ongoing-internships" class="footer-link">Internships</a></li>
+              <li><span class="footer-link text-white-50" style="font-size: 0.75rem; letter-spacing: 0.08em;">UPCOMING</span></li>
+              <li><a href="programs.html#upcoming-panels" class="footer-link">Panels</a></li>
+              <li><a href="programs.html#upcoming-competitions" class="footer-link">Competitions</a></li>
+              <li><a href="programs.html#upcoming-events" class="footer-link">Events</a></li>
+              <li><a href="programs.html#upcoming-conferences" class="footer-link">Conferences</a></li>
+              <li><a href="programs.html#upcoming-workshops" class="footer-link">Workshops</a></li>"""
+
+DROPDOWN_CSS = """
+    .desktop-nav .dropdown-menu-desktop.dropdown-menu-opportunities { min-width: 440px; padding: 0.75rem 0.5rem; display: flex; gap: 0; }
+    .desktop-nav .dropdown-menu-opportunities .dropdown-column { flex: 1; min-width: 0; }
+    .desktop-nav .dropdown-menu-opportunities .dropdown-column + .dropdown-column { border-left: 1px solid rgba(255, 255, 255, 0.1); }"""
+
+DETAIL_NAV_CSS = """
+      .desktop-nav .nav-item { position: relative; }
+      .desktop-nav .nav-link .dropdown-arrow { font-size: 8px; transition: transform 0.3s ease; margin-left: 4px; color: #ffffff; }
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+      .desktop-nav .dropdown-menu-desktop { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); min-width: 240px; background: rgba(30, 41, 59, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 0.75rem 0; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); z-index: 1000; }
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-menu-desktop { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+      .desktop-nav .dropdown-section-title { padding: 0.5rem 1.25rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #9CA3AF; }
+      .desktop-nav .dropdown-item { display: block; padding: 0.6rem 1.25rem; color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.2s ease; }
+      .desktop-nav .dropdown-item:hover { background: rgba(255, 255, 255, 0.1); color: #ffffff; padding-left: 1.5rem; }"""
+
+DESKTOP_NAV_BLOCK = f"""<nav class="desktop-nav">
+          <div class="desktop-nav-container">
+            <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+            <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+            <div class="nav-item"><a href="mission-vision.html" class="nav-link">Mission & Vision</a></div>
+            {DESKTOP_DROPDOWN}
+            <div class="nav-item"><a href="sectors.html" class="nav-link">Sectors</a></div>
+            <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+            <div class="nav-item"><a href="contact.html" class="nav-link nav-cta">Apply Now</a></div>
+          </div>
+        </nav>"""
+
+MOBILE_NAV_BLOCK = """<ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item"><a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20" class="img-fluid animate-spin">Home</a></li>
+                    <li class="header-item"><a href="about.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20" class="img-fluid animate-spin">About</a></li>
+                    <li class="header-item"><a href="mission-vision.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20" class="img-fluid animate-spin">Mission & Vision</a></li>
+                    <li class="header-item">
+                      <a href="programs.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark has-submenu" onclick="toggleSubmenu(event)"><img src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20" class="img-fluid animate-spin">Opportunities</a>
+                      """ + MOBILE_SUBMENU + """
+                    </li>
+                    <li class="header-item"><a href="sectors.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20" class="img-fluid animate-spin">Sectors</a></li>
+                    <li class="header-item"><a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20" class="img-fluid animate-spin">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </ul>"""
+
+
+def add_dropdown_css(text: str) -> str:
+    if "dropdown-menu-opportunities" in text:
+        return text
+    marker = ".desktop-nav .dropdown-divider"
+  if marker in text:
+    insert = DROPDOWN_CSS + "\n    .desktop-nav .dropdown-divider { height: 1px; background: rgba(255, 255, 255, 0.1); margin: 0.5rem 1rem; }"
+    if ".desktop-nav .dropdown-divider {" in text or "dropdown-menu-opportunities" in text:
+      return text
+    return text.replace(marker, marker + insert, 1)
+    marker = ".desktop-nav .dropdown-item:hover"
+    if marker in text:
+        idx = text.find(marker)
+        end = text.find("\n", idx)
+        return text[: end + 1] + DROPDOWN_CSS + text[end + 1 :]
+    return text
+
+
+def replace_desktop_dropdown(text: str) -> str:
+    pattern = re.compile(
+        r"<div class=\"nav-item has-dropdown\">.*?<div class=\"dropdown-menu-desktop\">.*?</div>\s*</div>",
+        re.DOTALL,
+    )
+    if not pattern.search(text):
+        return text
+    return pattern.sub(DESKTOP_DROPDOWN, text, count=1)
+
+
+def replace_mobile_submenu(text: str) -> str:
+    pattern = re.compile(
+        r"<ul class=\"submenu list-unstyled ps-4 mt-2\">.*?</ul>",
+        re.DOTALL,
+    )
+    if "Opportunities</a>" not in text and "Opportunities <span" not in text:
+        return text
+    return pattern.sub(MOBILE_SUBMENU, text, count=1)
+
+
+def replace_footer(text: str) -> str:
+    pattern = re.compile(
+        r"<li><a href=\"#\" class=\"footer-link fw-bold\">Opportunities</a></li>.*?"
+        r"(?:<li><a href=\"events\.html\" class=\"footer-link\">Events</a></li>|"
+        r"<li><a href=\"internships\.html\" class=\"footer-link\">Internships</a></li>)",
+        re.DOTALL,
+    )
+    if not pattern.search(text):
+        return text
+    return pattern.sub(FOOTER_OPPORTUNITIES, text, count=1)
+
+
+def upgrade_detail_page(text: str) -> str:
+    if "dropdown-menu-opportunities" in text:
+        return text
+
+    if ".desktop-nav .nav-cta" in text and ".desktop-nav .dropdown-menu-desktop" not in text:
+        text = text.replace(
+            ".desktop-nav .nav-cta { margin-left: 0.5rem;",
+            DETAIL_NAV_CSS + DROPDOWN_CSS + "\n      .desktop-nav .nav-cta { margin-left: 0.5rem;",
+            1,
+        )
+
+    text = re.sub(
+        r"<nav class=\"desktop-nav\">.*?</nav>",
+        DESKTOP_NAV_BLOCK,
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+
+    text = re.sub(
+        r"<ul class=\"dropdown-menu dropdown-menu-end p-4\">.*?</ul>\s*</div>\s*</div>",
+        MOBILE_NAV_BLOCK + "\n          </div>\n        </div>",
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+
+    if "function toggleSubmenu" not in text:
+        text = text.replace(
+            "</body>",
+            "<script>\n  function toggleSubmenu(event) {\n    event.preventDefault();\n    event.stopPropagation();\n    const link = event.currentTarget;\n    const submenu = link.nextElementSibling;\n    if (submenu && submenu.classList.contains('submenu')) {\n      submenu.classList.toggle('show');\n      link.classList.toggle('show');\n    }\n  }\n</script>\n</body>",
+        )
+
+    if "has-submenu" not in text:
+        submenu_css = """
+    .has-submenu { cursor: pointer; position: relative; }
+    .submenu { display: none; padding-left: 20px; margin-top: 10px; max-height: 300px; overflow-y: auto; border-left: 2px solid rgba(107, 114, 128, 0.2); }
+    .submenu.show { display: block; }"""
+        text = text.replace("</style>", submenu_css + "\n  </style>", 1)
+
+    return text
+
+
+def update_file(path: Path) -> bool:
+    original = path.read_text()
+    updated = original
+    updated = add_dropdown_css(updated)
+    updated = replace_desktop_dropdown(updated)
+    updated = replace_mobile_submenu(updated)
+    updated = replace_footer(updated)
+
+    if path.name in {"programs.html", "program-detail.html", "sector-detail.html"}:
+        updated = upgrade_detail_page(updated)
+
+    if updated != original:
+        path.write_text(updated)
+        return True
+    return False
+
+
+def main() -> None:
+    changed = []
+    for path in sorted(HTML_DIR.glob("*.html")):
+        if path.name == "404.html":
+            continue
+        if update_file(path):
+            changed.append(path.name)
+    print("Updated:", ", ".join(changed) if changed else "none")
+
+
+if __name__ == "__main__":
+    main()

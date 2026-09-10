@@ -1,0 +1,3370 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHE ORBITS - Empowering Women in Space Industry</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg?v=she-orbits-2" />
+  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/she-orbits-theme.css?v=she-orbits-10" />
+
+  <!-- Smooth Scroll CSS -->
+
+
+
+  <style>
+    img {
+      padding: 3px;
+    }
+
+    .header {
+      background: transparent !important;
+      border-top: none !important;
+    }
+
+    .header-menu .dropdown-menu {
+      background-color: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      min-width: 200px;
+      margin-top: 10px;
+    }
+
+    .has-submenu {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .has-submenu::after {
+      content: "▼";
+      font-size: 10px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+
+    .has-submenu.show::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .submenu {
+      display: none;
+      padding-left: 20px;
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border-left: 2px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .submenu::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .submenu::-webkit-scrollbar-track {
+      background: rgba(99, 102, 241, 0.1);
+      border-radius: 2px;
+    }
+
+    .submenu::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 2px;
+    }
+
+    .submenu::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 102, 241, 0.6);
+    }
+
+    .submenu.show {
+      display: block;
+    }
+
+    .submenu li {
+      margin-bottom: 8px !important;
+    }
+
+    .submenu .fw-bold {
+      font-size: 11px !important;
+      margin-bottom: 6px !important;
+      margin-top: 8px !important;
+    }
+
+    .submenu a {
+      transition: all 0.3s ease;
+      display: block;
+      padding: 3px 0;
+      font-size: 14px !important;
+    }
+
+    .submenu a:hover {
+      color: #6366f1 !important;
+      transform: translateX(5px);
+      display: inline-block;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    @media (min-width: 992px) {
+      .header .btn-group {
+        display: none !important;
+      }
+
+      .desktop-nav {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .desktop-nav-container {
+        display: flex;
+        align-items: center;
+        background: rgba(30, 41, 59, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.5rem 0.75rem;
+        gap: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .desktop-nav .nav-item {
+        position: relative;
+      }
+
+      .desktop-nav .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0.85rem 1.25rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        border-radius: 40px;
+      }
+
+      .desktop-nav .nav-link:hover {
+        color: #a5b4fc;
+      }
+
+      .desktop-nav .nav-link .dropdown-arrow {
+        font-size: 8px;
+        transition: transform 0.3s ease;
+        margin-left: 4px;
+        color: #ffffff;
+      }
+
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
+      .desktop-nav .dropdown-menu-desktop {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        min-width: 240px;
+        background: rgba(30, 41, 59, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 0.75rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+      }
+
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-menu-desktop {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .desktop-nav .dropdown-section-title {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #a5b4fc;
+      }
+
+      .desktop-nav .dropdown-item {
+        display: block;
+        padding: 0.6rem 1.25rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .desktop-nav .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        padding-left: 1.5rem;
+      }
+
+      .desktop-nav .dropdown-menu-desktop.dropdown-menu-opportunities {
+        /* min-width: 440px; */
+        padding: 0.75rem 0.5rem;
+        display: flex;
+        gap: 0;
+      }
+
+      .desktop-nav .dropdown-menu-opportunities .dropdown-column {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .desktop-nav .dropdown-menu-opportunities .dropdown-column+.dropdown-column {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .desktop-nav .dropdown-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 0.5rem 1rem;
+      }
+
+      .desktop-nav .nav-cta {
+        margin-left: 0.5rem;
+        padding: 0.85rem 1.75rem;
+        background: rgba(99, 102, 241, 0.8);
+        color: #fff !important;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .desktop-nav .nav-cta:hover {
+        background: rgba(165, 180, 252, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        color: #fff !important;
+      }
+    }
+
+    .sectors-showcase {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, #0a0a1a 0%, #111827 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sectors-showcase::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .sectors-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sectors-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .sectors-subtitle {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .sectors-grid-photo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sector-photo-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(31, 41, 55, 0.75), rgba(17, 24, 39, 0.9));
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      height: 100%;
+    }
+
+    .sector-photo-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(129, 140, 248, 0.55);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .sector-photo-link {
+      display: flex;
+      flex-direction: column;
+      /* height: 100%; */
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sector-photo-wrap {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: rgba(15, 23, 42, 0.8);
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .sector-photo-wrap img {}
+
+    .sector-photo-card:hover .sector-photo-wrap img {
+      transform: scale(1.06);
+    }
+
+    .sector-photo-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      padding: 1.5rem 1.25rem;
+      flex: 1;
+    }
+
+    .sector-photo-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .sector-photo-status {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .sector-photo-card.is-active .sector-photo-status {
+      color: #a5b4fc;
+    }
+
+    .sector-photo-card.is-coming-soon .sector-photo-status {
+      color: #9ca3af;
+    }
+
+    .sector-photo-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .sector-photo-card:hover .sector-photo-btn {
+      background: rgba(99, 102, 241, 0.35);
+      border-color: rgba(165, 180, 252, 0.65);
+    }
+
+    .sectors-load-error {
+      color: rgba(255, 255, 255, 0.75);
+      text-align: center;
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+
+
+
+    .programs-preview-block {
+      margin-top: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .programs-preview-heading {
+      color: #fff;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .programs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .programs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+    }
+
+    .program-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(31, 41, 55, 0.75), rgba(17, 24, 39, 0.9));
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(129, 140, 248, 0.55);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .program-photo-wrap {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: rgba(15, 23, 42, 0.8);
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .program-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .program-card:hover .program-photo-wrap img {
+      transform: scale(1.06);
+    }
+
+    .program-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.25rem 1.25rem 1.5rem;
+      flex: 1;
+    }
+
+    .program-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .program-card-lifecycle {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .program-card.is-ongoing .program-card-lifecycle {
+      color: #a5b4fc;
+    }
+
+    .program-card.is-upcoming .program-card-lifecycle {
+      color: #9ca3af;
+    }
+
+    .program-card-description {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin: 0;
+      flex: 1;
+    }
+
+    .program-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: auto;
+    }
+
+    .program-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+
+    .program-btn-discover {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .program-btn-discover:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    .program-btn-cta {
+      border: 1px solid rgba(165, 180, 252, 0.45);
+      background: rgba(99, 102, 241, 0.25);
+      color: #fff;
+    }
+
+    .program-btn-cta:hover {
+      background: rgba(99, 102, 241, 0.45);
+      color: #fff;
+    }
+
+    .programs-load-error {
+      color: rgba(255, 255, 255, 0.75);
+      margin: 0;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+
+
+    /* Space-themed background with stars */
+    .services {
+      background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1428 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated stars layer 1 */
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 60px 70px, white, transparent),
+        radial-gradient(1px 1px at 50px 50px, white, transparent),
+        radial-gradient(1px 1px at 130px 80px, white, transparent),
+        radial-gradient(2px 2px at 90px 10px, white, transparent),
+        radial-gradient(1px 1px at 150px 120px, white, transparent),
+        radial-gradient(1px 1px at 200px 40px, white, transparent),
+        radial-gradient(2px 2px at 250px 90px, white, transparent),
+        radial-gradient(1px 1px at 180px 150px, white, transparent),
+        radial-gradient(1px 1px at 300px 60px, white, transparent);
+      background-size: 350px 200px;
+      background-repeat: repeat;
+      opacity: 0.6;
+      animation: twinkle 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    /* Animated stars layer 2 for depth */
+    .services::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(1px 1px at 40px 60px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 100px 100px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 170px 30px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 220px 110px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 280px 50px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 320px 130px, rgba(255, 255, 255, 0.8), transparent);
+      background-size: 350px 200px;
+      background-repeat: repeat;
+      opacity: 0.4;
+      animation: twinkle 3s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    /* Ensure content is above stars */
+    .services .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Space-themed accent color */
+    .services .bg-primary {
+      background-color: #6366f1 !important;
+    }
+
+    /* Glow effect on active tab */
+    .services .nav-link.active {
+      color: #818cf8 !important;
+      text-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+    }
+
+    /* Dynamic News Styles */
+    .news-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+    }
+
+    .news-loading-spinner {
+      border: 4px solid rgba(99, 102, 241, 0.1);
+      border-top: 4px solid #6366f1;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .news-error {
+      padding: 2rem;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 8px;
+      color: #dc2626;
+      text-align: center;
+    }
+
+    .news-timestamp {
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.6);
+      margin-top: 0.5rem;
+    }
+
+    .news-source {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: rgba(99, 102, 241, 0.15);
+      color: #6366f1;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+    }
+
+
+    .update-status {
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.5);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .header .dropdown-item-wrapper {
+      position: relative;
+    }
+
+    .header .dropdown-submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 140px;
+      background: #fff;
+      /* match your dropdown's background */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      z-index: 10;
+      flex-direction: column;
+    }
+
+    .header .dropdown-item-wrapper:hover .dropdown-submenu {
+      display: flex;
+    }
+
+    .header .dropdown-subitem {
+      display: block;
+      padding: 8px 16px;
+      white-space: nowrap;
+      color: inherit;
+      /* match your existing link color */
+      text-decoration: none;
+    }
+
+    .header .dropdown-subitem:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .header .submenu-item-wrapper {
+      position: relative;
+    }
+
+    .header .submenu-flyout {
+      display: none;
+    }
+
+    .fit-image {
+      width: 100%;
+      height: 300px;
+      /* set to whatever fixed height your card needs */
+      overflow: hidden;
+      /* clips anything that spills past the rounded corners */
+      border-radius: 12px;
+      /* match your card's corner radius */
+      position: relative;
+    }
+
+    .fit-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* fills the box, crops overflow instead of stretching */
+      object-position: center;
+      /* adjust to e.g. "center top" if the crop cuts off the subject's head */
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- Updated Header with Logo -->
+
+  <header class="header border-4 border-primary border-top w-100">
+    <div class="container">
+      <div class="header-wrapper d-flex align-items-center justify-content-between">
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="desktop-nav">
+          <div class="desktop-nav-container">
+            <div class="nav-item"><a href="../" class="nav-link">Home</a></div>
+            <div class="nav-item"><a href="/about/" class="nav-link">About</a></div>
+            <div class="nav-item"><a href="/mission-vision/" class="nav-link">Mission & Vision</a></div>
+            <div class="nav-item has-dropdown">
+              <a href="/opportunities/" class="nav-link">Opportunities <span class="dropdown-arrow">▼</span></a>
+              <div class="dropdown-menu-desktop dropdown-menu-opportunities">
+                <div class="dropdown-column">
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#programs">Programs</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#programs">Ongoing</a>
+                      <a class="dropdown-subitem" href="#programs">Upcoming</a>
+                      <a class="dropdown-subitem" href="#programs">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#courses">Courses</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#courses">Ongoing</a>
+                      <a class="dropdown-subitem" href="#courses">Upcoming</a>
+                      <a class="dropdown-subitem" href="#courses">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#internships">Internships</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#internships">Ongoing</a>
+                      <a class="dropdown-subitem" href="#internships">Upcoming</a>
+                      <a class="dropdown-subitem" href="#internships">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#fellowships">Fellowships</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#fellowships">Ongoing</a>
+                      <a class="dropdown-subitem" href="#fellowships">Upcoming</a>
+                      <a class="dropdown-subitem" href="#fellowships">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#research">Research Programs</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#research">Ongoing</a>
+                      <a class="dropdown-subitem" href="#research">Upcoming</a>
+                      <a class="dropdown-subitem" href="#research">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#competitions-challenges">Competitions & Challenges</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#competitions-challenges">Ongoing</a>
+                      <a class="dropdown-subitem" href="#competitions-challenges">Upcoming</a>
+                      <a class="dropdown-subitem" href="#competitions-challenges">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#events">Events</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#events">Ongoing</a>
+                      <a class="dropdown-subitem" href="#events">Upcoming</a>
+                      <a class="dropdown-subitem" href="#events">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#talks-panels">Talks & Panels</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#talks-panels">Ongoing</a>
+                      <a class="dropdown-subitem" href="#talks-panels">Upcoming</a>
+                      <a class="dropdown-subitem" href="#talks-panels">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#webinars">Webinars</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#webinars">Ongoing</a>
+                      <a class="dropdown-subitem" href="#webinars">Upcoming</a>
+                      <a class="dropdown-subitem" href="#webinars">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#workshops">Workshops</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#workshops">Ongoing</a>
+                      <a class="dropdown-subitem" href="#workshops">Upcoming</a>
+                      <a class="dropdown-subitem" href="#workshops">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#conferences">Conferences</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#conferences">Ongoing</a>
+                      <a class="dropdown-subitem" href="#conferences">Upcoming</a>
+                      <a class="dropdown-subitem" href="#conferences">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#missions-simulations">Missions & Simulations</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#missions-simulations">Ongoing</a>
+                      <a class="dropdown-subitem" href="#missions-simulations">Upcoming</a>
+                      <a class="dropdown-subitem" href="#missions-simulations">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="#astronaut-training">Astronaut Trainings</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="#astronaut-training">Ongoing</a>
+                      <a class="dropdown-subitem" href="#astronaut-training">Upcoming</a>
+                      <a class="dropdown-subitem" href="#astronaut-training">Previous</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item"><a href="/sectors/" class="nav-link">Sectors</a></div>
+            <div class="nav-item"><a href="/contact/" class="nav-link">Contact</a></div>
+            <div class="nav-item"><a href="/contact/" class="nav-link nav-cta">Apply Now</a></div>
+          </div>
+        </nav>
+
+        <!-- MOBILE HAMBURGER MENU -->
+
+        <div class="d-flex align-items-center gap-4 ms-auto">
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item"><a href="./" aria-current="true"
+                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Home</a></li>
+                    <li class="header-item"><a href="/about/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">About</a></li>
+                    <li class="header-item"><a href="/mission-vision/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Mission & Vision</a></li>
+                    <li class="header-item">
+                      <a href="/opportunities/" class="header-link hstack gap-2 fs-7 fw-bold text-dark has-submenu"
+                        onclick="toggleSubmenu(event)"><img src="../assets/images/svgs/secondary-leaf.svg" alt=""
+                          width="20" height="20" class="img-fluid animate-spin">Opportunities</a>
+                      <ul class="submenu list-unstyled ps-4 mt-2">
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#programs">Programs</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#programs">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#programs">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#programs">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#courses">Courses</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#courses">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#courses">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#courses">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#internships">Internships</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#internships">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#internships">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#internships">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#fellowships">Fellowships</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#fellowships">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#fellowships">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#fellowships">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#research">Research Programs</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#research">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#research">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#research">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="#competitions-challenges">Competitions & Challenges</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#competitions-challenges">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#competitions-challenges">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#competitions-challenges">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#events">Events</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#events">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#events">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#events">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#talks-panels">Talks & Panels</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#talks-panels">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#talks-panels">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#talks-panels">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#webinars">Webinars</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#webinars">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#webinars">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#webinars">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#workshops">Workshops</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#workshops">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#workshops">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#workshops">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#conferences">Conferences</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#conferences">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#conferences">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block" href="#conferences">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#missions-simulations">Missions &
+                            Simulations</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#missions-simulations">Ongoing</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#missions-simulations">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#missions-simulations">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block" href="#astronaut-training">Astronaut
+                            Trainings</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block" href="#astronaut-training">Ongoing</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#astronaut-training">Upcoming</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="#astronaut-training">Previous</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="header-item"><a href="/sectors/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Sectors</a></li>
+                    <li class="header-item"><a href="/contact/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="page-wrapper overflow-hidden">
+
+    <!-- Banner Section -->
+    <section class="banner-section position-relative d-flex align-items-end min-vh-100">
+      <a href="./" class="banner-hero-logo" aria-label="SHE ORBITS home">
+        <img src="../assets/images/logos/logo-light.svg?v=she-orbits-8" alt="SHE ORBITS" width="112" height="34">
+      </a>
+
+      <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+        <source src="../assets/images/backgrounds/banner-video.mp4" type="video/mp4" />
+      </video>
+      <div class="container">
+        <div class="d-flex flex-column gap-4 pb-8 position-relative z-1">
+          <div class="row align-items-center">
+            <div class="col-xl-6">
+              <div class="d-flex align-items-center gap-4 banner-hero-copy" data-aos="fade-up" data-aos-delay="100"
+                data-aos-duration="1000">
+                <img src="../assets/images/svgs/primary-leaf.svg" alt="" class="img-fluid animate-spin">
+                <p class="mb-0 text-white fs-5 text-opacity-90">Pioneering <span class="text-primary">women's leadership
+                    in space exploration</span> through Aerospace, Space industry, Space exploration Innovation,
+                  education, and groundbreaking aerospace research.</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-end gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="200"
+            data-aos-duration="1000">
+            <h1 class="mb-0 fs-16 text-white lh-1">SHE ORBITS</h1>
+            <a href="/contact/" class="p-1 ps-7 bg-primary rounded-pill" aria-label="Apply now">
+              <span class="bg-white round-52 rounded-circle d-flex align-items-center justify-content-center">
+                <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats & Facts Section -->
+    <section class="stats-facts py-5 py-lg-11 py-xl-12 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row gap-7 gap-xl-0">
+          <div class="col-xl-4 col-xxl-4">
+            <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+              data-aos-duration="1000">
+              <span
+                class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">01</span>
+              <hr class="border-line">
+              <span class="badge text-bg-dark">Why Choose Us</span>
+            </div>
+          </div>
+          <div class="col-xl-8 col-xxl-7">
+            <div class="d-flex flex-column gap-9">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Empowering Women in Space Industry</h2>
+                    <p class="fs-5 mb-0">SHE ORBITS is a multidisciplinary Space &amp; STEM global company dedicated to
+                      advancing women's participation in aerospace technology, satellite missions, and space
+                      exploration. We bridge the gender gap in STEM through quality training, global recognition,
+                      practical research, and 30+ space and STEM sectors where learners can discover their path into the
+                      future space industry.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row gap-5">
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">1000+</h2>
+                    <p class="mb-0">Women Trained in Aerospace Technology</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="300"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">50+</h2>
+                    <p class="mb-0">Space Research Projects Completed</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="400"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">10+</h2>
+                    <p class="mb-0">International Space Partnerships</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="400"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">30+</h2>
+                    <p class="mb-0">Space Sectors Across Different Fields</p>
+                  </div>
+                </div>
+              </div>
+              <a href="/about/" class="btn" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <span class="btn-text">Learn More About Our Mission</span>
+                <iconify-icon icon="lucide:arrow-up-right"
+                  class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute bottom-0 start-0" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+        <img src="../assets/images/backgrounds/stats-facts-bg.svg" alt="" class="img-fluid">
+      </div>
+    </section>
+
+    <!-- SECTORS SHOWCASE SECTION -->
+    <section class="sectors-showcase">
+      <div class="stars" id="starsContainer"></div>
+
+      <div class="sectors-header" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="sectors-title">Space & STEM Sectors We Pioneer</h2>
+        <p class="sectors-subtitle">Discover 30 interdisciplinary pathways where girls can lead humanity's journey
+          beyond Earth — from engineering and medicine to policy, business, arts, and future human space systems. To
+          explore any sector in detail, just click on it.</p>
+      </div>
+
+
+
+
+      <div id="homeSectorsGrid" class="sectors-grid-photo" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" aria-live="polite"></div>
+
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="d-flex flex-column gap-5 gap-xl-11">
+        <div class="container">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">02</span>
+                <hr class="border-line">
+                <span class="badge text-bg-dark">Our Research</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Our Research Projects</h2>
+                    <p class="fs-5 mb-0">SHE ORBITS advances interdisciplinary research across autonomy, satellite
+                      systems, orbital dynamics, astronaut health, and Earth observation—turning ambitious ideas into
+                      publishable, mission-ready insight.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-3">
+          <div class="featured-projects-grid" aria-label="SHE ORBITS research projects">
+
+            <!-- ==================== PROJECT 01 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/research-projects/research-project-1.jpg"
+                  alt="Cyber-Resilient Satellite Collision Avoidance research" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Cyber-Resilient Satellite Collision Avoidance via Deep Reinforcement Learning: An End-to-End PPO
+                  Framework with Adversarial Robustness
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  An AI-driven research project developing an autonomous satellite collision avoidance framework for Low
+                  Earth Orbit (LEO)
+                  using Deep Reinforcement Learning and Proximal Policy Optimization (PPO). The system enables
+                  intelligent, fuel-efficient
+                  maneuver planning while enhancing resilience against adversarial cyber threats, contributing to safer
+                  and more
+                  autonomous satellite operations.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Deep Reinforcement Learning</span>
+                  <span class="badge border">Autonomous Satellite Navigation</span>
+                  <span class="badge border">Space Cybersecurity</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 02 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/research-projects/research-project-2.jpg"
+                  alt="Design and Operations of Small Satellites in LEO" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Design and Operations of Small Satellites in Low Earth Orbit
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  A Pre-Phase A/Phase A conceptual design study for a generic 12U LEO CubeSat bus, covering orbit
+                  selection, subsystem
+                  architecture (ADCS, EPS, C&DH, structures/thermal), mass/power budgets, and the full mission lifecycle
+                  from fabrication
+                  through launch, operations, and end-of-life disposal in compliance with debris mitigation guidelines.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">CubeSat design</span>
+                  <span class="badge border">LEO mission lifecycle</span>
+                  <span class="badge border">Small satellite systems engineering</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 03 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/research-projects/research-project-3.jpg"
+                  alt="Spacecraft Formation Flying in Retrograde Orbits" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Dynamics and Control of Spacecraft Formation Flying in Retrograde Orbits
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  A technical review examining relative-motion dynamics (HCW, T-H, Yamanaka-Ankersen) and control
+                  strategies (PID, LQR,
+                  MPC, distributed/cooperative) for spacecraft formation flying in retrograde orbital regimes, with
+                  emphasis on J2 and
+                  third-body perturbations, collision avoidance, and emerging machine learning/multi-agent RL approaches
+                  for autonomous
+                  GNC.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Spacecraft formation flying</span>
+                  <span class="badge border">Retrograde orbit dynamics</span>
+                  <span class="badge border">Autonomous GNC</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 04 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/research-projects/research-project-4.png"
+                  alt="Effects of Space Radiation on Human Health" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Effects of Space Radiation on Human Health in Low Earth Orbit
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  A literature review examining how galactic cosmic rays, solar particle events, and trapped radiation
+                  affect astronaut
+                  health in LEO (with ISS and Tiangong as case studies), covering molecular, cellular, CNS,
+                  cardiovascular, ocular, and
+                  reproductive effects, current shielding/countermeasure strategies, and key research gaps such as the
+                  lack of long-term
+                  human dose-response data.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Space radiation biology</span>
+                  <span class="badge border">Astronaut health risks</span>
+                  <span class="badge border">LEO dosimetry</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 05 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/research-projects/research-project-5.png"
+                  alt="Exploring Lagrange Points for Space Observation" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Exploring Lagrange Points for Space Observation Missions
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  A study of the five Lagrange points arising from the Circular Restricted Three-Body Problem, covering
+                  their derivation,
+                  stability properties (unstable collinear vs. stable triangular points), and their use in real
+                  missions—including SOHO
+                  and DSCOVR at L1, JWST, WMAP, and Planck at L2, and Chang'e 4's Queqiao relay at Earth-Moon L2—along
+                  with future
+                  prospects for L4/L5 as sites for stable long-term structures.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Lagrange points</span>
+                  <span class="badge border">Three-body problem</span>
+                  <span class="badge border">Space telescope orbits</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 06 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/research-projects/research-project-6.png"
+                  alt="Satellite Coverage Analysis for Disaster Monitoring" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Satellite Coverage Analysis for Disaster Monitoring: A Review of Orbital Mechanics, Ground Track
+                  Analysis and Satellite
+                  Observation Techniques
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  This study analyzes satellite coverage, ground tracks, and revisit times for disaster monitoring,
+                  using RISAT-1 over
+                  flood-prone Assam as the primary case study (with MENA and China's Jianghan Plain as secondary
+                  regions). It evaluates
+                  SAR-based flood detection and satellite pass patterns to assess how effectively different orbital
+                  configurations support
+                  real-time disaster response.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Satellite Coverage</span>
+                  <span class="badge border">SAR Flood Detection</span>
+                  <span class="badge border">Revisit Time Analysis</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 07 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-07.jpg"
+                  alt="Legal Counsel Memo – Launch of an Italian Private AI-Enabled Earth Observation Satellite"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Legal Counsel Memo – Launch of an Italian Private AI-Enabled Earth Observation Satellite
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  A legal roadmap for an Italian New Space startup developing an AI-enabled Earth observation satellite,
+                  covering authorization, registration, liability, cybersecurity, export controls, debris mitigation,
+                  and
+                  AI governance.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">AI in Space</span>
+                  <span class="badge border">Earth Observation</span>
+                  <span class="badge border">Space Regulation</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 08 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-08.jpg"
+                  alt="The Artemis Accords and Space Resource Extraction" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  The Artemis Accords and Space Resource Extraction
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Examines the legal framework surrounding space resource extraction under the Artemis Accords and the
+                  Outer
+                  Space Treaty, including resource utilization, safety zones, and competing international approaches.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Artemis Accords</span>
+                  <span class="badge border">Space Resources</span>
+                  <span class="badge border">International Law</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 09 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-09.jpg"
+                  alt="The End of the ISS? Legal Implications of the Deorbiting of the International Space Station"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  The End of the ISS? Legal Implications of the Deorbiting of the International Space Station
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Explores the legal and environmental implications of ISS deorbiting, including international
+                  responsibility,
+                  jurisdiction, liability, safety, and potential marine environmental impacts.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">ISS</span>
+                  <span class="badge border">Liability</span>
+                  <span class="badge border">Space Sustainability</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 10 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-10.jpg" alt="Space Tourism and Criminal Liability"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Space Tourism and Criminal Liability: Who Is Responsible When a Crime Happens in Space?
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Investigates criminal jurisdiction in commercial space tourism and proposes an international framework
+                  for
+                  determining jurisdiction, cooperation, evidence handling, and responsibility for crimes in space.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Space Tourism</span>
+                  <span class="badge border">Criminal Law</span>
+                  <span class="badge border">Jurisdiction</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 11 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-11.jpg"
+                  alt="From Prevention to Action: The Challenge of Space Debris" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  From Prevention to Action: The Challenge of Space Debris
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Examines the transition from preventing space debris to actively remediating it, addressing ownership,
+                  liability, jurisdiction, authorization, and the governance of active debris removal.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Space Debris</span>
+                  <span class="badge border">ADR</span>
+                  <span class="badge border">Space Sustainability</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ==================== PROJECT 12 ==================== -->
+            <article class="featured-project-card" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-12.gif" alt="Iridium 33 – Kosmos 2251"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">Iridium 33 – Kosmos 2251</h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Analyzes the 2009 collision between Iridium 33 and Kosmos 2251, focusing on fault, negligence,
+                  liability,
+                  collision avoidance, and the legal challenges created by orbital debris.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Orbital Collision</span>
+                  <span class="badge border">Liability</span>
+                  <span class="badge border">Space Debris</span>
+                </div>
+              </div>
+            </article>
+
+
+            <!-- ================================================= -->
+            <!--                DISCOVER MORE BUTTON                -->
+            <!-- ================================================= -->
+
+            <div id="discover-more-wrapper" class="discover-more-wrapper w-full text-center">
+              <button id="discover-more" type="button" class="btn btn-primary" style="width: fit-content">
+                Discover More
+                <iconify-icon icon="lucide:arrow-down" class="ms-2"></iconify-icon>
+              </button>
+            </div>
+
+
+            <!-- ================================================= -->
+            <!--              HIDDEN PROJECTS START                -->
+            <!-- ================================================= -->
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-13.jpg" alt="Space Insurance" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">Space Insurance</h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Explores insurance across the space mission lifecycle, from pre-launch and launch to in-orbit
+                  operations
+                  and third-party liability, highlighting its role in managing commercial space risks.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Space Insurance</span>
+                  <span class="badge border">Risk Management</span>
+                  <span class="badge border">Liability</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-14.jpg"
+                  alt="Before Liftoff: Legal Counsel's Roadmap for Launching a Commercial Earth-Observation Satellite"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Before Liftoff: Legal Counsel’s Roadmap for Launching a Commercial Earth-Observation Satellite
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Provides a practical legal roadmap for a commercial Earth-observation mission, covering launch
+                  licensing,
+                  remote sensing, spectrum, registration, insurance, cybersecurity, export controls, and debris
+                  mitigation.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Earth Observation</span>
+                  <span class="badge border">Commercial Space</span>
+                  <span class="badge border">Licensing</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-15.jpg"
+                  alt="Policy Brief for a First Private Satellite Mission" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">Policy Brief for a First Private Satellite Mission</h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Proposes a regulatory framework for a government authorizing its first private satellite mission,
+                  addressing licensing, registration, insurance, ITU requirements, cybersecurity, debris, and national
+                  security.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Satellite Licensing</span>
+                  <span class="badge border">Regulation</span>
+                  <span class="badge border">Policy</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-16.jpg"
+                  alt="Legal Memorandum for a Startup: Pre-Launch Compliance" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Legal Memorandum for a Startup: Pre-Launch Compliance
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Examines the legal requirements facing an Italian Earth-observation startup before launch, including
+                  authorization, licensing, registration, insurance, spectrum, export controls, and end-of-life
+                  obligations.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Compliance</span>
+                  <span class="badge border">Licensing</span>
+                  <span class="badge border">Earth Observation</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-17.jpg"
+                  alt="Kosmos 954 – Damage Caused by a Space Object" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Kosmos 954 – Damage Caused by a Space Object
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Analyzes the 1978 Kosmos 954 nuclear satellite accident and the resulting radioactive contamination in
+                  Canada under the Outer Space Treaty and Liability Convention.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Kosmos 954</span>
+                  <span class="badge border">Liability</span>
+                  <span class="badge border">Nuclear Spacecraft</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-18.jpg" alt="The 2021 Russian ASAT Test"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  The 2021 Russian ASAT Test: Space Security, Responsibility, and the Challenge of Protecting the
+                  Orbital
+                  Environment
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Examines the destruction of Cosmos 1408, the resulting orbital debris, and the international legal
+                  questions surrounding state responsibility, liability, and destructive ASAT testing.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">ASAT</span>
+                  <span class="badge border">Orbital Debris</span>
+                  <span class="badge border">State Responsibility</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-19.png"
+                  alt="The 2021 Russian ASAT Test and International Legal Governance" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  The 2021 Russian ASAT Test and International Legal Governance
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Studies the legal implications of the 2021 Russian ASAT test, focusing on orbital debris, state
+                  responsibility, attribution, and the need for stronger international restrictions.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">ASAT</span>
+                  <span class="badge border">Space Governance</span>
+                  <span class="badge border">Orbital Debris</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-20.jpg"
+                  alt="Personal Reflection on AI and Space Law Making" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Personal Reflection on AI and Space Law Making
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Explores emerging legal challenges created by autonomous AI systems in space, including collision
+                  risks,
+                  fault-based liability, safety audits, transparency, and algorithmic decision-making.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">AI</span>
+                  <span class="badge border">Space Law</span>
+                  <span class="badge border">Autonomous Systems</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-21.jpg" alt="SpaceX Falcon 9 Moon Crash"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">SpaceX Falcon 9 Moon Crash</h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Examines the legal implications of a spent Falcon 9 upper stage impacting the Moon, particularly the
+                  distinction between physical alteration of celestial bodies and legally compensable damage.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Lunar Activities</span>
+                  <span class="badge border">Liability</span>
+                  <span class="badge border">Space Resources</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-22.jpg"
+                  alt="Advising a Government That Wants to Authorize Its First Private Satellite Mission"
+                  loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  Advising a Government That Wants to Authorize Its First Private Satellite Mission
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Provides a government-focused framework for authorizing and supervising a private satellite mission
+                  under
+                  international space law and national regulatory requirements.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Authorization</span>
+                  <span class="badge border">Supervision</span>
+                  <span class="badge border">Space Regulation</span>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="featured-project-card more-project" data-aos="fade-up" data-aos-duration="1000">
+              <div class="featured-project-image fit-image">
+                <img src="../assets/images/portfolio/portfolio-img-23.png"
+                  alt="2030 Space Program: The Need for a Stronger Legal Framework" loading="lazy">
+                <div class="featured-project-overlay">
+                  <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+                    <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-white"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+              <div class="featured-project-body">
+                <h3 class="featured-project-title">
+                  2030 Space Program: The Need for a Stronger Legal Framework
+                </h3>
+                <p class="mb-0 text-dark text-opacity-70">
+                  Analyzes future space initiatives up to 2030, emphasizing regulatory gaps, international cooperation,
+                  and policy adaptations required for sustainable space operations.
+                </p>
+                <div class="featured-project-tags">
+                  <span class="badge border">Space Policy</span>
+                  <span class="badge border">2030 Strategy</span>
+                  <span class="badge border">Legal Framework</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section - Updated with Space Theme -->
+
+    <section class="services py-5 py-lg-11 py-xl-12" id="services">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-10">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">03</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-dark bg-white">Ongoing Opportunities</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 text-white">Space Industry Programs</h2>
+                    <p class="fs-5 mb-0 text-white text-opacity-70">Comprehensive aerospace programs designed to empower
+                      women with cutting-edge skills in satellite technology, mission planning, space research, and
+                      leadership in the global space industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="programs-preview-block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+            <h3 class="programs-preview-heading">Ongoing Opportunities</h3>
+            <div id="homeOngoingPrograms" class="programs-grid" aria-live="polite"></div>
+          </div>
+          <div class="programs-preview-block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <h3 class="programs-preview-heading">Upcoming Opportunities</h3>
+            <div id="homeUpcomingPrograms" class="programs-grid" aria-live="polite"></div>
+          </div>
+          <a href="/opportunities/" class="btn border border-white border-opacity-25 mt-2" data-aos="fade-up"
+            data-aos-delay="300" data-aos-duration="1000">
+            <span class="btn-text">Explore all opportunities</span>
+            <iconify-icon icon="lucide:arrow-up-right"
+              class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us Section -->
+    <section class="why-choose-us py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="row justify-content-between gap-5 gap-xl-0">
+
+          <!-- here here -->
+
+          <!-- Why Choose SHE ORBITS -->
+          <div class="col-xxl-7">
+            <div class="d-flex flex-column gap-4">
+
+              <div>
+
+                <div class="flex mb-3">
+                  <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <span
+                      class="mt-1 round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">04</span>
+                    <hr class="border-line bg-white">
+                    <span class="badge text-dark bg-white mt-0 fs-8">Why Choose SHE ORBITS</span>
+                  </div>
+                </div>
+
+                <p class="mb-3 fs-5 text-dark text-opacity-70" data-aos="fade-right" data-aos-delay="300"
+                  data-aos-duration="1000">
+                  Where women turn ambition into real opportunities in the space industry.
+                </p>
+
+                <p class="mb-0 text-dark text-opacity-70" data-aos="fade-right" data-aos-delay="400"
+                  data-aos-duration="1000">
+                  SHE ORBITS is built exclusively for women who want to learn, innovate, and build their future in
+                  space.
+                  We bridge the gap between women, knowledge, the space industry, and real missions—creating pathways
+                  that go beyond traditional education.
+                </p>
+              </div>
+
+              <div class="row g-3">
+
+                <!-- 01 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">01</span>
+                      Women-Only. Purpose-Built.
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">A dedicated environment exclusively for women in space and STEM.</li>
+                      <li class="mb-2">Designed to help women learn, collaborate, lead, and grow with confidence.</li>
+                      <li>Built around the unique needs and ambitions of women in STEM.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">02</span>
+                      Connected to the Real Space Industry
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Direct industrial connection to the space sector.</li>
+                      <li class="mb-2">Exposure to real industry practices, challenges, and technologies.</li>
+                      <li>Access to real industry opportunities and experiences.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">03</span>
+                      From Learning to Real Missions
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Knowledge is only the beginning.</li>
+                      <li class="mb-2">Pathways from learning and research toward real engineering projects.</li>
+                      <li>Gain experience that goes beyond the classroom.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">04</span>
+                      Industry-Relevant Skills
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Skills and knowledge that matter in the evolving space sector.</li>
+                      <li class="mb-2">Aerospace, satellite technologies, and Earth observation.</li>
+                      <li>AI, data science, astronomy, and emerging space applications.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">05</span>
+                      Multidisciplinary by Design
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Space challenges require more than one discipline.</li>
+                      <li class="mb-2">Bringing science, engineering, technology, and innovation together.</li>
+                      <li>Approach complex space challenges from multiple perspectives.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 06 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">06</span>
+                      From Ideas to Impact
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Transform learning into research, projects, and solutions.</li>
+                      <li class="mb-2">Develop innovations with real-world potential.</li>
+                      <li>Focus on meaningful impact—not simply certificates.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 07 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">07</span>
+                      Opportunities to Build &amp; Lead
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Take responsibility and contribute to projects and missions.</li>
+                      <li class="mb-2">Develop ideas and turn them into meaningful contributions.</li>
+                      <li>Grow as future leaders in the space industry.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 08 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">08</span>
+                      A Community With a Purpose
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">A focused community of women who share an ambition for space.</li>
+                      <li class="mb-2">Connect, collaborate, learn, and grow together.</li>
+                      <li>Become active contributors to the future of space.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Our Promise -->
+              <div class="mt-4 p-4 p-lg-5 rounded-4 bg-light" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">
+
+                <span class="badge text-bg-primary text-white mb-3">
+                  OUR PROMISE
+                </span>
+
+                <h2 class="mb-2 text-white">
+                  We don't just prepare women for the space industry.
+                </h2>
+
+                <p class="mb-0 fs-5 text-white text-opacity-70">
+                  We create opportunities for them to become part of it.
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xxl-5">
+            <div class="row">
+
+              <div class="col-lg-6 mb-7 mb-lg-0">
+                <div class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                  <div class="position-relative">
+                    <img src="../assets/images/home-services/services-img-2.jpeg" alt="" class="img-fluid w-100">
+                  </div>
+                  <div class="card bg-dark">
+                    <div class="card-body d-flex flex-column gap-7">
+                      <div>
+                        <h2 class="mb-0 text-white">30+</h2>
+                        <p class="mb-0 text-white text-opacity-70">Space sectors across science, technology,
+                          engineering, business, health, sustainability, policy, arts, and future space fields.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-7 mb-lg-0">
+                <div class="card border h-100 position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="300"
+                  data-aos-duration="1000">
+                  <span
+                    class="border rounded-circle round-490 d-block position-absolute top-0 start-50 translate-middle"></span>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="mb-0">1000+</h2>
+                      <p class="mb-0 text-dark">Girls Engaged Globally</p>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                      <a href="./" class="logo-dark">
+                        <img src="../assets/images/logos/logo-dark-2.png" alt="SHE ORBITS" class="img-fluid">
+                      </a>
+                      <p class="mb-0 fs-5 text-dark">Hundreds of girls worldwide have joined SHE ORBITS workshops,
+                        mentorships, programs, and research experiences—building skills, confidence, and pathways into
+                        the global space industry.</p>
+                    </div>
+                  </div>
+
+                  <span
+                    class="border rounded-circle round-490 d-block position-absolute top-100 start-50 translate-middle"></span>
+                </div>
+
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-4 mt-5" data-aos="fade-left" data-aos-delay="300"
+              data-aos-duration="1000">
+              <img src="../assets/images/39.jpg" alt="Astronauts working in space" class="w-100 object-fit-cover"
+                style="height: 780px;">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <!-- <section class="testimonial py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">05</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Success Stories</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Voices from Our Community</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Hear from participants, mentors, and partner organizations who
+                      are shaping the SHE ORBITS community. Their stories reflect the confidence, technical growth,
+                      leadership support, and global collaboration that help girls turn curiosity about space into real
+                      academic, research, and career pathways.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gap-7 gap-lg-0">
+            <div class="col-lg-4 col-xl-3 d-flex align-items-stretch">
+              <div class="card bg-primary w-100" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column gap-5 gap-xl-11 justify-content-between">
+                  <div class="d-flex flex-column gap-4">
+                    <p class="mb-0">Alumna Testimonial</p>
+                    <h4 class="mb-0">SHE ORBITS gave me the confidence and skills to lead a team developing
+                      next-generation propulsion systems. The mentorship here is unparalleled!</h4>
+                  </div>
+                  <div class="hstack gap-3">
+                    <img src="../assets/images/testimonial/testimonial-1.jpg" alt=""
+                      class="img-fluid rounded-circle overflow-hidden flex-shrink-0" width="60" height="60">
+                    <div>
+                      <h5 class="mb-1 fw-normal">Maria Rodriguez</h5>
+                      <p class="mb-0">Propulsion Engineer, SpaceX</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xl-6 d-flex align-items-stretch">
+              <div class="card bg-dark w-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column gap-5 gap-xl-11 justify-content-between">
+                  <div class="d-flex flex-column gap-4">
+                    <p class="mb-0 text-white text-opacity-70">Partner Testimonial</p>
+                    <h4 class="mb-0 text-white pe-xl-2">SHE ORBITS graduates bring exceptional technical skills and
+                      fresh perspectives to our missions. Their innovative approaches have revolutionized how we think
+                      about space exploration!</h4>
+                    <div class="hstack gap-2">
+                      <ul class="list-unstyled mb-0 hstack gap-1">
+                        <li><a class="hstack" href="javascript:void(0)"><iconify-icon icon="solar:star-bold"
+                              class="fs-6 text-white"></iconify-icon></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><iconify-icon icon="solar:star-bold"
+                              class="fs-6 text-white"></iconify-icon></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><iconify-icon icon="solar:star-bold"
+                              class="fs-6 text-white"></iconify-icon></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><iconify-icon icon="solar:star-bold"
+                              class="fs-6 text-white"></iconify-icon></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><iconify-icon icon="solar:star-bold"
+                              class="fs-6 text-white"></iconify-icon></a></li>
+                      </ul>
+                      <h6 class="mb-0 text-white fw-medium">5.0</h6>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="hstack gap-3">
+                      <img src="../assets/images/testimonial/testimonial-2.jpg" alt=""
+                        class="img-fluid rounded-circle overflow-hidden flex-shrink-0" width="60" height="60">
+                      <div>
+                        <h5 class="mb-1 fw-normal text-white">Dr. James Thompson</h5>
+                        <p class="mb-0 text-white text-opacity-70">Director, NASA Partnerships</p>
+                      </div>
+                    </div>
+                    <span><img src="../assets/images/testimonial/quete.svg" alt="quote"
+                        class="img-fluid flex-shrink-0"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xl-3 d-flex align-items-stretch">
+              <div class="card w-100" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column gap-5 gap-xl-11 justify-content-between">
+                  <div class="d-flex flex-column gap-4">
+                    <p class="mb-0">Student Testimonial</p>
+                    <h4 class="mb-0">The hands-on experience with real satellites and missions is incredible. I'm not
+                      just learning theory - I'm building the future of space exploration!</h4>
+                  </div>
+                  <div class="hstack gap-3">
+                    <img src="../assets/images/testimonial/testimonial-3.jpg" alt=""
+                      class="img-fluid rounded-circle overflow-hidden flex-shrink-0" width="60" height="60">
+                    <div>
+                      <h5 class="mb-1 fw-normal">Priya Sharma</h5>
+                      <p class="mb-0">Current Trainee, Batch 2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Partners section hidden until real partner logos are provided. -->
+    <section class="py-5 py-lg-8 d-none" aria-hidden="true">
+      <div class="container">
+        <div class="d-flex flex-column gap-8" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <p class="fs-5 mb-0 text-center text-dark">Our Global Partners & Collaborators</p>
+          <div class="marquee w-100 d-flex align-items-center overflow-hidden">
+            <div class="marquee-content d-flex align-items-center gap-8">
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-1.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-2.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-3.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-4.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-5.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-1.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-2.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-3.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-4.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="../assets/images/pricing/partners-5.svg"
+                  alt="partners" class="img-fluid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">05</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">FAQs</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-9">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Frequently Asked Questions</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Learn more about our programs, admission requirements, and how
+                      SHE ORBITS is creating pathways for women to lead in the global space industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-xl-8">
+              <div class="accordion accordion-flush" id="accordionFlushExample" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">What
+                      is SHE ORBITS?</button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">SHE ORBITS is a global space company dedicated to
+                      empowering the next generation of innovators through education, research, innovation, and
+                      international collaboration across the space sector. Our mission is to create accessible
+                      opportunities that inspire individuals to contribute to the future of space exploration and
+                      technology.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Who
+                      can apply to SHE ORBITS programs?</button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Our programs are open to women and girls from all
+                      backgrounds who are passionate about space and STEM. We offer programs for high school students,
+                      university students, and professionals looking to transition into aerospace careers. No prior
+                      space experience required - just curiosity and commitment!</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseEight" aria-expanded="false"
+                      aria-controls="flush-collapseEight">Are your programs
+                      available internationally?</button>
+                  </h2>
+                  <div id="flush-collapseEight" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes. SHE ORBITS is an international company with
+                      participants from more than 60 countries. Most of our educational programs, workshops, and events
+                      are delivered online, allowing learners worldwide to participate.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">Do
+                      participants receive certificates?</button>
+                  </h2>
+                  <div id="flush-collapseNine" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes. Participants who successfully complete the
+                      program requirements receive an official SHE ORBITS Certificate of Completion. Some programs may
+                      also include additional recognition for outstanding performance or project excellence.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">Are
+                      the programs free?</button>
+                  </h2>
+                  <div id="flush-collapseTen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Many of our initiatives are offered free of charge
+                      to expand access to high-quality space education. Some specialized programs may have different
+                      participation models, which will always be announced in advance.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseEleven" aria-expanded="false"
+                      aria-controls="flush-collapseEleven">How can I become
+                      a SHE ORBITS Ambassador?</button>
+                  </h2>
+                  <div id="flush-collapseEleven" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Applications for the SHE ORBITS Ambassadors Program
+                      open periodically throughout the year. Ambassadors represent SHE ORBITS in their universities and
+                      communities by organizing events, promoting space education, and supporting our global
+                      initiatives.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+                      aria-controls="flush-collapseTwelve">Can I join more
+                      than one program?</button>
+                  </h2>
+                  <div id="flush-collapseTwelve" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Absolutely. Participants are encouraged to join
+                      multiple programs and explore different sectors based on their interests and career goals.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThirteen" aria-expanded="false"
+                      aria-controls="flush-collapseThirteen">Does SHE
+                      ORBITS conduct research?</button>
+                  </h2>
+                  <div id="flush-collapseThirteen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes. SHE ORBITS supports research and innovation
+                      across multiple disciplines, including artificial intelligence, satellite technologies, Earth
+                      observation, orbital mechanics, space medicine, cybersecurity, sustainability, and future space
+                      exploration. We actively encourage participants to engage in research projects and collaborative
+                      initiatives.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+                      aria-controls="flush-collapseFourteen">How can I
+                      collaborate with SHE ORBITS?</button>
+                  </h2>
+                  <div id="flush-collapseFourteen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">We welcome collaborations with universities,
+                      research institutions, companies, nonprofits, and industry experts. Partnership opportunities
+                      include educational programs, research projects, workshops, conferences, outreach initiatives, and
+                      strategic collaborations.</div>
+                  </div>
+                </div>
+                <div class="accordion-item ">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFifteen" aria-expanded="false"
+                      aria-controls="flush-collapseFifteen">How do I stay
+                      informed about upcoming
+                      opportunities?</button>
+                  </h2>
+                  <div id="flush-collapseFifteen" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Follow SHE ORBITS on our official social media
+                      platforms and regularly visit our website to receive updates on new programs, research
+                      initiatives, workshops, conferences, competitions, and global opportunities. Still have questions?
+                      Email contact@sheorbitscompany.com — we typically respond within 48 hours.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">What
+                      kind of projects will I work on?</button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Participants work on real space missions including
+                      satellite design and launch, Mars habitat development, asteroid mining research, and space
+                      medicine experiments. You'll have hands-on experience with mission control operations, data
+                      analysis from active satellites, and collaborative projects with international space agencies.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Do
+                      you offer scholarships or financial aid?</button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Yes! We offer full and partial scholarships based on
+                      merit and need. Over 60% of our participants receive some form of financial assistance. We also
+                      have partnerships with corporations and space agencies that sponsor talented women. Our goal is to
+                      ensure financial barriers don't prevent anyone from reaching the stars.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">What
+                      career opportunities are available after completing the program?</button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Our graduates work at leading space agencies (NASA,
+                      ESA, ISRO), private space companies (SpaceX, Blue Origin, Virgin Galactic), and research
+                      institutions worldwide. Career paths include satellite engineering, mission planning, space
+                      medicine, astrobiology, and space policy. With our 95% job placement rate, you'll be
+                      well-positioned for your dream space career.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">How
+                      long are the programs and can I participate remotely?</button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">Programs range from 6-week intensive bootcamps to
+                      2-year comprehensive training programs. We offer both on-site programs at our state-of-the-art
+                      facilities and hybrid options combining online learning with periodic hands-on sessions.
+                      International participants can join our virtual labs and collaborate on global projects through
+                      our digital platform.</div>
+                  </div>
+                </div>
+                <div class="accordion-item border-bottom">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseLast" aria-expanded="false"
+                      aria-controls="flush-collapseLast">Still have questions?</button>
+                  </h2>
+                  <div id="flush-collapseLast" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body pt-0 fs-5 text-dark">
+                      Our team is here to help.
+                      <br> 📧 Email: <a
+                        href="https://mailto:contact@sheorbitscompany.com">contact@sheorbitscompany.com</a>
+                      <br> 💬 Response time: Within 48 hours
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent news Section - DYNAMIC -->
+    <section class="Recent-news bg-light-gray py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">06</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Latest Updates</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Space Industry News</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Stay updated with the latest space exploration news, space
+                      industry developments, and breakthrough research from organizations shaping humanity's journey
+                      beyond Earth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="newsContainer" class="news-container w-100">
+              <div class="row">
+
+                <div class="col-xl-6 mb-7 mb-xl-0">
+                  <div class="resources d-flex flex-column gap-6">
+
+                    <a href="https://www.nasa.gov/mission/artemis-iii/?utm_source=chatgpt.com" target="_blank"
+                      rel="noopener noreferrer"
+                      class="resources-img resources-img-first position-relative overflow-hidden d-block" style="
+           background-image: url('../assets/images/news/news-post-1.jpg');
+           background-size: contain;
+           background-position: center;
+  background-repeat: no-repeat;
+           height: 300px;
+           border-radius: 12px;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+         " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </a>
+
+                    <div class="resources-details">
+                      <p class="mb-0">Launch: 2007</p>
+
+                      <a href="https://www.nasa.gov/mission/artemis-iii/?utm_source=chatgpt.com" target="_blank"
+                        rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <h4 class="mb-0" style="cursor: pointer; color: #000;">
+                          Artemis III: NASA’s Next Giant Leap Toward the Moon
+                        </h4>
+                      </a>
+                      <p>NASA’s Artemis III is planned for 2027 as a crewed demonstration mission designed to test
+                        critical systems required for
+                        future lunar surface missions. The mission will launch four astronauts aboard Orion and
+                        demonstrate rendezvous and
+                        docking operations with commercial lunar landing systems in low Earth orbit.</p>
+
+                      <span class="news-source">NASA</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6 mb-7 mb-xl-0">
+                  <div class="resources d-flex flex-column gap-6">
+
+                    <a href="https://science.nasa.gov/mission/roman-space-telescope/?utm_source=chatgpt.com"
+                      target="_blank" rel="noopener noreferrer"
+                      class="resources-img resources-img-first position-relative overflow-hidden d-block" style="
+           background-image: url('../assets/images/news/news-post-2.jpg');
+           background-size: cover;
+           background-position: center 65%;
+  background-repeat: no-repeat;
+           height: 300px;
+           border-radius: 12px;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+         " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </a>
+
+                    <div class="resources-details">
+                      <p class="mb-0">Launch: August 30, 2026</p>
+
+                      <a href="https://science.nasa.gov/mission/roman-space-telescope/?utm_source=chatgpt.com"
+                        target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <h4 class="mb-0" style="cursor: pointer; color: #000;">
+                          Nancy Grace Roman Space Telescope: A New Window on the Universe
+                        </h4>
+                      </a>
+                      <p>NASA’s Nancy Grace Roman Space Telescope launched on August 30, 2026, aboard a SpaceX Falcon
+                        Heavy. The observatory is
+                        designed to investigate dark energy, exoplanets, and the large-scale structure of the universe,
+                        expanding our ability to
+                        study the cosmos with wide-field observations.</p>
+
+                      <span class="news-source">NASA</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6 mb-7 mb-xl-0">
+                  <div class="resources d-flex flex-column gap-6">
+
+                    <a href="https://www.nasa.gov/mission/artemis-iii/?utm_source=chatgpt.com" target="_blank"
+                      rel="noopener noreferrer"
+                      class="resources-img resources-img-first position-relative overflow-hidden d-block" style="
+           background-image: url('../assets/images/news/news-post-3.jpg');
+           background-size: cover;
+           background-position: center 17%;
+  background-repeat: no-repeat;
+           height: 300px;
+           border-radius: 12px;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+         " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    </a>
+
+                    <div class="resources-details">
+                      <p class="mb-0">Launch: 2026</p>
+
+                      <a href="https://www.nasa.gov/mission/artemis-iii/?utm_source=chatgpt.com" target="_blank"
+                        rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <h4 class="mb-0" style="cursor: pointer; color: #000;">
+                          Falcon Heavy: SpaceX’s Heavy-Lift Powerhouse
+                        </h4>
+                      </a>
+                      <p>SpaceX’s Falcon Heavy remains one of the world’s most powerful operational launch vehicles,
+                        combining three Falcon
+                        rocket cores to deliver large payloads to orbit. Its capabilities support demanding government,
+                        commercial, scientific,
+                        and deep-space missions—including the launch of NASA’s Nancy Grace Roman Space Telescope in
+                        2026.</p>
+
+                      <span class="news-source">SpaceX</span>
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="update-status">
+            <small>Last updated: <span id="lastUpdateTime">Loading...</span> • Auto-refreshes every 30 minutes</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get in touch Section -->
+    <section class="get-in-touch py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-10">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">07</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Join Us</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Launch Your Space Journey</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between gap-7 gap-xl-0">
+            <div class="col-xl-3">
+              <p class="mb-0 fs-5" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Ready to break
+                barriers and reach for the stars? Join our community of pioneering women in space. Share your dreams
+                with us—we're here to help you achieve them.</p>
+            </div>
+            <div class="col-xl-8">
+              <form id="contactForm" class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">
+                <div><input type="text" class="form-control border-bottom border-dark" id="formGroupExampleInput"
+                    name="fullName" placeholder="Your Name"></div>
+                <div><input type="email" class="form-control border-bottom border-dark" id="exampleInputEmail1"
+                    name="email" placeholder="Your Email" aria-describedby="emailHelp"></div>
+                <div><textarea class="form-control border-bottom border-dark" id="exampleFormControlTextarea1"
+                    name="spaceDreams"
+                    placeholder="Tell us about your space aspirations and which program interests you"
+                    rows="3"></textarea></div>
+                <button type="submit" class="btn w-100 justify-content-center">
+                  <span class="btn-text">Apply Now</span>
+                  <iconify-icon icon="lucide:arrow-up-right"
+                    class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm"></iconify-icon>
+                </button>
+                <div id="contactFormStatus" class="mt-2"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer" style="background: linear-gradient(180deg, #111827 0%, #374151 100%); color: #fff;">
+    <div class="container py-6 py-lg-7">
+      <div class="row gy-5 align-items-start justify-content-between">
+        <div class="col-lg-4 text-center text-lg-start">
+          <img src="../assets/images/logos/logo-light.svg?v=she-orbits-2" alt="SHE ORBITS" height="120" class="mb-4">
+          <p class="text-white-50" style="font-size: 15px; line-height: 1.8;">Empowering women to lead humanity's
+            journey to the stars. We are a pioneering space company dedicated to breaking barriers and creating
+            opportunities for women in aerospace technology, research, and exploration.</p>
+        </div>
+        <div class="col-lg-4 text-left">
+          <h6 class="text-uppercase fw-semibold mb-4" style="letter-spacing: 1px; color: #E5E7EB;">Explore</h6>
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <ul class="list-unstyled text-start mb-0">
+              <li><a href="./" class="footer-link">Home</a></li>
+              <li><a href="/about/" class="footer-link">About</a></li>
+              <li><a href="/mission-vision/" class="footer-link">Mission & Vision</a></li>
+              <li><a href="/sectors/" class="footer-link">Sectors</a></li>
+              <li><a href="/contact/" class="footer-link">Contact</a></li>
+            </ul>
+            <ul class="list-unstyled text-start mb-0">
+              <li><a class="footer-link fw-bold" href="#programs">Programs</a></li>
+              <li><a class="footer-link fw-bold" href="#courses">Courses</a></li>
+              <li><a class="footer-link fw-bold" href="#internships">Internships</a></li>
+              <li><a class="footer-link fw-bold" href="#fellowships">Fellowships</a></li>
+              <li><a class="footer-link fw-bold" href="#research">Research Programs</a></li>
+              <li><a class="footer-link fw-bold" href="#competitions-challenges">Competitions & Challenges</a></li>
+              <li><a class="footer-link fw-bold" href="#events">Events</a></li>
+              <li><a class="footer-link fw-bold" href="#talks-panels">Talks & Panels</a></li>
+              <li><a class="footer-link fw-bold" href="#webinars">Webinars</a></li>
+              <li><a class="footer-link fw-bold" href="#workshops">Workshops</a></li>
+              <li><a class="footer-link fw-bold" href="conferences">Conferences</a></li>
+              <li><a class="footer-link fw-bold" href="#missions-simulations">Missions & Simulations</a></li>
+              <li><a class="footer-link fw-bold" href="#astronaut-training">Astronaut Trainings</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-lg-3 text-center text-lg-end">
+          <h6 class="text-uppercase fw-semibold mb-4" style="letter-spacing: 1px; color: #E5E7EB;">Stay Connected with
+            SHE ORBITS</h6>
+          <p class="mb-1"><a href="mailto:contact@sheorbitscompany.com"
+              class="footer-link">contact@sheorbitscompany.com</a></p>
+          <p class="mb-3"><a href="tel:+201014717368" class="footer-link">+20 (101) 471-7368</a></p>
+          <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+            <a href="https://www.instagram.com/she.orbits" class="social-icon" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+            <a href="https://www.linkedin.com/company/she-orbits/" class="social-icon" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+            <a href="https://discord.com/invite/JucgMJ76wS" class="social-icon" target="_blank"
+              rel="noopener noreferrer" aria-label="Discord"><iconify-icon icon="mdi:discord"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-white border-opacity-10 mt-5 pt-3 text-center">
+        <p class="mb-0 text-white-50 small">© 2025 <span style="color:#E5E7EB;">SHE ORBITS</span>. All Rights Reserved |
+          Empowering Women to Reach for the Stars 🚀</p>
+      </div>
+    </div>
+    <style>
+      .footer {
+        position: relative;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+      }
+
+      .footer-link {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+      }
+
+      .footer-link:hover {
+        color: #D1D5DB;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: rgba(165, 180, 252, 0.15);
+        color: #a5b4fc;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        font-size: 20px;
+      }
+
+      .social-icon:hover {
+        background: rgba(165, 180, 252, 0.35);
+        transform: translateY(-3px);
+      }
+
+      .footer h6 {
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+
+        .footer img {
+          height: 80px;
+        }
+
+        .footer-link {
+          font-size: 15px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .footer {
+          padding-top: 5rem;
+          padding-bottom: 4rem;
+        }
+      }
+
+      .discover-more-wrapper {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+      .discover-more-wrapper .btn {
+        width: 100%;
+        min-height: 56px;
+      }
+
+      .more-project {
+        display: none;
+      }
+
+      .program-card-description-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .program-card-type {
+        font-size: 0.85rem;
+        color: var(--text-muted, #9A90C2);
+        margin: 0.25rem 0;
+
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    </style>
+  </footer>
+
+  <div class="get-template hstack gap-2">
+    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
+      id="scrollToTopBtn">
+      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
+    </button>
+  </div>
+
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../assets/libs/aos-master/dist/aos.js"></script>
+
+  <script src="../assets/js/custom.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+  <script src="../assets/js/liquid-effect-pro.js"></script>
+
+  <script>
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const link = event.currentTarget;
+      const submenu = link.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu')) {
+        submenu.classList.toggle('show');
+        link.classList.toggle('show');
+      }
+    }
+
+    $(document).ready(function () {
+
+      $("#discover-more").on("click", function () {
+
+        const $button = $(this);
+        const $wrapper = $("#discover-more-wrapper");
+        const $grid = $(".featured-projects-grid");
+        const $moreProjects = $(".more-project");
+
+        const expanded = $wrapper.hasClass("expanded");
+
+        if (!expanded) {
+
+          // =========================
+          // EXPAND
+          // =========================
+
+          $moreProjects
+            .css("display", "block")
+            .hide()
+            .fadeIn(500);
+
+          // Move button AFTER all projects
+          $wrapper.appendTo($grid);
+
+          $button.html(`
+                Show Less
+                <iconify-icon icon="lucide:arrow-up" class="ms-2"></iconify-icon>
+            `);
+
+          $wrapper.addClass("expanded");
+
+        } else {
+
+          // =========================
+          // COLLAPSE
+          // =========================
+
+          // Move button back after Project 12
+          $wrapper.insertAfter(
+            $grid.find(".featured-project-card").not(".more-project").last()
+          );
+
+          $moreProjects.fadeOut(300, function () {
+            $(this).css("display", "none");
+          });
+
+          $button.html(`
+                Discover More
+                <iconify-icon icon="lucide:arrow-down" class="ms-2"></iconify-icon>
+            `);
+
+          $wrapper.removeClass("expanded");
+        }
+
+      });
+
+    });
+  </script>
+
+  <script src="../assets/js/sectors-site.js"></script>
+
+  <script src="../assets/js/opportunities-site.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      SheOrbitsSectors.renderSectorGrid(document.getElementById('homeSectorsGrid'));
+      SheOrbitsOpportunities.renderHomeProgramsPreview(
+        document.getElementById('homeOngoingPrograms'),
+        document.getElementById('homeUpcomingPrograms')
+      );
+
+      // Initialize news feed
+      fetchAndDisplayNews();
+
+      // Refresh news every 30 minutes
+      setInterval(fetchAndDisplayNews, 30 * 60 * 1000);
+    });
+
+    // Latest Space News with Real Images and Sources
+    const latestSpaceNews = [
+      {
+        title: "NASA Announces New Artemis Lunar Landing Date",
+        date: "September 2024",
+        description: "NASA confirms Artemis III will land humans back on the Moon with a focus on the lunar south pole.",
+        image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=500&fit=crop",
+        source: "NASA Official",
+        link: "https://www.nasa.gov/artemis/"
+      },
+      {
+        title: "SpaceX Completes Record-Breaking Starship Test Flight",
+        date: "September 2024",
+        description: "SpaceX successfully completes 6th Starship integrated flight test with major improvements.",
+        image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800&h=500&fit=crop",
+        source: "SpaceX Updates",
+        link: "https://www.spacex.com/"
+      },
+      {
+        title: "James Webb Discovers Earliest Galaxies Yet",
+        date: "September 2024",
+        description: "JWST reveals the most distant galaxies ever observed, reshaping our understanding of the universe.",
+        image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=500&fit=crop",
+        source: "ESA & NASA",
+        link: "https://www.esa.int/Applications/Observing_the_Earth"
+      }
+    ];
+
+    // Dynamic News Fetching Function
+    async function fetchAndDisplayNews() {
+      const container = document.getElementById('newsContainer');
+      const updateTimeEl = document.getElementById('lastUpdateTime');
+
+      try {
+        // First try to fetch live news
+        const response = await fetch(`https://newsapi.org/v2/everything?q=space%20NASA%20SpaceX%20satellite&sortBy=publishedAt&language=en&pageSize=3`);
+
+        if (response.ok) {
+          const data = await response.json();
+          const articles = data.articles && data.articles.length > 0 ? data.articles : null;
+
+          if (articles) {
+            displayLiveNews(container, articles);
+            updateTimeEl.textContent = new Date().toLocaleTimeString();
+            return;
+          }
+        }
+      } catch (error) {
+        console.log('Live news fetch failed, using curated news');
+      }
+
+      // Use curated news if API fails
+      displayCuratedNews(container);
+      updateTimeEl.textContent = new Date().toLocaleTimeString();
+    }
+
+    // Display Live News from API
+    //   function displayLiveNews(container, articles) {
+    //     const newsHTML = `
+    //       <div class="col-xl-6 mb-7 mb-xl-0">
+    //         <div class="resources d-flex flex-column gap-6">
+    //           <a href="${articles[0].url}" target="_blank" rel="noopener noreferrer" class="resources-img resources-img-first position-relative overflow-hidden d-block" style="background-image: url('${articles[0].urlToImage || 'https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800&h=500&fit=crop'}'); background-size: cover; background-position: center; height: 300px; border-radius: 12px; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    //           </a>
+    //           <div class="resources-details">
+    //             <p class="mb-0">${new Date(articles[0].publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    //             <a href="${articles[0].url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    //               <h4 class="mb-0" style="cursor: pointer; color: #000;">${articles[0].title}</h4>
+    //             </a>
+    //             <span class="news-source">${articles[0].source.name}</span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-md-6 col-xl-3 mb-7 mb-xl-0">
+    //         <div class="resources d-flex flex-column gap-6">
+    //           <a href="${articles[1].url}" target="_blank" rel="noopener noreferrer" class="resources-img position-relative overflow-hidden d-block" style="background-image: url('${articles[1].urlToImage || 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=500&fit=crop'}'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    //           </a>
+    //           <div class="resources-details">
+    //             <p class="mb-0">${new Date(articles[1].publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    //             <a href="${articles[1].url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    //               <h4 class="mb-0" style="cursor: pointer; color: #000;">${articles[1].title}</h4>
+    //             </a>
+    //             <span class="news-source">${articles[1].source.name}</span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-md-6 col-xl-3 mb-7 mb-xl-0">
+    //         <div class="resources d-flex flex-column gap-6">
+    //           <a href="${articles[2].url}" target="_blank" rel="noopener noreferrer" class="resources-img position-relative overflow-hidden d-block" style="background-image: url('${articles[2].urlToImage || 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=500&fit=crop'}'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    //           </a>
+    //           <div class="resources-details">
+    //             <p class="mb-0">${new Date(articles[2].publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    //             <a href="${articles[2].url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    //               <h4 class="mb-0" style="cursor: pointer; color: #000;">${articles[2].title}</h4>
+    //             </a>
+    //             <span class="news-source">${articles[2].source.name}</span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     `;
+    //     container.innerHTML = `<div class="row">${newsHTML}</div>`;
+    //   }
+
+    //   // Display Curated Space News
+    //   function displayCuratedNews(container) {
+    //     const newsHTML = `
+    //       <div class="col-xl-6 mb-7 mb-xl-0">
+    //         <div class="resources d-flex flex-column gap-6">
+    //           <a href="${latestSpaceNews[0].link}" target="_blank" rel="noopener noreferrer" class="resources-img resources-img-first position-relative overflow-hidden d-block" style="background-image: url('${latestSpaceNews[0].image}'); background-size: cover; background-position: center; height: 300px; border-radius: 12px; cursor: pointer; transition: transform 0.3s ease; display: block;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    //           </a>
+    //           <div class="resources-details">
+    //             <p class="mb-0">${latestSpaceNews[0].date}</p>
+    //             <a href="${latestSpaceNews[0].link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    //               <h4 class="mb-0" style="cursor: pointer; color: #000; transition: color 0.3s ease;" onmouseover="this.style.color='#6366f1'" onmouseout="this.style.color='#000'">${latestSpaceNews[0].title}</h4>
+    //             </a>
+    //             <p style="font-size: 0.95rem; color: #666; margin-top: 0.5rem;">${latestSpaceNews[0].description}</p>
+    //             <span class="news-source">${latestSpaceNews[0].source}</span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-md-6 col-xl-3 mb-7 mb-xl-0">
+    //         <div class="resources d-flex flex-column gap-6">
+    //           <a href="${latestSpaceNews[1].link}" target="_blank" rel="noopener noreferrer" class="resources-img position-relative overflow-hidden d-block" style="background-image: url('${latestSpaceNews[1].image}'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    //           </a>
+    //           <div class="resources-details">
+    //             <p class="mb-0">${latestSpaceNews[1].date}</p>
+    //             <a href="${latestSpaceNews[1].link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    //               <h4 class="mb-0" style="cursor: pointer; color: #000; transition: color 0.3s ease;" onmouseover="this.style.color='#6366f1'" onmouseout="this.style.color='#000'">${latestSpaceNews[1].title}</h4>
+    //             </a>
+    //             <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">${latestSpaceNews[1].description}</p>
+    //             <span class="news-source">${latestSpaceNews[1].source}</span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-md-6 col-xl-3 mb-7 mb-xl-0">
+    //         <div class="resources d-flex flex-column gap-6">
+    //           <a href="${latestSpaceNews[2].link}" target="_blank" rel="noopener noreferrer" class="resources-img position-relative overflow-hidden d-block" style="background-image: url('${latestSpaceNews[2].image}'); background-size: cover; background-position: center; height: 200px; border-radius: 12px; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    //           </a>
+    //           <div class="resources-details">
+    //             <p class="mb-0">${latestSpaceNews[2].date}</p>
+    //             <a href="${latestSpaceNews[2].link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    //               <h4 class="mb-0" style="cursor: pointer; color: #000; transition: color 0.3s ease;" onmouseover="this.style.color='#6366f1'" onmouseout="this.style.color='#000'">${latestSpaceNews[2].title}</h4>
+    //             </a>
+    //             <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">${latestSpaceNews[2].description}</p>
+    //             <span class="news-source">${latestSpaceNews[2].source}</span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     `;
+    //     container.innerHTML = `<div class="row">${newsHTML}</div>`;
+    //   }
+    // </script>
+
+  <script>
+    function generateStars() {
+      const container = document.getElementById('starsContainer');
+      if (!container) return;
+      for (let i = 0;i < 50;i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        star.style.opacity = Math.random() * 0.5 + 0.3;
+        container.appendChild(star);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', generateStars);
+  </script>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const submitBtn = form.querySelector("button[type=submit]");
+      const status = document.getElementById("contactFormStatus");
+      const formData = new FormData(form);
+      formData.append("formType", "homepage-contact");
+
+      submitBtn.disabled = true;
+      status.textContent = "Submitting...";
+
+      fetch("https://script.google.com/macros/s/AKfycbziuf8_V1CGqHe9ryenHrOF-tHGWlCHqQB5vb_8L7O0Ycn9DDcYKTy3mivUhj79Ic5Y/exec", {
+        method: "POST",
+        body: formData
+      })
+        .then(() => {
+          status.textContent = "Thank you! We'll be in touch soon.";
+          form.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          status.textContent = "Something went wrong. Please try again or email us directly.";
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
+    });
+  </script>
+
+</body>
+
+</html>

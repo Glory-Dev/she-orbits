@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHE ORBITS - Program Detail</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg?v=she-orbits-2" />
+  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/she-orbits-theme.css?v=she-orbits-10" />
+
+  <style>
+    .header {
+      background: transparent !important;
+      border-top: none !important;
+    }
+
+    .bg-primary,
+    .btn-primary {
+      background-color: #6366f1 !important;
+    }
+
+    .text-primary {
+      color: #6366f1 !important;
+    }
+
+    .btn-primary:hover {
+      background-color: #4f46e5 !important;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    @media (min-width: 992px) {
+      .header .btn-group {
+        display: none !important;
+      }
+
+      .desktop-nav {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .desktop-nav-container {
+        display: flex;
+        align-items: center;
+        background: rgba(30, 41, 59, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.5rem 0.75rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .desktop-nav .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0.85rem 1.25rem;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 40px;
+      }
+
+      .desktop-nav .nav-link:hover {
+        color: #a5b4fc;
+      }
+
+      .desktop-nav .nav-item {
+        position: relative;
+      }
+
+      .desktop-nav .nav-link .dropdown-arrow {
+        font-size: 8px;
+        transition: transform 0.3s ease;
+        margin-left: 4px;
+        color: #ffffff;
+      }
+
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
+      .desktop-nav .dropdown-menu-desktop {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        min-width: 240px;
+        background: rgba(30, 41, 59, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 0.75rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+      }
+
+      .desktop-nav .nav-item.has-dropdown:hover .dropdown-menu-desktop {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .desktop-nav .dropdown-section-title {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #a5b4fc;
+      }
+
+      .desktop-nav .dropdown-item {
+        display: block;
+        padding: 0.6rem 1.25rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .desktop-nav .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        padding-left: 1.5rem;
+      }
+
+      .desktop-nav .dropdown-menu-desktop.dropdown-menu-opportunities {
+        min-width: 440px;
+        padding: 0.75rem 0.5rem;
+        display: flex;
+        gap: 0;
+      }
+
+      .desktop-nav .dropdown-menu-opportunities .dropdown-column {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .desktop-nav .dropdown-menu-opportunities .dropdown-column+.dropdown-column {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .desktop-nav .nav-cta {
+        margin-left: 0.5rem;
+        padding: 0.85rem 1.75rem;
+        background: rgba(99, 102, 241, 0.8);
+        color: #fff !important;
+        border-radius: 50px;
+      }
+    }
+
+    .program-detail-page {
+      background: linear-gradient(180deg, #0a0a1a 0%, #111827 100%);
+      min-height: 100vh;
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+    }
+
+    .program-detail-image {
+      border-radius: 18px;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+    }
+
+    .program-detail-type {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.75rem;
+    }
+
+    .program-detail-lifecycle {
+      display: inline-block;
+      margin-left: 0.75rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .program-detail-lifecycle.is-ongoing {
+      background: rgba(99, 102, 241, 0.2);
+      color: #c7d2fe;
+    }
+
+    .program-detail-lifecycle.is-upcoming {
+      background: rgba(165, 180, 252, 0.2);
+      color: #d1d5db;
+    }
+
+    .program-detail-title {
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 1rem 0;
+    }
+
+    .program-detail-description {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .program-detail-block {
+      margin-top: 1.5rem;
+    }
+
+    .program-detail-heading {
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .program-detail-list {
+      color: rgba(255, 255, 255, 0.75);
+      padding-left: 1.25rem;
+      margin: 0;
+    }
+
+    .program-detail-list li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .header .dropdown-item-wrapper {
+      position: relative;
+    }
+
+    .header .dropdown-submenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 140px;
+      background: #fff;
+      /* match your dropdown's background */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      z-index: 10;
+      flex-direction: column;
+    }
+
+    .header .dropdown-item-wrapper:hover .dropdown-submenu {
+      display: flex;
+    }
+
+    .header .dropdown-subitem {
+      display: block;
+      padding: 8px 16px;
+      white-space: nowrap;
+      color: inherit;
+      /* match your existing link color */
+      text-decoration: none;
+    }
+
+    .header .dropdown-subitem:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .header .submenu-item-wrapper {
+      position: relative;
+    }
+
+    .header .submenu-flyout {
+      display: none;
+    }
+
+    /* .submenu-item-wrapper {
+      position: relative;
+    }
+
+    .submenu-flyout {
+      display: none;
+      position: static;
+      min-width: unset;
+      width: 100%;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      padding-left: 1rem;
+      z-index: auto;
+    }
+
+    .submenu-item-wrapper:hover .submenu-flyout {
+      display: block;
+    }
+
+    .submenu-flyout li a {
+      padding: 6px 16px;
+      white-space: nowrap;
+    }
+
+    .submenu-flyout li a:hover {
+      background: rgba(0, 0, 0, 0.05);
+    } */
+
+    .program-card-description-clamp {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .program-detail-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      /* adjust to match your images, or set a fixed height instead */
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .program-detail-description video {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header border-4 border-primary border-top w-100">
+    <div class="container">
+      <div class="header-wrapper d-flex align-items-center justify-content-between">
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="desktop-nav">
+          <div class="desktop-nav-container">
+            <div class="nav-item"><a href="../" class="nav-link">Home</a></div>
+            <div class="nav-item"><a href="../about/" class="nav-link">About</a></div>
+            <div class="nav-item"><a href="../mission-vision/" class="nav-link">Mission & Vision</a></div>
+            <div class="nav-item has-dropdown">
+              <a href="../opportunities/" class="nav-link">Opportunities <span class="dropdown-arrow">▼</span></a>
+              <div class="dropdown-menu-desktop dropdown-menu-opportunities">
+                <div class="dropdown-column">
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#programs">Programs</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#programs">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#programs">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#programs">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#courses">Courses</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#courses">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#courses">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#courses">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#internships">Internships</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#internships">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#internships">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#internships">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#fellowships">Fellowships</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#fellowships">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#fellowships">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#fellowships">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#research">Research Programs</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#research">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#research">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#research">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#competitions-challenges">Competitions &
+                      Challenges</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#competitions-challenges">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#competitions-challenges">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#competitions-challenges">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#events">Events</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#events">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#events">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#events">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#talks-panels">Talks & Panels</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#talks-panels">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#talks-panels">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#talks-panels">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#webinars">Webinars</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#webinars">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#webinars">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#webinars">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#workshops">Workshops</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#workshops">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#workshops">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#workshops">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#conferences">Conferences</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#conferences">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#conferences">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#conferences">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#missions-simulations">Missions & Simulations</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#missions-simulations">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#missions-simulations">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#missions-simulations">Previous</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-item-wrapper">
+                    <a class="dropdown-item" href="../opportunities/#astronaut-training">Astronaut Trainings</a>
+                    <div class="dropdown-submenu">
+                      <a class="dropdown-subitem" href="../opportunities/#astronaut-training">Ongoing</a>
+                      <a class="dropdown-subitem" href="../opportunities/#astronaut-training">Upcoming</a>
+                      <a class="dropdown-subitem" href="../opportunities/#astronaut-training">Previous</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item"><a href="../sectors/" class="nav-link">Sectors</a></div>
+            <div class="nav-item"><a href="../contact/" class="nav-link">Contact</a></div>
+            <div class="nav-item"><a href="../contact/" class="nav-link nav-cta">Apply Now</a></div>
+          </div>
+        </nav>
+
+        <!-- MOBILE HAMBURGER MENU -->
+
+        <div class="d-flex align-items-center gap-4 ms-auto">
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item"><a href="../" aria-current="true"
+                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Home</a></li>
+                    <li class="header-item"><a href="../about/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">About</a></li>
+                    <li class="header-item"><a href="../mission-vision/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Mission & Vision</a></li>
+                    <li class="header-item">
+                      <a href="../opportunities/" class="header-link hstack gap-2 fs-7 fw-bold text-dark has-submenu"
+                        onclick="toggleSubmenu(event)"><img src="../assets/images/svgs/secondary-leaf.svg" alt=""
+                          width="20" height="20" class="img-fluid animate-spin">Opportunities</a>
+                      <ul class="submenu list-unstyled ps-4 mt-2">
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#programs">Programs</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#programs">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#programs">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#programs">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#courses">Courses</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#courses">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#courses">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#courses">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#internships">Internships</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#internships">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#internships">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#internships">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#fellowships">Fellowships</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#fellowships">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#fellowships">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#fellowships">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#research">Research Programs</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#research">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#research">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#research">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#competitions-challenges">Competitions & Challenges</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#competitions-challenges">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#competitions-challenges">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#competitions-challenges">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#events">Events</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#events">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#events">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#events">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#talks-panels">Talks & Panels</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#talks-panels">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#talks-panels">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#talks-panels">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#webinars">Webinars</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#webinars">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#webinars">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#webinars">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#workshops">Workshops</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#workshops">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#workshops">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#workshops">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#conferences">Conferences</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#conferences">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#conferences">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#conferences">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#missions-simulations">Missions &
+                            Simulations</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#missions-simulations">Ongoing</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#missions-simulations">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#missions-simulations">Previous</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="submenu-item-wrapper">
+                          <a class="text-dark text-decoration-none pb-3 d-block"
+                            href="../opportunities/#astronaut-training">Astronaut
+                            Trainings</a>
+                          <ul class="submenu-flyout list-unstyled">
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#astronaut-training">Ongoing</a>
+                            </li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#astronaut-training">Upcoming</a></li>
+                            <li><a class="text-dark text-decoration-none d-block"
+                                href="../opportunities/#astronaut-training">Previous</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="header-item"><a href="../sectors/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Sectors</a></li>
+                    <li class="header-item"><a href="../contact/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="program-detail-page">
+    <div class="container">
+      <div id="programDetailRoot" class="text-white" aria-live="polite">
+        <p class="text-white text-opacity-70 mb-0">Loading program details...</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="background: linear-gradient(180deg, #111827 0%, #374151 100%); color: #fff;">
+    <div class="container py-5 text-center">
+      <p class="mb-0 text-white-50 small">© 2025 SHE ORBITS. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <div class="get-template hstack gap-2">
+    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
+      id="scrollToTopBtn" type="button" aria-label="Scroll to top">
+      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-white"></iconify-icon>
+    </button>
+  </div>
+
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/aos-master/dist/aos.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <script src="../assets/js/opportunities-site.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      SheOrbitsOpportunities.renderProgramDetail(document.getElementById('programDetailRoot'));
+    });
+  </script>
+  <script>
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const link = event.currentTarget;
+      const submenu = link.nextElementSibling;
+      if (submenu && submenu.classList.contains('submenu')) {
+        submenu.classList.toggle('show');
+        link.classList.toggle('show');
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+{
+  "sectors": [
+    {
+      "id": 1,
+      "slug": "stem",
+      "shortName": "STEM",
+      "name": "STEM",
+      "image": "../assets/images/1.png",
+      "description": "Educational foundation empowering learners through interdisciplinary Science, Technology, Engineering, and Mathematics.",
+      "detail": "The STEM sector serves as the educational foundation of SHE ORBITS, empowering learners through interdisciplinary education in Science, Technology, Engineering, and Mathematics. Designed to cultivate analytical thinking, creativity, and problem-solving skills, this sector introduces participants to the core principles that drive innovation across the global space ecosystem. Through practical projects, technical workshops, and collaborative learning experiences, participants develop the confidence and knowledge required to pursue academic excellence, research, and careers in aerospace, engineering, and emerging technologies.",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "slug": "space-industry",
+      "shortName": "Space Industry",
+      "name": "Space Industry",
+      "image": "../assets/images/2.png",
+      "description": "Insights into the global space economy, organizations, technologies, and commercial opportunities shaping humanity beyond Earth.",
+      "detail": "The Space Industry sector provides comprehensive insights into the rapidly evolving global space economy, exploring the organizations, technologies, and commercial opportunities shaping the future of humanity beyond Earth. Participants gain an understanding of government agencies, private space companies, NewSpace entrepreneurship, mission development, satellite services, launch operations, and international collaboration. This sector prepares future professionals to navigate and contribute to one of the world's fastest-growing industries.",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "slug": "space-navigation",
+      "shortName": "Space Navigation",
+      "name": "Space Navigation",
+      "image": "../assets/images/3.png",
+      "description": "Science and engineering of spacecraft motion, orbital mechanics, trajectory design, and navigation systems.",
+      "detail": "The Space Navigation sector focuses on the science and engineering behind spacecraft motion, orbital mechanics, trajectory design, and navigation systems. Participants explore orbital transfers, mission planning, spacecraft guidance, GNSS technologies, and the mathematical principles governing spaceflight. Through computational tools and real-world mission scenarios, learners develop the skills necessary for designing and analyzing missions in Earth orbit and deep space.",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "slug": "space-communications",
+      "shortName": "Space Communications",
+      "name": "Space Communications",
+      "image": "../assets/images/4.png",
+      "description": "Technologies enabling reliable communication between spacecraft, satellites, ground stations, and mission control.",
+      "detail": "The Space Communications sector introduces the technologies that enable reliable communication between spacecraft, satellites, ground stations, and mission control centers. Topics include radio frequency systems, telemetry, tracking, command systems, deep-space communications, antenna design, optical communication technologies, and future communication infrastructures for lunar and Martian exploration.",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "slug": "space-technology",
+      "shortName": "Space Technology",
+      "name": "Space Technology",
+      "image": "../assets/images/5.png",
+      "description": "Engineering innovations that make modern space exploration possible, from spacecraft systems to emerging tech.",
+      "detail": "The Space Technology sector explores the engineering innovations that make modern space exploration possible. Participants study spacecraft systems, onboard technologies, avionics, sensors, propulsion support systems, mission operations, and emerging technological advancements. Emphasis is placed on understanding how engineering solutions are developed to overcome the challenges of operating in the harsh space environment.",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "slug": "space-medicine",
+      "shortName": "Space Medicine",
+      "name": "Space Medicine",
+      "image": "../assets/images/6.png",
+      "description": "Physiological and medical challenges of human spaceflight, countermeasures, and astronaut healthcare.",
+      "detail": "The Space Medicine sector examines the physiological and medical challenges associated with human spaceflight. Participants investigate the effects of microgravity, radiation exposure, isolation, altered circadian rhythms, and long-duration missions on the human body. The sector also explores countermeasures, astronaut healthcare, biomedical monitoring, and the future of medical support for lunar and interplanetary missions.",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "slug": "space-pharmacy",
+      "shortName": "Space Pharmacy",
+      "name": "Space Pharmacy",
+      "image": "../assets/images/7.png",
+      "description": "Pharmaceutical sciences in space: drug behavior in microgravity and astronaut health for extended missions.",
+      "detail": "The Space Pharmacy sector explores pharmaceutical sciences within the context of space exploration. Participants learn how medications behave under microgravity conditions, how pharmaceutical manufacturing may evolve in space, and the challenges of maintaining astronaut health during extended missions. The sector highlights the growing importance of pharmaceutical innovation for future human exploration.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 8,
+      "slug": "space-agriculture",
+      "shortName": "Space Agriculture",
+      "name": "Space Agriculture",
+      "image": "../assets/images/8.png",
+      "description": "Sustainable food production for long-duration missions and extraterrestrial habitats.",
+      "detail": "The Space Agriculture sector investigates sustainable food production systems for long-duration space missions and extraterrestrial habitats. Participants explore controlled-environment agriculture, hydroponics, aeroponics, plant biology, closed-loop ecosystems, and food security strategies essential for establishing permanent human settlements on the Moon, Mars, and beyond.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 9,
+      "slug": "space-architecture",
+      "shortName": "Space Architecture & Habitat Design",
+      "name": "Space Architecture & Habitat Design",
+      "image": "../assets/images/9.png",
+      "description": "Designing safe, sustainable living environments for astronauts beyond Earth.",
+      "detail": "The Space Architecture & Habitat Design sector focuses on designing safe, sustainable, and functional living environments for astronauts beyond Earth. Participants study habitat engineering, life support integration, structural design, environmental control systems, human-centered architecture, and future concepts for lunar bases, Martian colonies, and deep-space stations.",
+      "status": "active"
+    },
+    {
+      "id": 10,
+      "slug": "space-environment",
+      "shortName": "Space Environment",
+      "name": "Space Environment",
+      "image": "../assets/images/10.png",
+      "description": "Natural conditions that influence spacecraft performance and astronaut safety.",
+      "detail": "The Space Environment sector examines the natural conditions that influence spacecraft performance and astronaut safety. Topics include space weather, solar activity, radiation, plasma environments, orbital debris, atmospheric drag, and environmental monitoring. Participants gain an understanding of how these factors affect mission planning and spacecraft operations.",
+      "status": "active"
+    },
+    {
+      "id": 11,
+      "slug": "space-policy",
+      "shortName": "Space Sustainability",
+      "name": "Sustainability",
+      "image": "../assets/images/11.png",
+      "description": "Responsible and sustainable use of outer space, debris mitigation, and long-term preservation.",
+      "detail": "This sector explores the responsible and sustainable use of outer space. Participants examine orbital sustainability, space debris mitigation, environmental responsibility, international cooperation, and policies that promote the long-term preservation of the space environment while supporting scientific discovery and commercial development.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 12,
+      "slug": "earth-observation",
+      "shortName": "Earth Observation & Climate Science",
+      "name": "Earth Observation & Climate Science",
+      "image": "../assets/images/12.png",
+      "description": "How satellite technologies help understand and protect our planet.",
+      "detail": "The Earth Observation & Climate Science sector demonstrates how satellite technologies contribute to understanding and protecting our planet. Participants explore remote sensing, climate monitoring, disaster management, environmental assessment, land-use analysis, and geospatial intelligence while learning how satellite data supports evidence-based decision making for global sustainability.",
+      "status": "active"
+    },
+    {
+      "id": 13,
+      "slug": "satellite-cubesats",
+      "shortName": "CubeSats",
+      "name": "Satellite Design & CubeSats",
+      "image": "../assets/images/13.png",
+      "description": "Complete lifecycle of satellite development from mission objectives to operations.",
+      "detail": "This sector introduces the complete lifecycle of satellite development, from mission objectives and systems engineering to subsystem integration, testing, launch preparation, and mission operations. Participants gain practical knowledge of CubeSat architecture, payload design, communications, power systems, attitude control, and mission planning.",
+      "status": "active"
+    },
+    {
+      "id": 14,
+      "slug": "planetary-defense",
+      "shortName": "Planetary Defense",
+      "name": "Planetary Defense & Asteroid Science",
+      "image": "../assets/images/14.png",
+      "description": "Detection, characterization, and mitigation of near-Earth objects.",
+      "detail": "The Planetary Defense & Asteroid Science sector focuses on the detection, characterization, and mitigation of near-Earth objects. Participants learn about asteroid dynamics, impact risk assessment, planetary protection strategies, space surveillance systems, and international efforts to safeguard Earth from potential asteroid threats.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 15,
+      "slug": "space-law",
+      "shortName": "Space Law",
+      "name": "Space Law, Policy & Ethics",
+      "image": "../assets/images/15.png",
+      "description": "Legal, ethical, and regulatory frameworks governing activities in outer space.",
+      "detail": "This sector provides a comprehensive understanding of the legal, ethical, and regulatory frameworks governing activities in outer space. Participants study international treaties, national regulations, commercial space law, resource utilization, liability, governance, and ethical challenges associated with future space exploration and commercialization.",
+      "status": "active"
+    },
+    {
+      "id": 16,
+      "slug": "space-economics",
+      "shortName": "Space Economics & Business Innovation",
+      "name": "Space Economics & Business Innovation",
+      "image": "../assets/images/16.png",
+      "description": "Financial, commercial, and entrepreneurial dimensions of the space industry.",
+      "detail": "The Space Economics & Business Innovation sector explores the financial, commercial, and entrepreneurial dimensions of the space industry. Participants learn about space markets, investment strategies, startup development, commercialization of space technologies, business models, and the expanding opportunities within the NewSpace economy.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 17,
+      "slug": "ai-data-science",
+      "shortName": "AI & Data Science in Space Exploration",
+      "name": "AI & Data Science in Space Exploration",
+      "image": "../assets/images/17.png",
+      "description": "AI, machine learning, and data science applied to modern space applications.",
+      "detail": "This sector integrates artificial intelligence, machine learning, and data science with modern space applications. Participants learn how intelligent algorithms support autonomous spacecraft, satellite image analysis, predictive maintenance, mission planning, robotics, and scientific discovery through advanced data analytics.",
+      "status": "active"
+    },
+    {
+      "id": 18,
+      "slug": "space-arts",
+      "shortName": "Space Arts & Science Communication",
+      "name": "Space Arts & Science Communication",
+      "image": "../assets/images/18.png",
+      "description": "Bridging science with creativity, storytelling, design, media, and public engagement.",
+      "detail": "The Space Arts & Science Communication sector bridges science with creativity, storytelling, design, media, and public engagement. Participants develop communication skills that make complex scientific concepts accessible to diverse audiences while promoting scientific literacy and inspiring future generations.",
+      "status": "active"
+    },
+    {
+      "id": 19,
+      "slug": "materials-science",
+      "shortName": "Materials Science & Advanced Manufacturing",
+      "name": "Materials Science & Advanced Manufacturing",
+      "image": "../assets/images/19.png",
+      "description": "Materials and manufacturing technologies used in space systems.",
+      "detail": "This sector examines the materials and manufacturing technologies used in space systems. Participants study lightweight structures, composite materials, additive manufacturing, radiation-resistant materials, thermal protection systems, and advanced fabrication techniques supporting next-generation spacecraft and habitats.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 20,
+      "slug": "deep-space",
+      "shortName": "Deep Space Missions & Interstellar Exploration",
+      "name": "Deep Space Missions & Interstellar Exploration",
+      "image": "../assets/images/20.png",
+      "description": "Scientific and engineering challenges of missions beyond Earth orbit.",
+      "detail": "The Deep Space Missions & Interstellar Exploration sector explores the scientific and engineering challenges associated with missions beyond Earth's orbit. Topics include mission architecture, propulsion concepts, deep-space navigation, spacecraft autonomy, long-duration exploration, and future interstellar ambitions.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 21,
+      "slug": "astrobiology",
+      "shortName": "Astrobiology & Life Sciences",
+      "name": "Astrobiology & Life Sciences",
+      "image": "../assets/images/21.png",
+      "description": "Origin, evolution, and potential existence of life beyond Earth.",
+      "detail": "This sector investigates the origin, evolution, and potential existence of life beyond Earth. Participants explore extremophiles, planetary habitability, biosignatures, planetary protection, biological systems in space, and the scientific search for extraterrestrial life.",
+      "status": "active"
+    },
+    {
+      "id": 22,
+      "slug": "astrophysics",
+      "shortName": "Astrophysics & Astronomy",
+      "name": "Astrophysics & Astronomy",
+      "image": "../assets/images/22.png",
+      "description": "Fundamental principles governing the universe, from stars to cosmology.",
+      "detail": "The Astrophysics & Astronomy sector introduces participants to the fundamental principles governing the universe. Topics include stellar evolution, galaxies, cosmology, black holes, dark matter, exoplanets, observational astronomy, and modern astronomical research.",
+      "status": "active"
+    },
+    {
+      "id": 23,
+      "slug": "planetary-science",
+      "shortName": "Planetary Science & Geology",
+      "name": "Planetary Science & Geology",
+      "image": "../assets/images/23.png",
+      "description": "Geological evolution of planets, moons, asteroids, and other celestial bodies.",
+      "detail": "This sector focuses on the geological evolution of planets, moons, asteroids, and other celestial bodies. Participants study planetary surfaces, volcanism, tectonics, mineralogy, impact cratering, and comparative planetology using data collected by robotic and human exploration missions.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 24,
+      "slug": "gnss",
+      "shortName": "GNSS",
+      "name": "GNSS",
+      "image": "../assets/images/24.png",
+      "description": "Satellite positioning, navigation, timing, and geographic information systems for spatial analysis.",
+      "detail": "The Global Navigation Satellite Systems (GNSS) and Geographic Information Systems (GIS) sector explores satellite-based positioning, navigation, and timing technologies alongside tools to collect, analyze, visualize, and interpret spatial data. Participants learn about GPS, Galileo, GLONASS, BeiDou, digital mapping, geospatial analysis, and real-world applications supporting transportation, Earth observation, robotics, and autonomous systems.",
+      "status": "active"
+    },
+    {
+      "id": 25,
+      "slug": "gis",
+      "shortName": "GIS",
+      "name": "GIS",
+      "image": "../assets/images/25.png",
+      "description": "Explore the science of geospatial data, digital mapping, satellite imagery, and spatial analysis. Learn how GIS technologies integrate location-based data with satellite and remote-sensing information to support navigation, Earth observation, environmental monitoring, infrastructure planning, and intelligent decision-making.",
+      "detail": "The Geographic Information Systems (GIS) sector equips participants with the tools and techniques used to collect, analyze, visualize, and interpret spatial data. Learners develop practical skills in digital mapping, geospatial analysis, satellite imagery interpretation, and decision support for environmental and engineering applications.",
+      "status": "active"
+    },
+    {
+      "id": 26,
+      "slug": "human-society",
+      "shortName": "Future Human Society in Space",
+      "name": "Future Human Society in Space",
+      "image": "../assets/images/26.png",
+      "description": "Long-term vision of human civilization beyond Earth.",
+      "detail": "This interdisciplinary sector explores the long-term vision of human civilization beyond Earth. Participants examine space settlements, governance, economics, psychology, healthcare, education, ethics, and the societal challenges associated with building sustainable communities on other worlds.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 27,
+      "slug": "cybersecurity",
+      "shortName": "Cybersecurity in Space Infrastructure",
+      "name": "Cybersecurity in Space Infrastructure",
+      "image": "../assets/images/27.png",
+      "description": "Protecting satellites, spacecraft, networks, and mission-critical systems from cyber threats.",
+      "detail": "The Cybersecurity in Space Infrastructure sector addresses the protection of satellites, spacecraft, communication networks, and mission-critical systems against cyber threats. Participants explore secure architectures, risk management, cyber resilience, encryption, and emerging challenges in protecting space assets.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 28,
+      "slug": "space-psychology",
+      "shortName": "Space Psychology & Human Factors",
+      "name": "Space Psychology & Human Factors",
+      "image": "../assets/images/28.png",
+      "description": "Psychological, cognitive, and behavioral aspects of human performance in extreme environments.",
+      "detail": "This sector investigates the psychological, cognitive, and behavioral aspects of human performance in extreme environments. Participants study teamwork, stress management, isolation, leadership, habitability, decision-making, and human-centered system design for long-duration missions.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 29,
+      "slug": "space-energy",
+      "shortName": "Space Energy & Power Systems",
+      "name": "Space Energy & Power Systems",
+      "image": "../assets/images/29.png",
+      "description": "Generating, storing, and distributing power for space missions.",
+      "detail": "The Space Energy & Power Systems sector examines the technologies responsible for generating, storing, and distributing power in space missions. Topics include solar arrays, batteries, fuel cells, nuclear power systems, energy management, and future power solutions for lunar and Martian exploration.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 30,
+      "slug": "lunar-economy",
+      "shortName": "Lunar Economy & Resource Utilization",
+      "name": "Lunar Economy & Resource Utilization",
+      "image": "../assets/images/30.png",
+      "description": "Sustainable lunar exploration, ISRU, and commercialization opportunities.",
+      "detail": "The Lunar Economy & Resource Utilization sector explores the emerging opportunities surrounding sustainable lunar exploration and commercialization. Participants examine in-situ resource utilization (ISRU), lunar mining, infrastructure development, transportation systems, economic models, and the role of the Moon in enabling future deep-space exploration.",
+      "status": "coming-soon"
+    },
+    {
+      "id": 31,
+      "slug": "space-philosophy",
+      "shortName": "Philosophy of Space & Cultural Heritage",
+      "name": "Philosophy of Space & Cultural Heritage",
+      "image": "../assets/images/31.png",
+      "description": "Philosophical, historical, ethical, and cultural perspectives on humanity and the cosmos.",
+      "detail": "The Philosophy of Space & Cultural Heritage sector encourages participants to examine humanity's relationship with the cosmos from philosophical, historical, ethical, and cultural perspectives. It explores the societal significance of space exploration, the preservation of humanity's heritage beyond Earth, and the role of space in shaping our collective future.",
+      "status": "coming-soon"
+    }
+  ]
+}
