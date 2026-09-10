@@ -123,7 +123,7 @@
     {
       "id": 13,
       "slug": "satellite-cubesats",
-      "shortName": "CubeSats",
+      "shortName": "Satellite Design & CubeSats",
       "name": "Satellite Design & CubeSats",
       "image": "../assets/images/13.png",
       "description": "Complete lifecycle of satellite development from mission objectives to operations.",
@@ -133,7 +133,7 @@
     {
       "id": 14,
       "slug": "planetary-defense",
-      "shortName": "Planetary Defense",
+      "shortName": "Planetary Defense & Asteroid Science",
       "name": "Planetary Defense & Asteroid Science",
       "image": "../assets/images/14.png",
       "description": "Detection, characterization, and mitigation of near-Earth objects.",
@@ -143,7 +143,7 @@
     {
       "id": 15,
       "slug": "space-law",
-      "shortName": "Space Law",
+      "shortName": "Space Law, Policy & Ethics",
       "name": "Space Law, Policy & Ethics",
       "image": "../assets/images/15.png",
       "description": "Legal, ethical, and regulatory frameworks governing activities in outer space.",

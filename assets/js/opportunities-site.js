@@ -268,17 +268,20 @@
    * ---------------------------------------------------------
    */
 
+  /*
+   * Home page only shows Upcoming opportunities now. The ongoingContainer
+   * param is kept (rather than removed) so existing call sites in the
+   * HTML don't break if they still pass an element for it — it's simply
+   * left untouched/empty. Remove the ongoing section markup on the page
+   * itself when you're ready to drop it entirely.
+   */
   function renderHomeProgramsPreview(ongoingContainer, upcomingContainer) {
-    if (!ongoingContainer && !upcomingContainer) {
+    if (!upcomingContainer) {
       return;
     }
 
     loadOpportunitiesData()
       .then(function (data) {
-        var ongoing = data.opportunities.filter(function (item) {
-          return item.lifecycle === 'ongoing';
-        });
-
         var upcoming = data.opportunities.filter(function (item) {
           return item.lifecycle === 'upcoming';
         });
@@ -289,31 +292,15 @@
           hideLifecycle: true
         };
 
-        if (ongoingContainer) {
-          ongoingContainer.innerHTML = ongoing.length
-            ? renderCards(ongoing, homeCardOptions)
-            : '<p class="programs-load-error">No ongoing programs to display.</p>';
-        }
-
-        if (upcomingContainer) {
-          upcomingContainer.innerHTML = upcoming.length
-            ? renderCards(upcoming, homeCardOptions)
-            : '<p class="programs-load-error">No upcoming programs to display.</p>';
-        }
+        upcomingContainer.innerHTML = upcoming.length
+          ? renderCards(upcoming, homeCardOptions)
+          : '<p class="programs-load-error">No upcoming programs to display.</p>';
       })
       .catch(function () {
-        var message =
+        upcomingContainer.innerHTML =
           '<p class="programs-load-error">' +
             'Unable to load programs. Please refresh the page.' +
           '</p>';
-
-        if (ongoingContainer) {
-          ongoingContainer.innerHTML = message;
-        }
-
-        if (upcomingContainer) {
-          upcomingContainer.innerHTML = message;
-        }
       });
   }
 
