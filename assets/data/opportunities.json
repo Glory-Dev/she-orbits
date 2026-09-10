@@ -450,18 +450,18 @@
     },
     {
       "slug": "astronaut-training",
-      "title": "Astronaut Training",
+      "title": "Astronaut Training (Coming soon)",
       "type": "astronaut-training",
-      "lifecycle": "upcoming",
+      "lifecycle": "coming-soon",
       "image": "../assets/images/services/astronaut-training.jpeg",
       "description": "",
       "detail": ""
     },
     {
       "slug": "webinar",
-      "title": "Webinars",
+      "title": "Webinars (Coming soon)",
       "type": "webinar",
-      "lifecycle": "upcoming",
+      "lifecycle": "coming-soon",
       "image": "../assets/images/services/webinars.jpeg",
       "description": "",
       "detail": ""
