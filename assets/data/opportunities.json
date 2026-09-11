@@ -390,7 +390,7 @@
     },
     {
       "slug": "fellowships-coming-soon",
-      "title": "Fellowships Coming Soon",
+      "title": "Fellowships",
       "type": "fellowships",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/fellowships.jpeg",
@@ -411,7 +411,7 @@
     },
     {
       "slug": "panels-coming-soon",
-      "title": "Panels Coming Soon",
+      "title": "Panels",
       "type": "panels",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/talks-panels.jpeg",
@@ -432,7 +432,7 @@
     },
     {
       "slug": "research-coming-soon",
-      "title": "Research Programs Coming Soon",
+      "title": "Research Programs",
       "type": "research",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/research-programs.jpeg",
@@ -468,7 +468,7 @@
     },
     {
       "slug": "talks-panels-coming-soon",
-      "title": "Talks & Panels Coming Soon",
+      "title": "Talks & Panels",
       "type": "talks-panels",
       "lifecycle": "coming-soon",
       "image": "../assets/images/services/talks-panels.jpeg",

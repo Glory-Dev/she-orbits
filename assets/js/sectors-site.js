@@ -59,7 +59,7 @@
       .then(function (sectors) {
         container.innerHTML = sectors.map(function (sector) {
           var statusClass = sector.status === 'active' ? 'is-active' : 'is-coming-soon';
-          var detailUrl = 'sector-detail.html?slug=' + encodeURIComponent(sector.slug);
+          var detailUrl = '../sectors/sector-detail.html?slug=' + encodeURIComponent(sector.slug);
 
           return (
             '<article class="sector-photo-card ' + statusClass + '">' +

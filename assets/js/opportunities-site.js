@@ -92,6 +92,9 @@
       return 'Past';
     }
 
+    if (lifecycle === 'coming-soon')
+      return 'Coming Soon'
+
     return '';
   }
 
@@ -110,18 +113,19 @@
   /*
    * Only Past and Upcoming opportunities have a special CTA.
    *
-   * Past     -> Sign your interest
-   * Upcoming -> Enroll now
-   * Ongoing  -> No special CTA
+   * Past     -> Enroll now
+   * Upcoming -> Sign your interest
+   * Ongoing 
+   * Coming Soon
    */
 
   function getCtaLabel(lifecycle) {
     if (lifecycle === 'past') {
-      return 'Sign your interest';
+      return 'Enroll Now';
     }
 
     if (lifecycle === 'upcoming') {
-      return 'Enroll now';
+      return 'Sign Your Interest';
     }
 
     return '';
@@ -158,7 +162,7 @@
   }
 
   function buildDetailUrl(slug) {
-    return 'program-detail.html?slug=' + encodeURIComponent(slug);
+    return '../opportunities/program-detail.html?slug=' + encodeURIComponent(slug);
   }
 
   /*
