@@ -4,9 +4,6 @@
   var OPPORTUNITIES_DATA_URL = '../assets/data/opportunities.json';
   var dataCache = null;
 
-  var PAST_INTEREST_URL = 'https://forms.gle/4KEWiMb24qBmNK1U6';
-  var UPCOMING_ENROLL_URL = 'https://forms.gle/R8WKx4ZNdWqPibps9';
-
   function escapeHtml(value) {
     return String(value || '')
       .replace(/&/g, '&amp;')
@@ -111,12 +108,41 @@
   }
 
   /*
+   * Display order for opportunities within a section:
+   * Upcoming -> Ongoing -> Past -> anything else (e.g. coming-soon).
+   */
+  var LIFECYCLE_SORT_ORDER = {
+    upcoming: 0,
+    ongoing: 1,
+    past: 2
+  };
+
+  function getLifecycleSortRank(lifecycle) {
+    if (Object.prototype.hasOwnProperty.call(LIFECYCLE_SORT_ORDER, lifecycle)) {
+      return LIFECYCLE_SORT_ORDER[lifecycle];
+    }
+
+    return 3;
+  }
+
+  function sortByLifecycle(opportunities) {
+    return opportunities.slice().sort(function (a, b) {
+      return getLifecycleSortRank(a.lifecycle) - getLifecycleSortRank(b.lifecycle);
+    });
+  }
+
+  /*
    * Only Past and Upcoming opportunities have a special CTA.
    *
    * Past     -> Enroll now
    * Upcoming -> Sign your interest
    * Ongoing 
    * Coming Soon
+   *
+   * The CTA target URL is no longer a hardcoded constant — it comes from
+   * each opportunity's own "form" property in opportunities.json. This
+   * lets every opportunity point to its own Google Form (or any URL)
+   * instead of sharing one global link per lifecycle.
    */
 
   function getCtaLabel(lifecycle) {
@@ -125,34 +151,38 @@
     }
 
     if (lifecycle === 'upcoming') {
-      return 'Sign Your Interest';
+      return 'Apply Now';
     }
 
     return '';
   }
 
-  function getCtaUrl(lifecycle) {
-    if (lifecycle === 'past') {
-      return PAST_INTEREST_URL;
+  function getCtaUrl(opportunity) {
+    if (!opportunity) {
+      return '';
     }
 
-    if (lifecycle === 'upcoming') {
-      return UPCOMING_ENROLL_URL;
+    if (
+      opportunity.lifecycle === 'past' ||
+      opportunity.lifecycle === 'upcoming'
+    ) {
+      return opportunity.form || '';
     }
 
     return '';
   }
 
-  function renderCtaButton(lifecycle) {
+  function renderCtaButton(opportunity) {
+    var lifecycle = opportunity ? opportunity.lifecycle : '';
     var label = getCtaLabel(lifecycle);
-    var url = getCtaUrl(lifecycle);
+    var url = getCtaUrl(opportunity);
 
     if (!label || !url) {
       return '';
     }
 
     return (
-      '<a href="' + url + '"' +
+      '<a href="' + escapeHtml(url) + '"' +
         ' class="program-btn program-btn-cta btn border border-white border-opacity-25 text-white"' +
         ' target="_blank"' +
         ' rel="noopener noreferrer">' +
@@ -247,9 +277,10 @@
              * - Past
              * - Upcoming
              *
-             * Ongoing has no special CTA.
+             * Ongoing has no special CTA. URL comes from
+             * opportunity.form (see renderCtaButton).
              */
-            renderCtaButton(opportunity.lifecycle) +
+            renderCtaButton(opportunity) +
 
           '</div>' +
 
@@ -324,9 +355,11 @@
         root.innerHTML = data.types
           .map(function (type) {
 
-            var items = data.opportunities.filter(function (item) {
-              return item.type === type.id;
-            });
+            var items = sortByLifecycle(
+              data.opportunities.filter(function (item) {
+                return item.type === type.id;
+              })
+            );
 
             var cards = items.length
               ? '<div class="programs-grid">' +
@@ -554,13 +587,12 @@
 
             /*
              * Only Past and Upcoming opportunities get
-             * a special CTA on the detail page.
+             * a special CTA on the detail page, using
+             * opportunity.form as the target URL.
              *
              * Ongoing only gets "All opportunities".
              */
-            var detailCtaHtml = renderCtaButton(
-              opportunity.lifecycle
-            );
+            var detailCtaHtml = renderCtaButton(opportunity);
 
             root.innerHTML =
 
