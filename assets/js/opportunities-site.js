@@ -475,7 +475,131 @@
       '</div>'
     );
   }
+/*
+   * ---------------------------------------------------------
+   * Slideshows inside the "detail" HTML
+   *
+   * In opportunities.json, put this where a slideshow should appear:
+   *   <div class="detail-slideshow"
+   *        data-slideshow-folder="../assets/images/.../day-1"
+   *        data-slideshow-alt="Day 1"></div>
+   *
+   * It loads slide-1.jpg, slide-2.jpg, ... from that folder until a
+   * file is missing. If slide-1.jpg doesn't exist, the block is removed,
+   * so days/roadmaps without images yet simply show nothing.
+   * ---------------------------------------------------------
+   */
 
+  function probeSlides(folder, done) {
+    var found = [];
+
+    (function next(i) {
+      if (i > 20) {
+        done(found);
+        return;
+      }
+
+      var src = folder + '/slide-' + i + '.jpg';
+      var img = new Image();
+
+      img.onload = function () {
+        found.push(src);
+        next(i + 1);
+      };
+
+      img.onerror = function () {
+        done(found);
+      };
+
+      img.src = src;
+    })(1);
+  }
+
+  function buildSlideshow(holder, sources, alt) {
+    var index = 0;
+    var multiple = sources.length > 1;
+
+    holder.innerHTML =
+      '<div class="detail-slideshow-stage">' +
+        sources.map(function (src, i) {
+          return (
+            '<img src="' + escapeHtml(src) + '"' +
+            ' alt="' + escapeHtml(alt) + ' – slide ' + (i + 1) + '"' +
+            ' class="detail-slide' + (i === 0 ? ' is-active' : '') + '"' +
+            ' loading="lazy" decoding="async">'
+          );
+        }).join('') +
+        (multiple
+          ? '<button type="button" class="detail-slide-btn is-prev" aria-label="Previous slide">&#10094;</button>' +
+            '<button type="button" class="detail-slide-btn is-next" aria-label="Next slide">&#10095;</button>' +
+            '<span class="detail-slide-counter">1 / ' + sources.length + '</span>'
+          : '') +
+      '</div>';
+
+    if (!multiple) {
+      return;
+    }
+
+    var slides = holder.querySelectorAll('.detail-slide');
+    var counter = holder.querySelector('.detail-slide-counter');
+    var stage = holder.querySelector('.detail-slideshow-stage');
+
+    function go(n) {
+      index = (n + slides.length) % slides.length;
+
+      Array.prototype.forEach.call(slides, function (slide, i) {
+        slide.classList.toggle('is-active', i === index);
+      });
+
+      counter.textContent = (index + 1) + ' / ' + slides.length;
+    }
+
+    holder.querySelector('.is-prev').addEventListener('click', function () {
+      go(index - 1);
+    });
+
+    holder.querySelector('.is-next').addEventListener('click', function () {
+      go(index + 1);
+    });
+
+    // Swipe on touch screens
+    var startX = null;
+
+    stage.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    stage.addEventListener('touchend', function (e) {
+      if (startX === null) {
+        return;
+      }
+
+      var diff = e.changedTouches[0].clientX - startX;
+      startX = null;
+
+      if (Math.abs(diff) > 40) {
+        go(diff < 0 ? index + 1 : index - 1);
+      }
+    });
+  }
+
+  function initDetailSlideshows(root) {
+    var holders = root.querySelectorAll('[data-slideshow-folder]');
+
+    Array.prototype.forEach.call(holders, function (holder) {
+      var folder = holder.getAttribute('data-slideshow-folder');
+      var alt = holder.getAttribute('data-slideshow-alt') || 'Slide';
+
+      probeSlides(folder, function (sources) {
+        if (!sources.length) {
+          holder.parentNode.removeChild(holder);
+          return;
+        }
+
+        buildSlideshow(holder, sources, alt);
+      });
+    });
+  }
   /*
    * ---------------------------------------------------------
    * Opportunity detail page
@@ -649,6 +773,9 @@
                 '</div>' +
 
               '</div>';
+
+              initDetailSlideshows(root);
+
           });
       })
       .catch(function () {
