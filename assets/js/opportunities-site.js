@@ -1,7 +1,7 @@
 (function (global) {
   'use strict';
 
-  var OPPORTUNITIES_DATA_URL = '../assets/data/opportunities.json';
+  var OPPORTUNITIES_DATA_URL = '/assets/data/opportunities.json';
   var dataCache = null;
 
   function escapeHtml(value) {
@@ -192,7 +192,7 @@
   }
 
   function buildDetailUrl(slug) {
-    return '../opportunities/program-detail.html?slug=' + encodeURIComponent(slug);
+    return '/opportunities/program-detail/?slug=' + encodeURIComponent(slug);
   }
 
   /*
@@ -617,7 +617,7 @@
       root.innerHTML =
         '<p class="text-white">' +
           'Program not found. ' +
-          '<a href="programs.html" class="text-white">' +
+          '<a href="../programs.html" class="text-white">' +
             'Browse all opportunities' +
           '</a>.' +
         '</p>';
@@ -632,7 +632,7 @@
           root.innerHTML =
             '<p class="text-white">' +
               'Program not found. ' +
-              '<a href="programs.html" class="text-white">' +
+              '<a href="../programs.html" class="text-white">' +
                 'Browse all opportunities' +
               '</a>.' +
             '</p>';
@@ -765,7 +765,7 @@
 
                   detailCtaHtml +
 
-                  '<a href="programs.html"' +
+                  '<a href="../programs.html"' +
                     ' class="btn border border-white border-opacity-25 text-white">' +
                     'All opportunities' +
                   '</a>' +
@@ -782,7 +782,7 @@
         root.innerHTML =
           '<p class="text-white">' +
             'Unable to load this program. ' +
-            '<a href="programs.html" class="text-white">' +
+            '<a href="../programs.html" class="text-white">' +
               'Browse all opportunities' +
             '</a>.' +
           '</p>';
