@@ -2,7 +2,7 @@
 title: "Cybersecurity in Space Infrastructure"
 number: 27
 status: "coming-soon"
-image: "/assets/images/27.png"
+image: "/assets/images/27.webp"
 summary: "Protecting satellites, spacecraft, networks, and mission-critical systems from cyber threats."
 ---
 

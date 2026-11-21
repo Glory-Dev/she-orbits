@@ -2,7 +2,7 @@
 title: "Philosophy of Space & Cultural Heritage"
 number: 31
 status: "coming-soon"
-image: "/assets/images/31.png"
+image: "/assets/images/31.webp"
 summary: "Philosophical, historical, ethical, and cultural perspectives on humanity and the cosmos."
 ---
 

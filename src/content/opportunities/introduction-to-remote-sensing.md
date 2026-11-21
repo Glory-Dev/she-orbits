@@ -2,7 +2,7 @@
 title: "Introduction to Remote Sensing"
 type: "courses"
 status: "past"
-image: "/assets/images/services/services-img-16.png"
+image: "/assets/images/services/services-img-16.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 160
 summary: "A foundational Earth observation course developed in collaboration with Planetek Italia, introducing satellite remote sensing, geospatial analysis, image interpretation, and real-world applications."

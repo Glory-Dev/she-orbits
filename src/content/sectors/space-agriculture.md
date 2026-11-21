@@ -2,7 +2,7 @@
 title: "Space Agriculture"
 number: 8
 status: "coming-soon"
-image: "/assets/images/8.png"
+image: "/assets/images/8.webp"
 summary: "Sustainable food production for long-duration missions and extraterrestrial habitats."
 ---
 

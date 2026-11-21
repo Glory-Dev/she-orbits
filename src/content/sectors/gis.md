@@ -2,7 +2,7 @@
 title: "GIS"
 number: 25
 status: "active"
-image: "/assets/images/25.png"
+image: "/assets/images/25.webp"
 summary: "Explore the science of geospatial data, digital mapping, satellite imagery, and spatial analysis. Learn how GIS technologies integrate location-based data with satellite and remote-sensing information to support navigation, Earth observation, environmental monitoring, infrastructure planning, and intelligent decision-making."
 ---
 

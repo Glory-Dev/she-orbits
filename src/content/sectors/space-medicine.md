@@ -2,7 +2,7 @@
 title: "Space Medicine"
 number: 6
 status: "active"
-image: "/assets/images/6.png"
+image: "/assets/images/6.webp"
 summary: "Physiological and medical challenges of human spaceflight, countermeasures, and astronaut healthcare."
 ---
 

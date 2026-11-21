@@ -2,7 +2,7 @@
 title: "Python for Orbital Mechanics"
 type: "courses"
 status: "past"
-image: "/assets/images/services/services-img-10.jpg"
+image: "/assets/images/services/services-img-10.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 100
 summary: "A specialized technical course combining Python programming with orbital mechanics, enabling participants to model, simulate, and visualize satellite trajectories and solve real aerospace engineering problems."

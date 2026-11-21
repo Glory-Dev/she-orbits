@@ -2,7 +2,7 @@
 title: "Space Law – Cohort 2"
 type: "programs"
 status: "past"
-image: "/assets/images/services/services-img-2.png"
+image: "/assets/images/services/services-img-2.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 20
 summary: "Space Law Cohort 2 provides participants with a comprehensive understanding of the legal, regulatory, and ethical frameworks governing activities in outer space. Through expert-led sessions and case studies, participants explore international treaties, commercial space law, resource utilization, satellite governance, sustainability, and emerging policy challenges shaping the future of the global space sector."

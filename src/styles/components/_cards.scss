@@ -42,9 +42,7 @@
   background-repeat: no-repeat;
 }
 
-.sector-photo-wrap img {
-
-}
+.sector-photo-wrap img {}
 
 .sector-photo-card:hover .sector-photo-wrap img {
   transform: scale(1.06);
@@ -292,5 +290,11 @@
 }
 
 .programs-preview-block .program-photo-wrap {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 23, 42, 0.8) {
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+
+  ;
 }

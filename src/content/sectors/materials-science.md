@@ -2,7 +2,7 @@
 title: "Materials Science & Advanced Manufacturing"
 number: 19
 status: "coming-soon"
-image: "/assets/images/19.png"
+image: "/assets/images/19.webp"
 summary: "Materials and manufacturing technologies used in space systems."
 ---
 

@@ -2,7 +2,7 @@
 title: "Space Communications"
 number: 4
 status: "active"
-image: "/assets/images/4.png"
+image: "/assets/images/4.webp"
 summary: "Technologies enabling reliable communication between spacecraft, satellites, ground stations, and mission control."
 ---
 

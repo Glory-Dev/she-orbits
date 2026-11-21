@@ -2,7 +2,7 @@
 title: "Astrophysics & Astronomy"
 number: 22
 status: "active"
-image: "/assets/images/22.png"
+image: "/assets/images/22.webp"
 summary: "Fundamental principles governing the universe, from stars to cosmology."
 ---
 

@@ -2,7 +2,7 @@
 title: "ARTEMIS II Program"
 type: "programs"
 status: "upcoming"
-image: "/assets/images/services/services-img-6.png"
+image: "/assets/images/services/services-img-6.webp"
 form: "https://forms.gle/R8WKx4ZNdWqPibps9"
 order: 60
 summary: "A specialized educational and industrial program inspired by NASA's Artemis missions and the future of human lunar exploration."

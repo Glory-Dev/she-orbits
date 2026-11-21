@@ -2,7 +2,7 @@
 title: "Panels"
 type: "talks-panels"
 status: "coming-soon"
-image: "/assets/images/services/talks-panels.jpeg"
+image: "/assets/images/services/talks-panels.webp"
 order: 210
 draft: true
 summary: "Conversations with women leaders across aerospace, policy, research, and commercial space are coming soon."

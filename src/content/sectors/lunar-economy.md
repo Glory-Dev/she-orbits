@@ -2,7 +2,7 @@
 title: "Lunar Economy & Resource Utilization"
 number: 30
 status: "coming-soon"
-image: "/assets/images/30.png"
+image: "/assets/images/30.webp"
 summary: "Sustainable lunar exploration, ISRU, and commercialization opportunities."
 ---
 

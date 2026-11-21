@@ -2,7 +2,7 @@
 title: "Future Human Society in Space"
 number: 26
 status: "coming-soon"
-image: "/assets/images/26.png"
+image: "/assets/images/26.webp"
 summary: "Long-term vision of human civilization beyond Earth."
 ---
 

@@ -2,7 +2,7 @@
 title: "SHE ORBITS Ambassadors Program"
 type: "programs"
 status: "upcoming"
-image: "/assets/images/services/services-img-5.png"
+image: "/assets/images/services/services-img-5.webp"
 form: "https://forms.gle/R8WKx4ZNdWqPibps9"
 order: 50
 summary: "A global leadership initiative designed to empower passionate students and young professionals to represent SHE ORBITS within their universities, organizations, and local communities."

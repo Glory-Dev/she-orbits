@@ -22,7 +22,7 @@ function resolveSite() {
 
 export default defineConfig({
   site: resolveSite(),
-  base: '/she-orbits',
+  base: '/',
 
   output: 'static',
   trailingSlash: 'always',

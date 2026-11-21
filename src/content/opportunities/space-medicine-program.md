@@ -2,7 +2,7 @@
 title: "Space Medicine Program"
 type: "programs"
 status: "upcoming"
-image: "/assets/images/services/services-img-4.jpg"
+image: "/assets/images/services/services-img-4.webp"
 form: "https://forms.gle/R8WKx4ZNdWqPibps9"
 order: 40
 summary: "Explore the medical and physiological challenges associated with human spaceflight, microgravity effects, and healthcare for lunar and Mars exploration."

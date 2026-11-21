@@ -2,7 +2,7 @@
 title: "AI & Data Science in Space Exploration"
 type: "courses"
 status: "past"
-image: "/assets/images/services/services-img-11.jpg"
+image: "/assets/images/services/services-img-11.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 110
 summary: "A technical course exploring how artificial intelligence, machine learning, and data science are transforming space exploration, satellite systems, and modern mission operations."

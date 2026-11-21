@@ -1,12 +1,8 @@
-// Single Sass entry point. Order replaces the old cascade:
-//   styles.css -> she-orbits-theme.css -> per-page <style> blocks.
-// public/assets/css/styles.css (compiled Bootstrap 5.3 + custom utilities) is linked in <head>
-// BEFORE this bundle. See docs/STYLES.md.
 
-@use '@fortawesome/fontawesome-free/scss/variables' with ($font-path: '@fortawesome/fontawesome-free/webfonts', $font-display: swap);
-@use '@fortawesome/fontawesome-free/scss/fontawesome';
-@use '@fortawesome/fontawesome-free/scss/solid';
-@use '@fortawesome/fontawesome-free/scss/brands';
+// @use '@fortawesome/fontawesome-free/scss/variables' with ($font-path: '@fortawesome/fontawesome-free/webfonts', $font-display: swap);
+// @use '@fortawesome/fontawesome-free/scss/fontawesome';
+// @use '@fortawesome/fontawesome-free/scss/solid';
+// @use '@fortawesome/fontawesome-free/scss/brands';
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';

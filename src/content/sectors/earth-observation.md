@@ -2,7 +2,7 @@
 title: "Earth Observation & Climate Science"
 number: 12
 status: "active"
-image: "/assets/images/12.png"
+image: "/assets/images/12.webp"
 summary: "How satellite technologies help understand and protect our planet."
 ---
 

@@ -2,7 +2,7 @@
 title: "Space Economics & Business Innovation"
 number: 16
 status: "coming-soon"
-image: "/assets/images/16.png"
+image: "/assets/images/16.webp"
 summary: "Financial, commercial, and entrepreneurial dimensions of the space industry."
 ---
 

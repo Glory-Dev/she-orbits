@@ -2,7 +2,7 @@
 title: "STEM"
 number: 1
 status: "active"
-image: "/assets/images/1.png"
+image: "/assets/images/1.webp"
 summary: "Educational foundation empowering learners through interdisciplinary Science, Technology, Engineering, and Mathematics."
 ---
 

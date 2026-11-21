@@ -2,7 +2,7 @@
 title: "Innovation Lab"
 type: "programs"
 status: "past"
-image: "/assets/images/services/services-img-13.png"
+image: "/assets/images/services/services-img-13.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 130
 summary: "An interdisciplinary innovation program where participants transform ideas into practical space-related solutions through research, engineering, creativity, and collaborative problem-solving."

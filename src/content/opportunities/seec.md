@@ -2,7 +2,7 @@
 title: "SEEC (Space Exploration Educators Conference)"
 type: "conferences"
 status: "past"
-image: "/assets/images/services/services-img-19.jpg"
+image: "/assets/images/services/services-img-19.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 190
 summary: "SHE ORBITS received a fully funded invitation to attend SEEC 2026 in Texas, connecting with NASA professionals, astronauts, educators, researchers, and global space-education leaders."

@@ -2,7 +2,7 @@
 title: "GNSS"
 number: 24
 status: "active"
-image: "/assets/images/24.png"
+image: "/assets/images/24.webp"
 summary: "Satellite positioning, navigation, timing, and geographic information systems for spatial analysis."
 ---
 

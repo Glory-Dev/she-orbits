@@ -2,7 +2,7 @@
 title: "Space Environment"
 number: 10
 status: "active"
-image: "/assets/images/10.png"
+image: "/assets/images/10.webp"
 summary: "Natural conditions that influence spacecraft performance and astronaut safety."
 ---
 

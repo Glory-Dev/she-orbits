@@ -2,7 +2,7 @@
 title: "Deep Space Missions & Interstellar Exploration"
 number: 20
 status: "coming-soon"
-image: "/assets/images/20.png"
+image: "/assets/images/20.webp"
 summary: "Scientific and engineering challenges of missions beyond Earth orbit."
 ---
 

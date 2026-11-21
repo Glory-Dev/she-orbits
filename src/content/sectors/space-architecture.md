@@ -2,7 +2,7 @@
 title: "Space Architecture & Habitat Design"
 number: 9
 status: "active"
-image: "/assets/images/9.png"
+image: "/assets/images/9.webp"
 summary: "Designing safe, sustainable living environments for astronauts beyond Earth."
 ---
 

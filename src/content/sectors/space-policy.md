@@ -3,7 +3,7 @@ title: "Sustainability"
 cardTitle: "Space Sustainability"
 number: 11
 status: "coming-soon"
-image: "/assets/images/11.png"
+image: "/assets/images/11.webp"
 summary: "Responsible and sustainable use of outer space, debris mitigation, and long-term preservation."
 ---
 

@@ -2,7 +2,7 @@
 title: "Satellite Data Processing with Planetek Italia"
 type: "courses"
 status: "upcoming"
-image: "/assets/images/services/services-img-7.jpg"
+image: "/assets/images/services/services-img-7.webp"
 form: "https://forms.gle/kEc55WRH7o6VM3au8"
 order: 70
 summary: "Advanced training program in collaboration with Planetek Italia covering professional satellite data processing and geospatial analysis."

@@ -2,7 +2,7 @@
 title: "NASA Space Apps Challenge"
 type: "competitions-challenges"
 status: "ongoing"
-image: "/assets/images/36.png"
+image: "/assets/images/36.webp"
 form: "https://forms.gle/ussmgF7rJZLH4Moc6"
 order: 90
 summary: "SHE ORBITS will organize participation in the NASA Space Apps Challenge, the world's largest global hackathon addressing real-world challenges using NASA's open data."

@@ -2,7 +2,7 @@
 title: "Outreach Series"
 type: "programs"
 status: "past"
-image: "/assets/images/services/services-img-14.png"
+image: "/assets/images/services/services-img-14.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 140
 summary: "A global science communication initiative making space education more accessible through expert talks, webinars, seminars, awareness campaigns, and educational events."

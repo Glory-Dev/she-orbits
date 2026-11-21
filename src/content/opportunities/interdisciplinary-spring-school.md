@@ -2,7 +2,7 @@
 title: "Interdisciplinary Spring School"
 type: "internships"
 status: "past"
-image: "/assets/images/services/services-img-17.png"
+image: "/assets/images/services/services-img-17.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 170
 summary: "A five-week multidisciplinary space program combining expert-led learning, technical applications, collaborative projects, and exploration of key space science and engineering disciplines."

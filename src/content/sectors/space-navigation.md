@@ -2,7 +2,7 @@
 title: "Space Navigation"
 number: 3
 status: "active"
-image: "/assets/images/3.png"
+image: "/assets/images/3.webp"
 summary: "Science and engineering of spacecraft motion, orbital mechanics, trajectory design, and navigation systems."
 ---
 

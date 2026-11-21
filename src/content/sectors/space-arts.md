@@ -2,7 +2,7 @@
 title: "Space Arts & Science Communication"
 number: 18
 status: "active"
-image: "/assets/images/18.png"
+image: "/assets/images/18.webp"
 summary: "Bridging science with creativity, storytelling, design, media, and public engagement."
 ---
 

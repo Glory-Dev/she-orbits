@@ -2,7 +2,7 @@
 title: "Space Industry"
 number: 2
 status: "active"
-image: "/assets/images/2.png"
+image: "/assets/images/2.webp"
 summary: "Insights into the global space economy, organizations, technologies, and commercial opportunities shaping humanity beyond Earth."
 ---
 

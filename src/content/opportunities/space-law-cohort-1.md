@@ -2,7 +2,7 @@
 title: "Space Law Program Cohort 1"
 type: "programs"
 status: "past"
-image: "/assets/images/services/services-img-15.png"
+image: "/assets/images/services/services-img-15.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 150
 summary: "An introductory program exploring the legal, regulatory, ethical, and policy frameworks shaping space activities, satellite operations, exploration, and the emerging commercial space industry."

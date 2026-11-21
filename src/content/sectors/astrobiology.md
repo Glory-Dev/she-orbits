@@ -2,7 +2,7 @@
 title: "Astrobiology & Life Sciences"
 number: 21
 status: "active"
-image: "/assets/images/21.png"
+image: "/assets/images/21.webp"
 summary: "Origin, evolution, and potential existence of life beyond Earth."
 ---
 

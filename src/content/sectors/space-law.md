@@ -2,7 +2,7 @@
 title: "Space Law, Policy & Ethics"
 number: 15
 status: "active"
-image: "/assets/images/15.png"
+image: "/assets/images/15.webp"
 summary: "Legal, ethical, and regulatory frameworks governing activities in outer space."
 ---
 

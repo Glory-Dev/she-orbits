@@ -2,7 +2,7 @@
 title: "Her Cosmic Hour"
 type: "programs"
 status: "past"
-image: "/assets/images/services/services-img-12.png"
+image: "/assets/images/services/services-img-12.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 120
 summary: "SHE ORBITS’ flagship series connecting women with inspiring leaders across the global space sector through conversations, talks, panels, and interactive sessions."

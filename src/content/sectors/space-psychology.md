@@ -2,7 +2,7 @@
 title: "Space Psychology & Human Factors"
 number: 28
 status: "coming-soon"
-image: "/assets/images/28.png"
+image: "/assets/images/28.webp"
 summary: "Psychological, cognitive, and behavioral aspects of human performance in extreme environments."
 ---
 

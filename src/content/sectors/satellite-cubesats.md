@@ -2,7 +2,7 @@
 title: "Satellite Design & CubeSats"
 number: 13
 status: "active"
-image: "/assets/images/13.png"
+image: "/assets/images/13.webp"
 summary: "Complete lifecycle of satellite development from mission objectives to operations."
 ---
 

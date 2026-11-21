@@ -2,7 +2,7 @@
 title: "Space Technology"
 number: 5
 status: "active"
-image: "/assets/images/5.png"
+image: "/assets/images/5.webp"
 summary: "Engineering innovations that make modern space exploration possible, from spacecraft systems to emerging tech."
 ---
 

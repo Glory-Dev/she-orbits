@@ -2,7 +2,7 @@
 title: "Planetary Defense & Asteroid Science"
 number: 14
 status: "coming-soon"
-image: "/assets/images/14.png"
+image: "/assets/images/14.webp"
 summary: "Detection, characterization, and mitigation of near-Earth objects."
 ---
 

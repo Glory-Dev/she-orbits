@@ -2,7 +2,7 @@
 title: "Space Energy & Power Systems"
 number: 29
 status: "coming-soon"
-image: "/assets/images/29.png"
+image: "/assets/images/29.webp"
 summary: "Generating, storing, and distributing power for space missions."
 ---
 

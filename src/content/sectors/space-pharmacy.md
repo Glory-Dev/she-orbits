@@ -2,7 +2,7 @@
 title: "Space Pharmacy"
 number: 7
 status: "coming-soon"
-image: "/assets/images/7.png"
+image: "/assets/images/7.webp"
 summary: "Pharmaceutical sciences in space: drug behavior in microgravity and astronaut health for extended missions."
 ---
 
