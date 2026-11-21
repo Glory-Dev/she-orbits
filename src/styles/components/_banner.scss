@@ -1,0 +1,11 @@
+// banner — folded from the old per-page inline <style> blocks.
+
+.banner-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-section h1.fs-16 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}

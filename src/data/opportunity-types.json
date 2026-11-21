@@ -1,0 +1,69 @@
+[
+  {
+    "id": "programs",
+    "label": "Programs",
+    "desc": "Flagship educational pathways bringing students, researchers, and professionals together across the global space ecosystem."
+  },
+  {
+    "id": "courses",
+    "label": "Courses",
+    "desc": "Focused technical courses bridging programming, remote sensing, and space systems fundamentals."
+  },
+  {
+    "id": "internships",
+    "label": "Internships",
+    "desc": "Internship placements are coming soon. Sign up via Contact to hear when applications open."
+  },
+  {
+    "id": "fellowships",
+    "label": "Fellowships",
+    "desc": "Fellowship pathways are coming soon. Check back for research and leadership fellowship openings."
+  },
+  {
+    "id": "research",
+    "label": "Research Programs",
+    "desc": "Coming soon..."
+  },
+  {
+    "id": "competitions-challenges",
+    "label": "Competitions & Challenges",
+    "desc": "Global challenges and hackathons that turn ideas into portfolio-ready work."
+  },
+  {
+    "id": "events",
+    "label": "Events",
+    "desc": "Community celebrations, outreach campaigns, and international space awareness events."
+  },
+  {
+    "id": "talks-panels",
+    "label": "Talks & Panels",
+    "desc": "Panel conversations with space leaders are coming soon."
+  },
+  {
+    "id": "webinars",
+    "label": "Webinars",
+    "desc": "Coming soon..."
+  },
+  {
+    "id": "workshops",
+    "label": "Workshops",
+    "desc": "Short, intensive sessions on astronomy, medicine, and professional space skills."
+  },
+  {
+    "id": "conferences",
+    "label": "Conferences",
+    "desc": ""
+  },
+  {
+    "id": "missions-simulations",
+    "label": "Missions Simulations",
+    "desc": "Coming soon...",
+    "navLabel": "Missions & Simulations"
+  },
+  {
+    "id": "astronaut-training",
+    "label": "Astronaut Training",
+    "desc": "Coming soon...",
+    "navLabel": "Astronaut Trainings"
+  }
+]

@@ -1,0 +1,52 @@
+// Swiper carousel (see components/Carousel.astro). Swiper's own CSS is loaded lazily with the module.
+.carousel {
+  position: relative;
+
+  .swiper { overflow: hidden; margin: 0 -0.5rem; padding: 0.5rem 0.5rem 1.75rem; } // room for card shadows
+  .swiper-slide { height: auto; }
+
+  // before the script loads (or without JS): a swipeable, scroll-snapping row
+  &:not(.is-ready) .swiper-wrapper { display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; }
+  &:not(.is-ready) .swiper-slide { flex: 0 0 min(88%, 380px); scroll-snap-align: start; }
+}
+
+.carousel-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid rgba($indigo, 0.35);
+  background: #fff;
+  color: $indigo;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+
+  &:hover { background: $indigo; color: #fff; }
+  &:focus-visible { outline: 3px solid $indigo-300; outline-offset: 2px; }
+  &.swiper-button-disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  &.swiper-button-lock { display: none; }
+}
+
+.carousel .carousel-dots.swiper-pagination-horizontal {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: auto;
+  min-height: 0.65rem;
+
+  &.swiper-pagination-lock { display: none; }
+  .swiper-pagination-bullet {
+    width: 0.65rem;
+    height: 0.65rem;
+    margin: 0;
+    background: rgba($indigo, 0.3);
+    opacity: 1;
+    transition: width 0.25s ease, background-color 0.25s ease;
+  }
+  .swiper-pagination-bullet-active { width: 1.6rem; border-radius: 999px; background: $indigo; }
+}

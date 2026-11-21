@@ -1,0 +1,74 @@
+// Home page "Space Industry News": cards inside a carousel (data: src/content/news/*.md)
+.news-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba($indigo, 0.14);
+  box-shadow: 0 1px 2px rgba($navy, 0.05), 0 12px 28px rgba($navy, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba($indigo, 0.4);
+    box-shadow: 0 2px 4px rgba($navy, 0.06), 0 22px 44px rgba($indigo, 0.18);
+  }
+  &:hover .news-card-media img { transform: scale(1.05); }
+  &:hover .news-card-link i { transform: translate(3px, -3px); }
+}
+
+.news-card-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: $navy;
+
+  img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+}
+
+.news-card-source {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba($navy, 0.78);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.news-card-body { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; padding: 1.4rem 1.5rem 1.6rem; }
+.news-card-date { font-size: 0.8rem; letter-spacing: 0.04em; color: rgba($charcoal, 0.6); }
+
+.news-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 700;
+  @include clamp(3);
+  a { color: $charcoal; text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: $indigo; }
+}
+
+.news-card-summary { margin: 0; font-size: 0.95rem; line-height: 1.65; color: rgba($charcoal, 0.78); @include clamp(4); }
+
+.news-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+  font-weight: 600;
+  color: $indigo;
+  text-decoration: none;
+  i { transition: transform 0.25s ease; }
+  &:hover { color: $indigo-600; }
+}

@@ -1,0 +1,374 @@
+---
+import Icon from '../components/Icon.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import { getOpportunities } from '../lib/content';
+const programs = (await getOpportunities()).map((o) => ({ slug: o.id, title: o.data.title }));
+---
+<BaseLayout title={"SHE ORBITS - Contact Us | Connect With Our Team"} description={""} bodyClass="page-contact" fluidCursor>
+
+
+  <!-- Header -->
+  
+
+  <!--  Page Wrapper -->
+  <div class="page-wrapper overflow-hidden">
+
+    <!--  Banner Section -->
+    <PageBanner title={"Contact Us"} video="/assets/images/backgrounds/72.mp4" leadOpacity="70">Ready to join our <span class="text-white">global community of future space leaders</span>? Let's connect and start your journey to the stars.</PageBanner>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="container">
+        <div class="row gap-7 gap-xl-0 mb-8">
+          <div class="col-xl-4 col-xxl-4">
+            <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+              data-aos-duration="1000">
+              <span
+                class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">01</span>
+              <hr class="border-line">
+              <span class="badge text-bg-dark">Get in Touch</span>
+            </div>
+          </div>
+          <div class="col-xl-8 col-xxl-7">
+            <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+              <h2 class="mb-0">Connect With SHE ORBITS</h2>
+              <p class="fs-5 mb-0">Have questions about our programs? Want to partner with us? Interested in supporting
+                our mission? We're here to help learners reach for the stars.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Email Contact -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <div class="contact-card">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="round-64 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px;">
+                  <Icon name="lucide:mail" class="fs-5 text-primary" />
+                </div>
+                <div>
+                  <h5 class="mb-2 text-dark">Email Us</h5>
+                  <p class="mb-3 text-dark text-opacity-70">We respond within 24-48 hours</p>
+                  <a href="mailto:contact@sheorbitscompany.com"
+                    class="text-primary fw-bold text-decoration-none">contact@sheorbitscompany.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone Contact -->
+          <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div class="contact-card">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="round-64 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px;">
+                  <Icon name="lucide:phone" class="fs-5 text-primary" />
+                </div>
+                <div>
+                  <h5 class="mb-2 text-dark">Call Us</h5>
+                  <p class="mb-3 text-dark text-opacity-70">Mon-Fri, 9 AM - 6 PM EST</p>
+                  <a href="tel:+201014717368" class="text-primary fw-bold text-decoration-none">+20 (101) 471-7368</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Global Reach -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <div class="contact-card">
+              <div class="d-flex flex-column gap-4">
+                <div
+                  class="round-64 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 60px; height: 60px;">
+                  <Icon name="lucide:globe" class="fs-5 text-primary" />
+                </div>
+                <div>
+                  <h5 class="mb-2 text-dark">Global Reach</h5>
+                  <p class="mb-3 text-dark text-opacity-70">Programs available worldwide</p>
+                  <p class="mb-0 text-primary fw-bold">90+ Countries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Get in touch Section -->
+    <section id="partner" class="get-in-touch py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-10">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">02</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Apply Now</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0" id="contactFormHeading">Join Our Programs</h2>
+                    <p class="fs-5 mb-0 text-opacity-70" id="contactFormIntro">Tell us about yourself and your space
+                      aspirations. We'll match you with the perfect program to launch your journey.</p>
+                    <div class="contact-form-tabs" role="tablist" aria-label="Contact form type">
+                      <button type="button" class="contact-form-tab active" id="contactTabParticipant" role="tab"
+                        aria-selected="true" aria-controls="participantFormPanel">Apply as Participant</button>
+                      <button type="button" class="contact-form-tab" id="contactTabPartner" role="tab"
+                        aria-selected="false" aria-controls="partnerFormPanel">Partner With Us</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between gap-7 gap-xl-0">
+            <div class="col-xl-3">
+              <div class="d-flex flex-column gap-6" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <div>
+                  <h5 class="mb-3 text-dark" id="contactSidebarTitle">Why Join SHE ORBITS?</h5>
+                  <ul class="list-unstyled d-flex flex-column gap-3 mb-0" id="contactSidebarList">
+                    <li class="hstack gap-2"><Icon name="lucide:check-circle" class="text-primary fs-6" /><span class="fs-6">Global Community</span></li>
+                    <li class="hstack gap-2"><Icon name="lucide:check-circle" class="text-primary fs-6" /><span class="fs-6">Expert Mentorship</span></li>
+                    <li class="hstack gap-2"><Icon name="lucide:check-circle" class="text-primary fs-6" /><span class="fs-6">Real Space Projects</span></li>
+                    <li class="hstack gap-2"><Icon name="lucide:check-circle" class="text-primary fs-6" /><span class="fs-6">Career Pathways</span></li>
+                    <li class="hstack gap-2"><Icon name="lucide:check-circle" class="text-primary fs-6" /><span class="fs-6">Scholarships Available</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-8">
+              <div id="participantFormPanel" role="tabpanel" aria-labelledby="contactTabParticipant">
+                <div id="participantFormSuccess" class="alert alert-success d-none mb-4" tabindex="-1" role="status">
+                  Thank you for your application. We'll review your details and respond within 24–48 hours.
+                </div>
+                <form id="participantForm" class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200"
+                  data-aos-duration="1000" novalidate>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Full Name *</label>
+                        <input type="text" class="form-control" name="fullName" placeholder="Your Name" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Email Address *</label>
+                        <input type="email" class="form-control" name="email" placeholder="your@email.com" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Age *</label>
+                        <input type="number" class="form-control" name="age" placeholder="Enter your age" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div>
+                        <label class="form-label fw-bold mb-2 text-dark">Country *</label>
+                        <input type="text" class="form-control" name="country" placeholder="Your Country" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="form-label fw-bold mb-2 text-dark">Program Interest *</label>
+                    <select class="form-control" id="programInterestSelect" name="programInterest" required>
+                      <option value="">Select a Program/Sector</option>
+                      <option value="stem-bootcamp">STEM for Space Bootcamp</option>
+                      <option value="space-medicine">Space Medicine</option>
+                      <option value="satellite-design">Satellite Design & CubeSats</option>
+                      <option value="space-agriculture">Space Agriculture</option>
+                      <option value="ai-space">AI & Data Science in Space</option>
+                      <option value="astronomy">Astrophysics & Astronomy</option>
+                      <option value="space-law">Space Law & Policy</option>
+                      <option value="mars-mission">Mars Mission Planning</option>
+                      <option value="robotics">Space Robotics</option>
+                      <option value="other">Other (please specify)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="form-label fw-bold mb-2 text-dark">Tell Us About Your Space Dreams *</label>
+                    <textarea class="form-control" name="spaceDreams"
+                      placeholder="Why do you want to join SHE ORBITS? What are your goals in space exploration?"
+                      rows="5" required></textarea>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="newsletter" value="yes" id="newsletter">
+                    <label class="form-check-label" for="newsletter">I'd like to receive updates about SHE ORBITS
+                      programs and opportunities</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 justify-content-center text-white">
+                    <span class="btn-text">Submit Application</span>
+                    <Icon name="lucide:arrow-up-right" class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm" />
+                  </button>
+                  <div id="formStatus" class="mt-2"></div>
+                </form>
+              </div>
+
+              <div id="partnerFormPanel" class="d-none" role="tabpanel" aria-labelledby="contactTabPartner"
+                aria-hidden="true">
+                <div id="partnerFormSuccess" class="alert alert-success d-none mb-4" tabindex="-1" role="status">
+                  Thank you for your partnership inquiry. Our team will reach out within 24–48 hours.
+                </div>
+                <form id="partnerForm" data-form-type="partner" class="d-flex flex-column gap-7" novalidate>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerOrgName">Organization Name *</label>
+                      <input type="text" class="form-control" id="partnerOrgName" name="organization"
+                        placeholder="Your organization" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerContactName">Contact Name *</label>
+                      <input type="text" class="form-control" id="partnerContactName" name="contactName"
+                        placeholder="Primary contact" required>
+                    </div>
+                  </div>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerEmail">Email Address *</label>
+                      <input type="email" class="form-control" id="partnerEmail" name="email"
+                        placeholder="partnerships@example.org" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold mb-2 text-dark" for="partnerType">Partnership Type *</label>
+                      <select class="form-control" id="partnerType" name="partnershipType" required>
+                        <option value="">Select partnership type</option>
+                        <option value="school-university">School / University</option>
+                        <option value="space-agency">Space Agency</option>
+                        <option value="company">Company</option>
+                        <option value="ngo">NGO / Foundation</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="form-label fw-bold mb-2 text-dark" for="partnerMessage">How would you like to partner?
+                      *</label>
+                    <textarea class="form-control" id="partnerMessage" name="message"
+                      placeholder="Tell us about sponsorship, mentorship, programs, or collaboration ideas." rows="5"
+                      required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 justify-content-center text-white">
+                    <span class="btn-text">Submit Partnership Inquiry</span>
+                    <Icon name="lucide:arrow-up-right" class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm" />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">03</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">FAQs</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-9">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Frequently Asked Questions</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Learn more about our programs, admission requirements, and how
+                      SHE ORBITS is creating pathways for women to lead in the global space industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-xl-8">
+              <FaqAccordion id="accordionFlushExample" delay="200" page="contact" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Organizations Section hidden until real partner logos are provided. -->
+    <section class="partners-section py-5 py-lg-11 py-xl-12 d-none" aria-hidden="true">
+      <div class="container">
+        <div class="text-center mb-8" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <span class="badge text-bg-dark mb-3">Our Network</span>
+          <h2 class="mb-4">Partner Organizations</h2>
+          <p class="fs-5 text-muted mb-0">Collaborating with leading space agencies, universities, and organizations
+            worldwide</p>
+        </div>
+        <div class="row align-items-center justify-content-center g-5">
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="partner-logo p-3"><img src="/assets/images/logos/partner-placeholder.png" alt="NASA"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="partner-logo p-3"><img src="/assets/images/logos/partner-placeholder.png" alt="ESA"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="partner-logo p-3"><img src="/assets/images/logos/partner-placeholder.png" alt="SpaceX"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="250">
+            <div class="partner-logo p-3"><img src="/assets/images/logos/partner-placeholder.png" alt="ISRO"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="partner-logo p-3"><img src="/assets/images/logos/partner-placeholder.png" alt="MIT"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center" data-aos="fade-up" data-aos-delay="350">
+            <div class="partner-logo p-3"><img src="/assets/images/logos/partner-placeholder.png" alt="UN"
+                class="img-fluid opacity-75" style="max-height: 60px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Professional Footer -->
+  
+
+  <div class="get-template hstack gap-2">
+    
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+
+<script type="application/json" id="programsData" set:html={JSON.stringify(programs)} is:inline />
+</BaseLayout>

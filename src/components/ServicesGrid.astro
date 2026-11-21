@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+import services from '../data/services.json';
+---
+<ol class="services-grid">
+  {services.map((s, i) => (
+    <li class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay={(i % 4) * 80}>
+      <span class="service-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+      <span class="service-icon"><Icon fa={s.icon} /></span>
+      <h3 class="service-title">{s.title}</h3>
+    </li>
+  ))}
+</ol>

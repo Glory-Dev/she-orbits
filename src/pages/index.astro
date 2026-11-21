@@ -1,0 +1,751 @@
+---
+import Icon from '../components/Icon.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import SectorCard from '../components/SectorCard.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import FeaturedProjectCard from '../components/FeaturedProjectCard.astro';
+import Carousel from '../components/Carousel.astro';
+import NewsCard from '../components/NewsCard.astro';
+import { getSectors, getOpportunities, getNews, getProjects } from '../lib/content';
+const sectors = await getSectors();
+const news = (await getNews()).slice(0, 9);
+const featuredProjects = (await getProjects()).slice(0, 12); // the first 12 by `order`; the rest live on /projects/
+const upcoming = (await getOpportunities()).filter((o) => o.data.status === 'upcoming');
+---
+<BaseLayout title={"SHE ORBITS - Empowering Women in Space Industry"} description={""} bodyClass="page-home" fluidCursor>
+
+
+
+
+  <!-- Updated Header with Logo -->
+
+  
+
+  <div class="page-wrapper overflow-hidden">
+
+    <!-- Banner Section -->
+    <PageBanner title={"SHE ORBITS"} video="/assets/images/backgrounds/banner-video.mp4" ctaHref="/contact/" ctaLabel="Apply now" padClass="pb-8" copyClass="banner-hero-copy">Pioneering <span class="text-primary">women's leadership in space exploration</span> through Aerospace, Space industry, Space exploration Innovation, education, and groundbreaking aerospace research.</PageBanner>
+
+    <!-- Stats & Facts Section -->
+    <section class="stats-facts py-5 py-lg-11 py-xl-12 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row gap-7 gap-xl-0">
+          <div class="col-xl-4 col-xxl-4">
+            <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+              data-aos-duration="1000">
+              <span
+                class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">01</span>
+              <hr class="border-line">
+              <span class="badge text-bg-dark">Why Choose Us</span>
+            </div>
+          </div>
+          <div class="col-xl-8 col-xxl-7">
+            <div class="d-flex flex-column gap-9">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Empowering Women in Space Industry</h2>
+                    <p class="fs-5 mb-0">SHE ORBITS is a multidisciplinary Space &amp; STEM global company dedicated to
+                      advancing women's participation in aerospace technology, satellite missions, and space
+                      exploration. We bridge the gender gap in STEM through quality training, global recognition,
+                      practical research, and 30+ space and STEM sectors where learners can discover their path into the
+                      future space industry.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row gap-5">
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="200"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">1000+</h2>
+                    <p class="mb-0">Women Trained in Aerospace Technology</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="300"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">50+</h2>
+                    <p class="mb-0">Space Research Projects Completed</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="400"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">10+</h2>
+                    <p class="mb-0">International Space Partnerships</p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="d-flex flex-column gap-6 pt-9 border-top" data-aos="fade-up" data-aos-delay="400"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 fs-14">30+</h2>
+                    <p class="mb-0">Space Sectors Across Different Fields</p>
+                  </div>
+                </div>
+              </div>
+              <a href="/about/" class="btn" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <span class="btn-text">Learn More About Our Mission</span>
+                <Icon name="lucide:arrow-up-right" class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute bottom-0 start-0" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+        <img src="/assets/images/backgrounds/stats-facts-bg.svg" alt="" class="img-fluid">
+      </div>
+    </section>
+
+    <!-- SECTORS SHOWCASE SECTION -->
+    <section class="sectors-showcase">
+      <div class="stars" id="starsContainer"></div>
+
+      <div class="sectors-header" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="sectors-title">Space & STEM Sectors We Pioneer</h2>
+        <p class="sectors-subtitle">Discover 30 interdisciplinary pathways where girls can lead humanity's journey
+          beyond Earth — from engineering and medicine to policy, business, arts, and future human space systems. To
+          explore any sector in detail, just click on it.</p>
+      </div>
+
+
+
+
+      <div id="homeSectorsGrid" class="sectors-grid-photo sectors-grid-preview" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="1000" aria-live="polite">
+{sectors.slice(0, 8).map((s) => <SectorCard entry={s} />)}
+</div>
+      <div class="sectors-more" data-aos="fade-up" data-aos-duration="1000">
+        <a href="/sectors/" class="btn btn-primary">Discover More Sectors <Icon name="lucide:arrow-right" class="ms-2" /></a>
+      </div>
+
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="d-flex flex-column gap-5 gap-xl-11">
+        <div class="container">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">02</span>
+                <hr class="border-line">
+                <span class="badge text-bg-dark">Our Research</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Our Research Projects</h2>
+                    <p class="fs-5 mb-0">SHE ORBITS advances interdisciplinary research across autonomy, satellite
+                      systems, orbital dynamics, astronaut health, and Earth observation—turning ambitious ideas into
+                      publishable, mission-ready insight.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-3">
+          <div class="featured-projects-grid" aria-label="SHE ORBITS research projects">
+{featuredProjects.map((entry) => <FeaturedProjectCard entry={entry} />)}
+            <div class="discover-more-wrapper w-full text-center">
+              <a href="/projects/" class="btn btn-primary" style="width: fit-content">Discover More Projects <Icon name="lucide:arrow-right" class="ms-2" /></a>
+            </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section - Updated with Space Theme -->
+
+    <section class="services py-5 py-lg-11 py-xl-12" id="services">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-10">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">03</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-dark bg-white">Upcoming Opportunities</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0 text-white">Space Industry Programs</h2>
+                    <p class="fs-5 mb-0 text-white text-opacity-70">Comprehensive aerospace programs designed to empower
+                      women with cutting-edge skills in satellite technology, mission planning, space research, and
+                      leadership in the global space industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="programs-preview-block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div id="homeUpcomingPrograms" class="programs-grid" aria-live="polite">
+{upcoming.length ? upcoming.map((o) => <ProgramCard entry={o} showType hideLifecycle />) : <p class="text-white">No upcoming programs to display.</p>}
+</div>
+          </div>
+          <a href="/opportunities/" class="btn border border-white border-opacity-25 mt-2" data-aos="fade-up"
+            data-aos-delay="300" data-aos-duration="1000">
+            <span class="btn-text">Explore all opportunities</span>
+            <Icon name="lucide:arrow-up-right" class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us Section -->
+    <section class="why-choose-us py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="row justify-content-between gap-5 gap-xl-0">
+
+          <!-- here here -->
+
+          <!-- Why Choose SHE ORBITS -->
+          <div class="col-xxl-7">
+            <div class="d-flex flex-column gap-4">
+
+              <div>
+
+                <div class="flex mb-3">
+                  <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <span
+                      class="mt-1 round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">04</span>
+                    <hr class="border-line bg-white">
+                    <span class="badge text-dark bg-white mt-0 fs-8">Why Choose SHE ORBITS</span>
+                  </div>
+                </div>
+
+                <p class="mb-3 fs-5 text-dark text-opacity-70" data-aos="fade-right" data-aos-delay="300"
+                  data-aos-duration="1000">
+                  Where women turn ambition into real opportunities in the space industry.
+                </p>
+
+                <p class="mb-0 text-dark text-opacity-70" data-aos="fade-right" data-aos-delay="400"
+                  data-aos-duration="1000">
+                  SHE ORBITS is built exclusively for women who want to learn, innovate, and build their future in
+                  space.
+                  We bridge the gap between women, knowledge, the space industry, and real missions—creating pathways
+                  that go beyond traditional education.
+                </p>
+              </div>
+
+              <div class="row g-3">
+
+                <!-- 01 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">01</span>
+                      Women-Only. Purpose-Built.
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">A dedicated environment exclusively for women in space and STEM.</li>
+                      <li class="mb-2">Designed to help women learn, collaborate, lead, and grow with confidence.</li>
+                      <li>Built around the unique needs and ambitions of women in STEM.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">02</span>
+                      Connected to the Real Space Industry
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Direct industrial connection to the space sector.</li>
+                      <li class="mb-2">Exposure to real industry practices, challenges, and technologies.</li>
+                      <li>Access to real industry opportunities and experiences.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">03</span>
+                      From Learning to Real Missions
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Knowledge is only the beginning.</li>
+                      <li class="mb-2">Pathways from learning and research toward real engineering projects.</li>
+                      <li>Gain experience that goes beyond the classroom.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">04</span>
+                      Industry-Relevant Skills
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Skills and knowledge that matter in the evolving space sector.</li>
+                      <li class="mb-2">Aerospace, satellite technologies, and Earth observation.</li>
+                      <li>AI, data science, astronomy, and emerging space applications.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">05</span>
+                      Multidisciplinary by Design
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Space challenges require more than one discipline.</li>
+                      <li class="mb-2">Bringing science, engineering, technology, and innovation together.</li>
+                      <li>Approach complex space challenges from multiple perspectives.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 06 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">06</span>
+                      From Ideas to Impact
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Transform learning into research, projects, and solutions.</li>
+                      <li class="mb-2">Develop innovations with real-world potential.</li>
+                      <li>Focus on meaningful impact—not simply certificates.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 07 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">07</span>
+                      Opportunities to Build &amp; Lead
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">Take responsibility and contribute to projects and missions.</li>
+                      <li class="mb-2">Develop ideas and turn them into meaningful contributions.</li>
+                      <li>Grow as future leaders in the space industry.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 08 -->
+                <div class="col-md-6">
+                  <div class="p-4 rounded-4 border h-100">
+                    <h5 class="mb-3">
+                      <span class="text-primary me-2">08</span>
+                      A Community With a Purpose
+                    </h5>
+                    <ul class="mb-0 ps-3 text-dark text-opacity-70">
+                      <li class="mb-2">A focused community of women who share an ambition for space.</li>
+                      <li class="mb-2">Connect, collaborate, learn, and grow together.</li>
+                      <li>Become active contributors to the future of space.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Our Promise -->
+              <div class="mt-4 p-4 p-lg-5 rounded-4 bg-light" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">
+
+                <span class="badge text-bg-primary text-white mb-3">
+                  OUR PROMISE
+                </span>
+
+                <h2 class="mb-2 text-white">
+                  We don't just prepare women for the space industry.
+                </h2>
+
+                <p class="mb-0 fs-5 text-white text-opacity-70">
+                  We create opportunities for them to become part of it.
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xxl-5">
+            <div class="row">
+
+              <div class="col-lg-6 mb-7 mb-lg-0">
+                <div class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                  <div class="position-relative">
+                    <img src="/assets/images/home-services/services-img-2.jpeg" alt="" class="img-fluid w-100">
+                  </div>
+                  <div class="card bg-dark">
+                    <div class="card-body d-flex flex-column gap-7">
+                      <div>
+                        <h2 class="mb-0 text-white">30+</h2>
+                        <p class="mb-0 text-white text-opacity-70">Space sectors across science, technology,
+                          engineering, business, health, sustainability, policy, arts, and future space fields.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-7 mb-lg-0">
+                <div class="card border h-100 position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="300"
+                  data-aos-duration="1000">
+                  <span
+                    class="border rounded-circle round-490 d-block position-absolute top-0 start-50 translate-middle"></span>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="mb-0">1000+</h2>
+                      <p class="mb-0 text-dark">Girls Engaged Globally</p>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                      <a href="/" class="logo-dark">
+                        <img src="/assets/images/logos/logo-dark-2.png" alt="SHE ORBITS" class="img-fluid">
+                      </a>
+                      <p class="mb-0 fs-5 text-dark">Hundreds of girls worldwide have joined SHE ORBITS workshops,
+                        mentorships, programs, and research experiences—building skills, confidence, and pathways into
+                        the global space industry.</p>
+                    </div>
+                  </div>
+
+                  <span
+                    class="border rounded-circle round-490 d-block position-absolute top-100 start-50 translate-middle"></span>
+                </div>
+
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-4 mt-5" data-aos="fade-left" data-aos-delay="300"
+              data-aos-duration="1000">
+              <img src="/assets/images/39.jpg" alt="Astronauts working in space" class="w-100 object-fit-cover"
+                style="height: 780px;">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <!-- <section class="testimonial py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">05</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Success Stories</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Voices from Our Community</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Hear from participants, mentors, and partner organizations who
+                      are shaping the SHE ORBITS community. Their stories reflect the confidence, technical growth,
+                      leadership support, and global collaboration that help girls turn curiosity about space into real
+                      academic, research, and career pathways.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gap-7 gap-lg-0">
+            <div class="col-lg-4 col-xl-3 d-flex align-items-stretch">
+              <div class="card bg-primary w-100" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column gap-5 gap-xl-11 justify-content-between">
+                  <div class="d-flex flex-column gap-4">
+                    <p class="mb-0">Alumna Testimonial</p>
+                    <h4 class="mb-0">SHE ORBITS gave me the confidence and skills to lead a team developing
+                      next-generation propulsion systems. The mentorship here is unparalleled!</h4>
+                  </div>
+                  <div class="hstack gap-3">
+                    <img src="/assets/images/testimonial/testimonial-1.webp" alt=""
+                      class="img-fluid rounded-circle overflow-hidden flex-shrink-0" width="60" height="60">
+                    <div>
+                      <h5 class="mb-1 fw-normal">Maria Rodriguez</h5>
+                      <p class="mb-0">Propulsion Engineer, SpaceX</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xl-6 d-flex align-items-stretch">
+              <div class="card bg-dark w-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column gap-5 gap-xl-11 justify-content-between">
+                  <div class="d-flex flex-column gap-4">
+                    <p class="mb-0 text-white text-opacity-70">Partner Testimonial</p>
+                    <h4 class="mb-0 text-white pe-xl-2">SHE ORBITS graduates bring exceptional technical skills and
+                      fresh perspectives to our missions. Their innovative approaches have revolutionized how we think
+                      about space exploration!</h4>
+                    <div class="hstack gap-2">
+                      <ul class="list-unstyled mb-0 hstack gap-1">
+                        <li><a class="hstack" href="javascript:void(0)"><Icon name="solar:star-bold" class="fs-6 text-white" /></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><Icon name="solar:star-bold" class="fs-6 text-white" /></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><Icon name="solar:star-bold" class="fs-6 text-white" /></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><Icon name="solar:star-bold" class="fs-6 text-white" /></a></li>
+                        <li><a class="hstack" href="javascript:void(0)"><Icon name="solar:star-bold" class="fs-6 text-white" /></a></li>
+                      </ul>
+                      <h6 class="mb-0 text-white fw-medium">5.0</h6>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="hstack gap-3">
+                      <img src="/assets/images/testimonial/testimonial-2.webp" alt=""
+                        class="img-fluid rounded-circle overflow-hidden flex-shrink-0" width="60" height="60">
+                      <div>
+                        <h5 class="mb-1 fw-normal text-white">Dr. James Thompson</h5>
+                        <p class="mb-0 text-white text-opacity-70">Director, NASA Partnerships</p>
+                      </div>
+                    </div>
+                    <span><img src="/assets/images/testimonial/quete.svg" alt="quote"
+                        class="img-fluid flex-shrink-0"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xl-3 d-flex align-items-stretch">
+              <div class="card w-100" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column gap-5 gap-xl-11 justify-content-between">
+                  <div class="d-flex flex-column gap-4">
+                    <p class="mb-0">Student Testimonial</p>
+                    <h4 class="mb-0">The hands-on experience with real satellites and missions is incredible. I'm not
+                      just learning theory - I'm building the future of space exploration!</h4>
+                  </div>
+                  <div class="hstack gap-3">
+                    <img src="/assets/images/testimonial/testimonial-3.webp" alt=""
+                      class="img-fluid rounded-circle overflow-hidden flex-shrink-0" width="60" height="60">
+                    <div>
+                      <h5 class="mb-1 fw-normal">Priya Sharma</h5>
+                      <p class="mb-0">Current Trainee, Batch 2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Partners section hidden until real partner logos are provided. -->
+    <section class="py-5 py-lg-8 d-none" aria-hidden="true">
+      <div class="container">
+        <div class="d-flex flex-column gap-8" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <p class="fs-5 mb-0 text-center text-dark">Our Global Partners & Collaborators</p>
+          <div class="marquee w-100 d-flex align-items-center overflow-hidden">
+            <div class="marquee-content d-flex align-items-center gap-8">
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-1.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-2.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-3.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-4.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-5.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-1.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-2.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-3.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-4.svg"
+                  alt="partners" class="img-fluid"></div>
+              <div class="marquee-tag hstack justify-content-center"><img src="/assets/images/pricing/partners-5.svg"
+                  alt="partners" class="img-fluid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">05</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">FAQs</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-9">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Frequently Asked Questions</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Learn more about our programs, admission requirements, and how
+                      SHE ORBITS is creating pathways for women to lead in the global space industry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-xl-8">
+              <FaqAccordion id="accordionFlushExample" delay="200" page="home" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent news Section - DYNAMIC -->
+    <section class="Recent-news bg-light-gray py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-11">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">06</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Latest Updates</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Space Industry News</h2>
+                    <p class="fs-5 mb-0 text-opacity-70">Stay updated with the latest space exploration news, space
+                      industry developments, and breakthrough research from organizations shaping humanity's journey
+                      beyond Earth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <Carousel class="news-carousel" label="Latest space news">
+              {news.map((item) => (<div class="swiper-slide"><NewsCard entry={item} /></div>))}
+            </Carousel>
+          </div>
+          <!-- <div class="update-status">
+            <small>Last updated: <span id="lastUpdateTime">Loading...</span> • Auto-refreshes every 30 minutes</small>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Get in touch Section -->
+    <section class="get-in-touch py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="d-flex flex-column gap-5 gap-xl-10">
+          <div class="row gap-7 gap-xl-0">
+            <div class="col-xl-4 col-xxl-4">
+              <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+                data-aos-duration="1000">
+                <span
+                  class="round-36 flex-shrink-0 text-white rounded-circle bg-primary hstack justify-content-center fw-medium">07</span>
+                <hr class="border-line bg-white">
+                <span class="badge text-bg-dark">Join Us</span>
+              </div>
+            </div>
+            <div class="col-xl-8 col-xxl-7">
+              <div class="row">
+                <div class="col-xxl-8">
+                  <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1000">
+                    <h2 class="mb-0">Launch Your Space Journey</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between gap-7 gap-xl-0">
+            <div class="col-xl-3">
+              <p class="mb-0 fs-5" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Ready to break
+                barriers and reach for the stars? Join our community of pioneering women in space. Share your dreams
+                with us—we're here to help you achieve them.</p>
+            </div>
+            <div class="col-xl-8">
+              <form id="contactForm" class="d-flex flex-column gap-7" data-aos="fade-up" data-aos-delay="200"
+                data-aos-duration="1000">
+                <div><input type="text" class="form-control border-bottom border-dark" id="formGroupExampleInput"
+                    name="fullName" placeholder="Your Name"></div>
+                <div><input type="email" class="form-control border-bottom border-dark" id="exampleInputEmail1"
+                    name="email" placeholder="Your Email" aria-describedby="emailHelp"></div>
+                <div><textarea class="form-control border-bottom border-dark" id="exampleFormControlTextarea1"
+                    name="spaceDreams"
+                    placeholder="Tell us about your space aspirations and which program interests you"
+                    rows="3"></textarea></div>
+                <button type="submit" class="btn w-100 justify-content-center">
+                  <span class="btn-text">Apply Now</span>
+                  <Icon name="lucide:arrow-up-right" class="btn-icon bg-white text-dark round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm" />
+                </button>
+                <div id="contactFormStatus" class="mt-2"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+
+  
+
+  <div class="get-template hstack gap-2">
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</BaseLayout>

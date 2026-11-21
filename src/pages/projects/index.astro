@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getProjects } from '../../lib/content';
+const projects = await getProjects();
+---
+<BaseLayout
+  title="SHE ORBITS - Projects"
+  description="Mission design, AI and space-science projects from the SHE ORBITS community, from CubeSat inspection and lunar constellations to space medicine and space law."
+  bodyClass="page-projects"
+>
+  <PageBanner title="Our Projects" video="/assets/images/backgrounds/sectors.mp4" ctaHref="#projects-grid" ctaLabel="Browse projects" leadOpacity="70">
+    Explore <span class="text-white">{projects.length} space projects</span> spanning mission design, AI, space medicine and space law
+  </PageBanner>
+  <main class="projects-page" id="projects-grid">
+    <div class="projects-grid">
+      {projects.map((entry) => <ProjectCard entry={entry} />)}
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import faqData from '../data/faq.json';
+interface Props { id?: string; delay?: string; page?: 'home' | 'contact' }
+const { id = 'accordionFlushExample', delay = '200', page = 'home' } = Astro.props;
+const items = (Array.isArray(faqData) ? faqData : (faqData as any)[page]) as { cls?: string; q: string; a: string }[];
+---
+<div class="accordion accordion-flush" id={id} data-aos="fade-up" data-aos-delay={delay} data-aos-duration="1000">
+  {items.map((item, i) => (
+    <div class:list={['accordion-item', item.cls]}>
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed fs-8 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target={`#${id}-item-${i}`} aria-expanded="false" aria-controls={`${id}-item-${i}`}>{item.q}</button>
+      </h2>
+      <div id={`${id}-item-${i}`} class="accordion-collapse collapse" data-bs-parent={`#${id}`}>
+        <div class="accordion-body pt-0 fs-5 text-dark" set:html={item.a} />
+      </div>
+    </div>
+  ))}
+</div>

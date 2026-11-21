@@ -1,0 +1,58 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSectors, SECTOR_STATUS_LABEL } from '../../lib/content';
+import { site } from '../../data/site';
+
+export async function getStaticPaths() {
+  return (await getSectors()).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+---
+<BaseLayout title={`SHE ORBITS - ${d.title}`} description={d.summary} bodyClass="page-detail">
+
+
+
+  
+
+  <main class="sector-detail-page">
+    <div class="container">
+      <div id="sectorDetailRoot" class="text-white" aria-live="polite">
+<div class="row g-5 align-items-start">
+  <div class="col-lg-6">
+    <img src={d.image} alt={d.title} class="sector-detail-image w-100" />
+  </div>
+  <div class="col-lg-6">
+    <span class="sector-detail-number">Sector {String(d.number).padStart(2, '0')}</span>
+    <span class:list={['sector-detail-status', d.status === 'active' ? 'is-active' : 'is-coming-soon']}>{SECTOR_STATUS_LABEL[d.status]}</span>
+    <h1 class="sector-detail-title">{d.title}</h1>
+    <p class="sector-detail-description">{d.summary}</p>
+    {entry.body?.trim() && <div class="sector-detail-description detail-body"><Content /></div>}
+    <div class="d-flex flex-wrap gap-3 mt-4">
+      <a href={site.sectorInterestForm} target="_blank" rel="noopener noreferrer" class="btn btn-primary text-white">Sign your interest</a>
+      <a href="/sectors/" class="btn border border-white border-opacity-25 text-white">All sectors</a>
+    </div>
+  </div>
+</div>
+</div>
+    </div>
+  </main>
+
+  
+
+  <div class="get-template hstack gap-2">
+    
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+</BaseLayout>

@@ -1,0 +1,99 @@
+// Home page research / featured projects grid (from she-orbits-theme.css)
+
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .featured-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+.featured-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid rgba(138, 163, 224, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba($indigo-300, 0.45);
+  box-shadow: 0 18px 36px rgba(10, 14, 39, 0.28);
+}
+
+.featured-project-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: $navy;
+}
+
+.featured-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.featured-project-card:hover .featured-project-image img {
+  transform: scale(1.04);
+}
+
+.featured-project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 39, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-project-card:hover .featured-project-overlay {
+  opacity: 1;
+}
+
+.featured-project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  flex: 1;
+}
+
+.featured-project-title {
+  color: var(--so-charcoal);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  min-height: 3rem;
+}
+
+.featured-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.featured-project-tags .badge {
+  border-color: rgba($indigo, 0.25) !important;
+  color: var(--so-charcoal) !important;
+  background: rgba($indigo, 0.08);
+}
+
+
+// Cards link to /projects/<slug>/ via the title (stretched link); long titles/descriptions are clamped
+.featured-project-title { @include clamp(3); a { color: inherit; text-decoration: none; } }
+.featured-project-body p { @include clamp(4); }

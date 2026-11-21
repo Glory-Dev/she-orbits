@@ -1,0 +1,289 @@
+// header — folded from the old per-page inline <style> blocks.
+
+.header {
+  background: transparent !important;
+  border-top: none !important;
+}
+
+.header-menu .dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  margin-top: 10px;
+}
+
+.has-submenu {
+  cursor: pointer;
+  position: relative;
+}
+
+.has-submenu::after {
+  content: "▼";
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.has-submenu.show::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-left: 2px solid rgba($indigo, 0.2);
+}
+
+.submenu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.submenu::-webkit-scrollbar-track {
+  background: rgba($indigo, 0.1);
+  border-radius: 2px;
+}
+
+.submenu::-webkit-scrollbar-thumb {
+  background: rgba($indigo, 0.4);
+  border-radius: 2px;
+}
+
+.submenu::-webkit-scrollbar-thumb:hover {
+  background: rgba($indigo, 0.6);
+}
+
+.submenu.show {
+  display: block;
+}
+
+.submenu li {
+  margin-bottom: 8px !important;
+}
+
+.submenu .fw-bold {
+  font-size: 11px !important;
+  margin-bottom: 6px !important;
+  margin-top: 8px !important;
+}
+
+.submenu a {
+  transition: all 0.3s ease;
+  display: block;
+  padding: 3px 0;
+  font-size: 14px !important;
+}
+
+.submenu a:hover {
+  color: $indigo !important;
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header .btn-group {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .desktop-nav-container {
+    display: flex;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 0.5rem 0.75rem;
+    gap: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .desktop-nav .nav-item {
+    position: relative;
+  }
+  .desktop-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.85rem 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 40px;
+  }
+  .desktop-nav .nav-link:hover {
+    color: $indigo-300;
+  }
+  .desktop-nav .nav-link .dropdown-arrow {
+    font-size: 8px;
+    transition: transform 0.3s ease;
+    margin-left: 4px;
+    color: #ffffff;
+  }
+  .desktop-nav .nav-item.has-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  .desktop-nav .dropdown-menu-desktop {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    min-width: 240px;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0.75rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+  .desktop-nav .nav-item.has-dropdown:hover .dropdown-menu-desktop {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .desktop-nav .dropdown-section-title {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $indigo-300;
+  }
+  .desktop-nav .dropdown-item {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .desktop-nav .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding-left: 1.5rem;
+  }
+  .desktop-nav .dropdown-menu-desktop.dropdown-menu-opportunities {
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    gap: 0;
+  }
+  .desktop-nav .dropdown-menu-opportunities .dropdown-column {
+    flex: 1;
+    min-width: 0;
+  }
+  .desktop-nav .dropdown-menu-opportunities .dropdown-column+.dropdown-column {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .desktop-nav .dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem 1rem;
+  }
+  .desktop-nav .nav-cta {
+    margin-left: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    background: rgba($indigo, 0.8);
+    color: #fff !important;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  .desktop-nav .nav-cta:hover {
+    background: rgba($indigo-300, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+    color: #fff !important;
+  }
+}
+
+.header .dropdown-item-wrapper {
+  position: relative;
+}
+
+.header .dropdown-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 140px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.header .dropdown-item-wrapper:hover .dropdown-submenu {
+  display: flex;
+}
+
+.header .dropdown-subitem {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header .dropdown-subitem:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header .submenu-item-wrapper {
+  position: relative;
+}
+
+.header .submenu-flyout {
+  display: none;
+}
+
+.header-menu .dropdown-item {
+  color: #374151;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.header-menu .dropdown-item:hover {
+  background-color: #f3f4f6;
+  color: $indigo;
+  transform: translateX(5px);
+}
+
+.header-menu .dropdown-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $indigo !important;
+}
+
+.header-menu .dropdown-divider {
+  margin: 10px 0;
+}
+
+.header-menu .dropdown-toggle::after {
+  margin-left: 5px;
+}

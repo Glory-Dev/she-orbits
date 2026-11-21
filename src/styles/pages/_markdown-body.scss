@@ -1,0 +1,10 @@
+// Rendered markdown (opportunity + sector detail pages) — see docs/CONTENT-GUIDE.md
+.detail-body {
+  h2 { @extend .program-detail-heading; margin-top: 2rem; }
+  h3 { color: $indigo; font-size: 1.25rem; margin: 1.5rem 0 .5rem; }
+  ul, ol { @extend .program-detail-list; }
+  a { color: $indigo-300; text-decoration: underline; }
+  img, video { max-width: 100%; border-radius: .5rem; }
+  .detail-slideshow { margin: 1.25rem 0; }
+  > :first-child { margin-top: 0; }
+}
