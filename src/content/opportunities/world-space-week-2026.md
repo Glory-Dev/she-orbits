@@ -2,6 +2,7 @@
 title: "World Space Week 2026: Rocket Revolution"
 type: "events"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-8.webp"
 order: 80
 summary: "SHE ORBITS celebrated World Space Week 2026 (October 4–10) under the theme “Rocket Revolution”: seven days of challenges, seven space-career roadmaps and two expert sessions."

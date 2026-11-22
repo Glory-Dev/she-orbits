@@ -8,11 +8,13 @@ import FaqAccordion from '../components/FaqAccordion.astro';
 import FeaturedProjectCard from '../components/FeaturedProjectCard.astro';
 import Carousel from '../components/Carousel.astro';
 import NewsCard from '../components/NewsCard.astro';
-import { getSectors, getOpportunities, getNews, getProjects } from '../lib/content';
+import { getSectors, getOpportunities, getNews, getProjects, byLifecycle } from '../lib/content';
+import { site } from '../data/site';
 const sectors = await getSectors();
-const news = (await getNews()).slice(0, 9);
-const featuredProjects = (await getProjects()).slice(0, 12); // the first 12 by `order`; the rest live on /projects/
-const upcoming = (await getOpportunities()).filter((o) => o.data.status === 'upcoming');
+const homeOpportunities = byLifecycle((await getOpportunities()).filter((o) => o.data.home));
+const news = (await getNews()).slice(0, site.home.news);
+const featuredProjects = (await getProjects()).slice(0, site.home.projects);
+
 ---
 <BaseLayout title={"SHE ORBITS - Empowering Women in Space Industry"} description={""} bodyClass="page-home" fluidCursor>
 
@@ -194,8 +196,11 @@ const upcoming = (await getOpportunities()).filter((o) => o.data.status === 'upc
           </div>
           <div class="programs-preview-block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <div id="homeUpcomingPrograms" class="programs-grid" aria-live="polite">
-{upcoming.length ? upcoming.map((o) => <ProgramCard entry={o} showType hideLifecycle />) : <p class="text-white">No upcoming programs to display.</p>}
-</div>
+              {homeOpportunities.length ?
+                homeOpportunities.map((o) => <ProgramCard entry={o} showType hideLifecycle />)
+                : <p class="text-white">New programs will be announced soon.</p>
+              }
+            </div>
           </div>
           <a href="/opportunities/" class="btn border border-white border-opacity-25 mt-2" data-aos="fade-up"
             data-aos-delay="300" data-aos-duration="1000">

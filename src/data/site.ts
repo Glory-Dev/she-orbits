@@ -7,4 +7,5 @@ export const site = {
   /** "Sign your interest" form on sector pages */
   sectorInterestForm: 'https://forms.gle/3PLVyWYVhBK8dJFS6',
   assetVersion: 'she-orbits-10',
+  home: { projects: 12, news: 9 },
 };

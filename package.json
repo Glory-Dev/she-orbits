@@ -16,7 +16,8 @@
     "check:links": "node scripts/check-links.mjs",
     "check": "npm run build && npm run check:links",
     "migrate:json": "node scripts/migrate-json-to-md.mjs",
-    "images:optimize": "node scripts/optimize-images.mjs"
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "videos:optimize": "node scripts/optimize-videos.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.10",

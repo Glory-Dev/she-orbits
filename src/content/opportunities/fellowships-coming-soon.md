@@ -2,6 +2,7 @@
 title: "Fellowships"
 type: "fellowships"
 status: "coming-soon"
+home: false
 image: "/assets/images/services/fellowships.webp"
 order: 200
 summary: "Research and leadership fellowships are being prepared. Contact SHE ORBITS to express interest."

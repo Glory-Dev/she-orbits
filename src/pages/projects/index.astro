@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Icon from '../../components/Icon.astro';
+import research from '../../data/research.json';
+import { getProjects } from '../../lib/content';
+const projects = await getProjects();
+---
+<BaseLayout
+  title="SHE ORBITS - Projects"
+  description="At SHE ORBITS, research is where curiosity becomes capability. Explore our research projects across autonomous systems, satellite engineering, orbital dynamics, astronaut health, space habitats and Earth observation."
+  bodyClass="page-projects-hub"
+  fluidCursor
+>
+  <PageBanner title="Projects" video="/assets/images/backgrounds/projects.mp4" ctaHref="#research-overview" ctaLabel="Explore our research">
+    At SHE ORBITS, <span class="text-primary">research</span> is where curiosity becomes capability.
+  </PageBanner>
+
+  <!-- 01 Overview -->
+  <section class="mission-section py-5 py-lg-11 py-xl-12" id="research-overview">
+    <div class="container">
+      <SectionHeading number="01" badge="Our Research" title="Research Projects" />
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="mission-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div class="text-center">
+              <Icon fa="flask" class="fs-1 text-primary mb-4 d-block mx-auto" />
+              <h3 class="mb-4">Where curiosity becomes capability</h3>
+              <p class="fs-5 text-dark mb-4">
+                Our research projects bring together engineering, science, data, and space systems to investigate challenges that matter for the future of exploration and life beyond Earth. We work across disciplines including autonomous systems, satellite engineering, orbital dynamics, astronaut health, space habitats, Earth observation, and emerging space technologies.
+              </p>
+              <p class="fs-5 text-dark mb-0">
+                From early-stage concepts and computational studies to applied research and mission-oriented projects, our work is designed to move beyond theory. We focus on developing practical methodologies, analyzing real-world problems, and producing insights that can contribute to future missions, technologies, and scientific understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Community -->
+  <section class="vision-section py-5 py-lg-11 py-xl-12 bg-light-gray">
+    <div class="container">
+      <SectionHeading number="02" badge="Our Community" title="A Research Community Built on Diverse Expertise" />
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="mission-card bg-white" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <div class="text-center">
+              <Icon fa="people-group" class="fs-1 text-primary mb-4 d-block mx-auto" />
+              <h3 class="mb-4">Ideas challenged, refined, validated</h3>
+              <p class="fs-5 text-dark mb-4">
+                Our research community brings together women with diverse technical and scientific backgrounds, creating an environment where ideas can be challenged, refined, validated, and transformed into meaningful outcomes. Projects may involve simulation, modeling, experimental analysis, satellite and mission data, systems engineering, literature-based investigation, or interdisciplinary collaboration.
+              </p>
+              <p class="fs-5 text-dark mb-0">
+                Through our research projects, SHE ORBITS aims to contribute to the growing body of knowledge in the space sector while giving women opportunities to develop research experience, collaborate across disciplines, and turn their expertise into work with potential scientific and mission relevance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement -->
+  <section class="research-quote py-5 py-lg-10">
+    <div class="container">
+      <figure class="research-quote-inner" data-aos="fade-up" data-aos-duration="1000">
+        <Icon fa="quote-left" class="research-quote-icon" />
+        <blockquote>
+          <p>We believe impactful space research does not always begin in a laboratory or mission control center—it can begin with a question, a dataset, a simulation, or an ambitious idea.</p>
+        </blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 03 Focus areas -->
+  <section class="values-section py-5 py-lg-11 py-xl-12">
+    <div class="container">
+      <SectionHeading number="03" badge="Focus Areas" title="What We Investigate" intro="Our projects span disciplines across the space sector, from the systems that fly to the people who will fly them." />
+      <div class="row g-4">
+        {research.areas.map((a, i) => (
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay={(i % 3 + 1) * 100} data-aos-duration="1000">
+            <div class="value-card">
+              <div class="value-icon"><Icon fa={a.icon} class="fs-3 text-primary" /></div>
+              <h4 class="mb-3">{a.title}</h4>
+              <p class="text-dark text-opacity-70">{a.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Approach -->
+  <section class="goals-section py-5 py-lg-11 py-xl-12 bg-light-gray">
+    <div class="container">
+      <SectionHeading number="04" badge="Our Approach" title="How Our Projects Work" intro="Every project starts with a question and uses the methods that fit it best, often several at once." />
+      <div class="row g-4">
+        {research.methods.map((m, i) => (
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay={(i % 3 + 1) * 100} data-aos-duration="1000">
+            <div class="value-card">
+              <div class="value-icon"><Icon fa={m.icon} class="fs-3 text-primary" /></div>
+              <h4 class="mb-3">{m.title}</h4>
+              <p class="text-dark text-opacity-70">{m.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Projects -->
+  <section class="projects-section py-5 py-lg-11 py-xl-12" id="projects-grid">
+    <div class="container">
+      <SectionHeading number="05" badge="Our Work" title="Explore the Research Behind Our Ideas" intro="Explore the research behind our ideas, the challenges we are investigating, and the work shaping what comes next." />
+      <div class="projects-grid projects-light">
+        {projects.map((entry) => <ProjectCard entry={entry} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -2,6 +2,7 @@
 title: "World Space Week 2025"
 type: "events"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-18.webp"
 order: 180
 summary: "A seven-day international SHE ORBITS initiative combining space education, inspiration, technical learning, community engagement, and the official launch of its global community."

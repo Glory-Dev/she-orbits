@@ -2,6 +2,7 @@
 title: "Interdisciplinary Spring School"
 type: "internships"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-17.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 170

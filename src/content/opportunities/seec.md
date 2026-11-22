@@ -2,6 +2,7 @@
 title: "SEEC (Space Exploration Educators Conference)"
 type: "conferences"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-19.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 190

@@ -2,6 +2,7 @@
 title: "Satellite Data Processing with Planetek Italia"
 type: "courses"
 status: "upcoming"
+home: true
 image: "/assets/images/services/services-img-7.webp"
 form: "https://forms.gle/kEc55WRH7o6VM3au8"
 order: 70

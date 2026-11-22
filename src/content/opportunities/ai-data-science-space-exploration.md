@@ -2,6 +2,7 @@
 title: "AI & Data Science in Space Exploration"
 type: "courses"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-11.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 110

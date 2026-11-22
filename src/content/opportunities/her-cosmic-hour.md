@@ -2,6 +2,7 @@
 title: "Her Cosmic Hour"
 type: "programs"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-12.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 120

@@ -2,6 +2,7 @@
 title: "Space Law – Cohort 2"
 type: "programs"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-2.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 20

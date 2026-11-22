@@ -2,6 +2,7 @@
 title: "Panels"
 type: "talks-panels"
 status: "coming-soon"
+home: false
 image: "/assets/images/services/talks-panels.webp"
 order: 210
 draft: true

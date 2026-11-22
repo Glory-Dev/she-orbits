@@ -2,6 +2,7 @@
 title: "Python for Orbital Mechanics"
 type: "courses"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-10.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 100

@@ -2,6 +2,7 @@
 title: "SHE ORBITS Summer School 2026"
 type: "internships"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-1.webp"
 form: "https://forms.gle/38UdZzYAurZkLdwR9"
 order: 10

@@ -27,6 +27,7 @@ const opportunities = defineCollection({
     title: z.string().min(2),
     type: z.enum(typeIds),
     status: z.enum(['ongoing', 'upcoming', 'coming-soon', 'past']),
+    home: z.boolean().default(false),
     image: assetPath,
     summary: z.string().default(''), // card text; may be empty for "coming soon" placeholders
     form: z.string().url().optional(), // application / enrolment link (shown for upcoming + past)

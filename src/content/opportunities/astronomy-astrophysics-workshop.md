@@ -2,6 +2,7 @@
 title: "Astronomy & Astrophysics Workshop"
 type: "workshops"
 status: "upcoming"
+home: true
 image: "/assets/images/services/services-img-3.webp"
 form: "https://forms.gle/R8WKx4ZNdWqPibps9"
 order: 30

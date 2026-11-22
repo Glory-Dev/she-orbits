@@ -24,7 +24,7 @@ const asset = (f, m) => (WARN_ASSETS ? warn : err)(f, m);
 const SPECS = {
   opportunities: {
     required: ['title', 'type', 'status', 'image'],
-    optional: ['summary', 'form', 'order', 'draft'],
+    optional: ['summary', 'home', 'form', 'order', 'draft'],
     enums: { type: types, status: ['ongoing', 'upcoming', 'coming-soon', 'past'] },
     urls: ['form'],
   },

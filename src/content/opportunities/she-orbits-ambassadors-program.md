@@ -2,6 +2,7 @@
 title: "SHE ORBITS Ambassadors Program"
 type: "programs"
 status: "upcoming"
+home: true
 image: "/assets/images/services/services-img-5.webp"
 form: "https://forms.gle/R8WKx4ZNdWqPibps9"
 order: 50

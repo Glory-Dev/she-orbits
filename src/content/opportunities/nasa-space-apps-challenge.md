@@ -2,6 +2,7 @@
 title: "NASA Space Apps Challenge"
 type: "competitions-challenges"
 status: "ongoing"
+home: false
 image: "/assets/images/36.webp"
 form: "https://forms.gle/ussmgF7rJZLH4Moc6"
 order: 90

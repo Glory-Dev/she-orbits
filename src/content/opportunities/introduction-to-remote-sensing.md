@@ -2,6 +2,7 @@
 title: "Introduction to Remote Sensing"
 type: "courses"
 status: "past"
+home: false
 image: "/assets/images/services/services-img-16.webp"
 form: "https://forms.gle/4KEWiMb24qBmNK1U6"
 order: 160
