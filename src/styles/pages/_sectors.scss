@@ -1,0 +1,13 @@
+// sectors — folded from the old per-page inline <style> blocks.
+
+.all-sectors {
+  background: linear-gradient(180deg, #0a0a1a 0%, $gray-900 100%);
+}
+
+.all-sectors h2, .all-sectors p {
+  color: #fff;
+}
+
+.all-sectors .text-muted {
+  color: rgba(255, 255, 255, 0.72) !important;
+}

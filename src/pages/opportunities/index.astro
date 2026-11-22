@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import ProgramCard from '../../components/ProgramCard.astro';
+import { getOpportunities, byLifecycle, opportunityTypes } from '../../lib/content';
+const all = await getOpportunities();
+---
+<BaseLayout title={"SHE ORBITS - Programs & Opportunities"} description={""} bodyClass="page-opportunities">
+
+
+
+  
+
+
+
+  <div class="page-wrapper overflow-hidden">
+
+    <PageBanner title={"Programs &amp; Opportunities"} video="/assets/videos/banner-video.mp4" ctaHref="/contact/" ctaLabel="Apply now">Explore <span class="text-primary">ongoing pathways and upcoming events</span> that connect girls to mentors, missions, and real opportunities in space.</PageBanner>
+
+    <section class="programs-hub-content py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="row gap-7 gap-xl-0 mb-8 text-white">
+          <div class="col-xl-4 col-xxl-4">
+            <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+              data-aos-duration="1000">
+              <span
+                class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">01</span>
+              <hr class="border-line bg-white">
+              <span class="badge text-dark bg-white">Explore</span>
+            </div>
+          </div>
+          <div class="col-xl-8 col-xxl-7">
+            <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+              <h2 class="mb-0 text-white">All Opportunities</h2>
+              <p class="fs-5 mb-0 text-white text-opacity-75">Browse programs, courses, fellowships, internships,
+                panels, competitions, events, conferences, and workshops. Each card links to full details and the right
+                next step for ongoing or upcoming opportunities.</p>
+              <nav class="programs-hub-nav" aria-label="Opportunity categories">
+                <a href="/opportunities/#programs">Programs</a>
+                <a href="/opportunities/#courses">Courses</a>
+                <a href="/opportunities/#internships">Internships</a>
+                <a href="/opportunities/#fellowships">Fellowships</a>
+                <a href="/opportunities/#research">Research Programs</a>
+                <a href="/opportunities/#competitions-challenges">Competitions & Challenges</a>
+                <a href="/opportunities/#events">Events</a>
+                <a href="/opportunities/#talks-panels">Talks & Panels</a>
+                <a href="/opportunities/#webinars">Webinars</a>
+                <a href="/opportunities/#workshops">Workshops</a>
+                <a href="/opportunities/#conferences">Conferences</a>
+                <a href="/opportunities/#missions-simulations">Missions & Simulations</a>
+                <a href="/opportunities/#astronaut-training">Astronaut Trainings</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="programsHubRoot" class="text-white" aria-live="polite">
+{opportunityTypes.map((type) => {
+  const items = byLifecycle(all.filter((o) => o.data.type === type.id));
+  return (
+    <section id={type.id} class="programs-hub-section">
+      <div class="programs-hub-section-header">
+        <h2 class="programs-hub-section-title">{type.label}</h2>
+        <p class="programs-hub-section-description">{type.desc}</p>
+      </div>
+      {items.length ? (
+        <div class="programs-grid">{items.map((entry) => <ProgramCard entry={entry} />)}</div>
+      ) : (
+        <p class="programs-empty">New opportunities in this category will be announced soon.</p>
+      )}
+    </section>
+  );
+})}
+</div>
+      </div>
+    </section>
+
+  </div>
+
+  
+
+  <div class="get-template hstack gap-2">
+    
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+</BaseLayout>

@@ -1,0 +1,159 @@
+// SHE ORBITS comfy space theme — was assets/css/she-orbits-theme.css, loaded after styles.css
+
+/* SHE ORBITS comfy space theme — loaded after styles.css */
+
+:root {
+  --bs-primary: #{$indigo};
+  --bs-primary-rgb: 99, 102, 241;
+  --bs-secondary: $navy;
+  --bs-secondary-rgb: 10, 14, 39;
+  --bs-light-gray: #f3f4f8;
+  --bs-light-gray-rgb: 243, 244, 248;
+  /* Readable body/heading text on light sections — not lavender */
+  --bs-dark: #1f2a2e;
+  --bs-dark-rgb: 31, 42, 46;
+  --bs-body-color: rgba(31, 42, 46, 0.82);
+  --bs-body-color-rgb: 31, 42, 46;
+  --bs-heading-color: #1f2a2e;
+  --bs-link-color: #1f2a2e;
+  --bs-link-color-rgb: 31, 42, 46;
+  --bs-link-hover-color: #{$indigo};
+  --bs-link-hover-color-rgb: 99, 102, 241;
+  --bs-focus-ring-color: rgba($indigo, 0.25);
+  --so-accent-lavender: #{$indigo-300};
+  --so-accent-muted: #8aa3e0;
+  --so-charcoal: #{$charcoal};
+  --so-warm-white: #f3f4f8;
+}
+
+.bg-primary,
+.btn-primary,
+.round-36.bg-primary,
+.round-45.bg-primary,
+.round-52.bg-primary,
+.round-64.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.text-dark,
+.text-dark.text-opacity-70,
+.text-dark.text-opacity-75 {
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity, 1)) !important;
+}
+
+.border-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: $indigo-600 !important;
+  border-color: $indigo-600 !important;
+  color: #fff !important;
+}
+
+.bg-light-gray {
+  background-color: var(--bs-light-gray) !important;
+}
+
+/* Light content sections: default paragraphs to readable charcoal */
+.about-content p,
+.mission-section p,
+.vision-section p,
+.values-section p,
+.stats-facts p,
+.faq-contact p,
+.get-in-touch p,
+body {
+  color: var(--bs-body-color);
+}
+
+.about-content h1,
+.about-content h2,
+.about-content h3,
+.about-content h4,
+.mission-section h1,
+.mission-section h2,
+.mission-section h3,
+.vision-section h1,
+.vision-section h2,
+.vision-section h3,
+.values-section h1,
+.values-section h2,
+.values-section h3,
+.values-section h4,
+.stats-facts h2,
+.faq-contact h2 {
+  color: var(--bs-heading-color);
+}
+
+.banner-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-section .banner-hero-copy {
+  max-width: 36rem;
+}
+
+/*
+ * Navbar stays with the user (fixed).
+ * Logo stays in the hero top-right (Asmaa) and scrolls away with the hero.
+ */
+header.header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1040;
+}
+
+.banner-section .banner-hero-logo {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.25rem;
+  z-index: 3;
+  display: block;
+  width: 96px;
+  line-height: 0;
+}
+
+.banner-section .banner-hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .banner-section .banner-hero-logo {
+    top: 1.35rem;
+    right: 1.75rem;
+    width: 112px;
+  }
+
+  /* Pill navbar stays centered; logo lives in the hero, not the header */
+  .header .header-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .header .desktop-nav {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .header .header-wrapper > .d-flex.ms-auto {
+    display: none !important;
+  }
+}
+

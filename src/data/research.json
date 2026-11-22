@@ -1,0 +1,19 @@
+{
+  "areas": [
+    { "title": "Autonomous Systems", "icon": "robot", "text": "Guidance, navigation and decision-making for spacecraft, rovers and swarms that operate with minimal human input." },
+    { "title": "Satellite Engineering", "icon": "satellite", "text": "Design, analysis and operation of satellites and small-satellite missions, from individual subsystems to full mission architecture." },
+    { "title": "Orbital Dynamics", "icon": "atom", "text": "Trajectory design, transfers, constellations and orbit maintenance across low Earth, geostationary and lunar environments." },
+    { "title": "Astronaut Health", "icon": "heart-pulse", "text": "Biomedical and life-science research on how spaceflight affects the human body and how to protect future crews." },
+    { "title": "Space Habitats", "icon": "igloo", "text": "Concepts for living and working beyond Earth, from life support and radiation protection to sustainable design." },
+    { "title": "Earth Observation", "icon": "earth-americas", "text": "Using satellite data to understand our planet, from climate and land use to natural hazards and the environment." },
+    { "title": "Emerging Space Technologies", "icon": "microchip", "text": "New ideas at the frontier of the sector, including AI for space, novel sensing and communication approaches, and next-generation systems." }
+  ],
+  "methods": [
+    { "title": "Simulation & Modeling", "icon": "laptop-code", "text": "Computational studies that test ideas, explore trade-offs and predict how a system behaves before anything is built." },
+    { "title": "Experimental Analysis", "icon": "flask", "text": "Structured experiments and data analysis that validate assumptions and measure what actually happens." },
+    { "title": "Satellite & Mission Data", "icon": "database", "text": "Working with real satellite and mission datasets to ground research in real-world conditions." },
+    { "title": "Systems Engineering", "icon": "diagram-project", "text": "Looking at the whole mission, from requirements and interfaces to risk, so that results hold up in practice." },
+    { "title": "Literature-Based Investigation", "icon": "book-open", "text": "Careful review of existing research, policy and case studies to find gaps and build on what is already known." },
+    { "title": "Interdisciplinary Collaboration", "icon": "people-group", "text": "Engineers, scientists, data specialists and policy thinkers working across fields on one shared question." }
+  ]
+}

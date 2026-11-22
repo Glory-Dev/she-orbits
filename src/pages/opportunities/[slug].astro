@@ -1,0 +1,52 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getOpportunities, LIFECYCLE_LABEL, lifecycleClass, typeLabel, cta } from '../../lib/content';
+
+export async function getStaticPaths() {
+  return (await getOpportunities()).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const action = cta(entry);
+---
+<BaseLayout title={`SHE ORBITS - ${d.title}`} description={d.summary} bodyClass="page-opportunities page-detail">
+
+  
+
+  <main class="program-detail-page">
+    <div class="container">
+      <div id="programDetailRoot" class="text-white" aria-live="polite">
+<div class="program-detail-layout">
+  <div class="program-detail-image" style={`background-image: url('${d.image}');`} role="img" aria-label={d.title}></div>
+  <span class="program-detail-type">{typeLabel(d.type)}</span>
+  <span class:list={['program-detail-lifecycle', lifecycleClass(d.status)]}>{LIFECYCLE_LABEL[d.status]}</span>
+  <h1 class="program-detail-title">{d.title}</h1>
+  <p class="program-detail-description">{d.summary}</p>
+  {entry.body?.trim() && <div class="program-detail-description detail-body"><Content /></div>}
+  <div class="d-flex flex-wrap gap-3 mt-4">
+    {action && <a href={action.url} class="program-btn program-btn-cta btn border border-white border-opacity-25 text-white" target="_blank" rel="noopener noreferrer">{action.label}</a>}
+    <a href="/opportunities/" class="btn border border-white border-opacity-25 text-white">All opportunities</a>
+  </div>
+</div>
+</div>
+    </div>
+  </main>
+
+  
+
+  <div class="get-template hstack gap-2">
+    
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+</BaseLayout>

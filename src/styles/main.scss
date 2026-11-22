@@ -1,0 +1,28 @@
+@use '@fortawesome/fontawesome-free/scss/variables' with ($font-path: '@fortawesome/fontawesome-free/webfonts', $font-display: swap);
+@use '@fortawesome/fontawesome-free/scss/fontawesome';
+@use '@fortawesome/fontawesome-free/scss/solid';
+@use '@fortawesome/fontawesome-free/scss/brands';
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/theme';
+@import 'base/icons';
+
+@import 'components/banner';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/cards';
+@import 'components/scroll-top';
+@import 'components/carousel';
+@import 'components/news';
+
+@import 'pages/home';
+@import 'pages/featured-projects';
+@import 'pages/contact';
+@import 'pages/mission-vision';
+@import 'pages/sectors';
+@import 'pages/projects';
+@import 'pages/about-services';
+@import 'pages/opportunities';
+@import 'pages/detail';
+@import 'pages/markdown-body';

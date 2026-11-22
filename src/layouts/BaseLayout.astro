@@ -1,0 +1,43 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+import { site } from '../data/site';
+import '../styles/main.scss';
+
+interface Props {
+  title: string;
+  description?: string;
+  bodyClass?: string;
+  /** WebGL fluid cursor (was loaded on home, about, contact, mission-vision, sectors) */
+  fluidCursor?: boolean;
+  image?: string;
+}
+const { title, description = '', bodyClass = '', fluidCursor = false, image = '/assets/images/logos/logo-light.svg' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logos/favicon.svg?v=she-orbits-2" />
+    <!-- Bootstrap build + custom utilities (phase 1: served as-is; the Sass bundle loads after it) -->
+    <link rel="stylesheet" href="/assets/css/styles.css?v=she-orbits-10" />
+  </head>
+  <body class={bodyClass} data-fluid-cursor={fluidCursor ? '' : undefined} data-forms-endpoint={site.formsEndpoint}>
+    <SiteHeader />
+    <slot />
+    <SiteFooter />
+    <ScrollTop />
+    <script>
+      import '../scripts/main.js';
+    </script>
+  </body>
+</html>

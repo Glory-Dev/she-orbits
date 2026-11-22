@@ -1,0 +1,71 @@
+// mission-vision — folded from the old per-page inline <style> blocks.
+
+.mission-card {
+  background: rgba($indigo, 0.05);
+  border: 1px solid rgba($indigo, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+  background: rgba($indigo, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-card {
+  background: white;
+  border: 1px solid rgba($indigo, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba($indigo, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: $indigo;
+  border-radius: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 25px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: rgba($indigo, 0.3);
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}

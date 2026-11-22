@@ -1,0 +1,71 @@
+// opportunities — folded from the old per-page inline <style> blocks.
+
+.programs-hub-content {
+  background: linear-gradient(180deg, #0a0a1a 0%, $gray-900 100%);
+  padding-bottom: 5rem;
+}
+
+.programs-hub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.programs-hub-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba($indigo, 0.35);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.programs-hub-nav a:hover {
+  background: rgba($indigo, 0.25);
+  border-color: rgba($indigo-300, 0.55);
+  color: #fff;
+}
+
+.programs-hub-section {
+  margin-bottom: 4.5rem;
+  scroll-margin-top: 7rem;
+}
+
+.programs-hub-section-header {
+  margin-bottom: 2rem;
+}
+
+.programs-hub-lifecycle {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $indigo-300;
+  margin-bottom: 0.75rem;
+}
+
+.programs-hub-section-title {
+  color: #fff;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 0.75rem;
+}
+
+.programs-hub-section-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 720px;
+  margin: 0;
+}
+
+// legacy: page background of the opportunities hub
+.page-opportunities body {
+  background: #0a0a1a;
+  overflow-x: clip;
+}

@@ -1,0 +1,19 @@
+---
+interface Props { number: string; badge: string; title: string; intro?: string }
+const { number, badge, title, intro } = Astro.props;
+---
+<div class="row gap-7 gap-xl-0 mb-10">
+  <div class="col-xl-4 col-xxl-4">
+    <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+      <span class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">{number}</span>
+      <hr class="border-line" />
+      <span class="badge text-bg-dark">{badge}</span>
+    </div>
+  </div>
+  <div class="col-xl-8 col-xxl-7">
+    <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <h2 class="mb-0">{title}</h2>
+      {intro && <p class="fs-5 mb-0 text-opacity-70">{intro}</p>}
+    </div>
+  </div>
+</div>

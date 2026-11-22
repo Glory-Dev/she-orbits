@@ -1,0 +1,65 @@
+---
+import Icon from './Icon.astro';
+import { opportunityTypes } from '../lib/content';
+---
+<footer class="footer" style="background: linear-gradient(180deg, #111827 0%, #374151 100%); color: #fff;">
+    <div class="container py-6 py-lg-7">
+      <div class="row gy-5 align-items-start justify-content-between">
+
+        <!-- Logo and Brand -->
+        <div class="col-lg-4 text-center text-lg-start">
+          <img src="/assets/images/logos/logo-light.svg?v=she-orbits-2" alt="SHE ORBITS" height="120" class="mb-4">
+          <p class="text-white-50" style="font-size: 15px; line-height: 1.8;">
+            Empowering girls globally to lead in space and STEM fields. We provide a launchpad where science,
+            technology, leadership, and imagination converge, giving young women the tools to contribute meaningfully to
+            space exploration.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-lg-4 text-center">
+          <h6 class="text-uppercase fw-semibold mb-4" style="letter-spacing: 1px; color: #E5E7EB;">Explore</h6>
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <ul class="list-unstyled text-start mb-0">
+              <li><a href="/" class="footer-link">Home</a></li>
+              <li><a href="/about/" class="footer-link">About</a></li>
+              <li><a href="/mission-vision/" class="footer-link">Mission & Vision</a></li>
+              <li><a href="/projects/" class="footer-link">Projects</a></li>
+              <li><a href="/sectors/" class="footer-link">Sectors</a></li>
+              <li><a href="/contact/" class="footer-link">Contact</a></li>
+            </ul>
+            <ul class="list-unstyled text-start mb-0">
+              <li><a href="/opportunities/" class="footer-link fw-bold">Opportunities</a></li>
+{opportunityTypes.map((t) => <li><a href={`/opportunities/#${t.id}`} class="footer-link">{t.navLabel ?? t.label}</a></li>)}
+</ul>
+          </div>
+        </div>
+
+        <!-- Contact and Social -->
+        <div class="col-lg-3 text-center text-lg-end">
+          <h6 class="text-uppercase fw-semibold mb-4" style="letter-spacing: 1px; color: #E5E7EB;">Stay Connected with
+            SHE ORBITS</h6>
+          <p class="mb-1"><a href="mailto:contact@sheorbitscompany.com"
+              class="footer-link">contact@sheorbitscompany.com</a></p>
+          <p class="mb-3"><a href="#" class="footer-link">+###</a></p>
+          <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+            <a href="https://www.instagram.com/she.orbits" class="social-icon" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram"><Icon name="mdi:instagram" /></a>
+            <a href="https://www.linkedin.com/company/she-orbits" class="social-icon" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="mdi:linkedin" /></a>
+            <a href="https://discord.com/invite/JucgMJ76wS" class="social-icon" target="_blank"
+              rel="noopener noreferrer" aria-label="Discord"><Icon name="mdi:discord" /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-top border-white border-opacity-10 mt-5 pt-3 text-center">
+        <p class="mb-0 text-white-50 small">
+          © {new Date().getFullYear()} <span style="color:#E5E7EB;">SHE ORBITS</span>. All Rights Reserved | Empowering Girls in Space & STEM
+          🚀
+        </p>
+      </div>
+    </div>
+
+    
+  </footer>

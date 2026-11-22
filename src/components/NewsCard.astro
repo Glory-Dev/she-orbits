@@ -1,0 +1,19 @@
+---
+import Icon from './Icon.astro';
+import { formatDate, type NewsItem } from '../lib/content';
+const { entry } = Astro.props as { entry: NewsItem };
+const d = entry.data;
+const external = { target: '_blank', rel: 'noopener noreferrer' };
+---
+<article class="news-card">
+  <a class="news-card-media" href={d.url} {...external} tabindex="-1" aria-hidden="true">
+    <img src={d.image} alt="" loading="lazy" decoding="async" style={d.imagePosition ? `object-position: ${d.imagePosition}` : undefined} />
+    <span class="news-card-source">{d.source}</span>
+  </a>
+  <div class="news-card-body">
+    {d.date && <time class="news-card-date" datetime={d.date}>{formatDate(d.date)}</time>}
+    <h3 class="news-card-title"><a href={d.url} {...external}>{d.title}</a></h3>
+    <p class="news-card-summary">{d.summary}</p>
+    <a class="news-card-link" href={d.url} {...external}>Read on {d.source} <Icon name="lucide:arrow-up-right" /></a>
+  </div>
+</article>

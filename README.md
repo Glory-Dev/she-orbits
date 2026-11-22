@@ -1,106 +1,58 @@
-# SHE ORBITS
+# SHE ORBITS website (Astro)
 
-Marketing website for [SHE ORBITS](https://sheorbits.space) — a multidisciplinary Space & STEM global company empowering females across space sectors through education, research, mentorship, and international collaboration. Established September 2025.
-
-Static site: HTML, Bootstrap 5, SCSS, and vanilla JavaScript. No build step is required to preview locally.
-
-## Quick start
-
-From the repository root:
+Astro 7 · Bootstrap 5 (JS from npm, CSS build in `public/`) · Sass · Font Awesome · AOS · Swiper carousel (lazy). No jQuery anywhere.
 
 ```bash
-python3 -m http.server 8080
+npm install
+npm run dev            # http://localhost:4321
+npm run build          # validates content, then builds to dist/
+npm run check:links    # every link / image / #anchor in dist/ must resolve
+npm run content:new    # scaffold a new opportunity, sector, project or news item (interactive)
+npm run images:optimize # compress/rename big images and fix references (docs/CONTENT-GUIDE.md §3)
 ```
 
-Open [http://localhost:8080/html/index.html](http://localhost:8080/html/index.html).
+Needs Node ≥ 22.23 (`.nvmrc`).
 
-## Project structure
+## Structure
 
 ```
-SHE-ORBITS/
-├── html/                 # Site pages
-├── assets/
-│   ├── css/              # Compiled CSS (styles.css, she-orbits-theme.css)
-│   ├── scss/             # SCSS sources
-│   ├── js/               # Site scripts
-│   ├── data/             # JSON content + validators
-│   └── images/           # Photos, logos, video backgrounds
-└── scripts/              # One-off HTML maintenance utilities
+src/
+  content/
+    opportunities/*.md      one file = one opportunity (page + card)        ← docs/CONTENT-GUIDE.md
+    sectors/*.md            one file = one sector
+    projects/*.md           one file = one project (card on /projects/, first 12 also on the home page)
+    news/*.md               one file = one card in the home page news carousel
+  data/
+    opportunity-types.json  the 13 categories (menu, footer, hub sections)
+    faq.json                FAQ shared by home + contact
+    services.json           About page "Our Services" cards
+    site.ts                 email, forms endpoint, sector interest form
+  components/               SiteHeader, SiteFooter, PageBanner, SectorCard, ProgramCard, ResearchProjects,
+                            FaqAccordion, ServicesGrid, NewsCard, ProjectCard, FeaturedProjectCard, Carousel (Swiper), Icon (Iconify → Font Awesome map), ScrollTop
+  layouts/BaseLayout.astro  <head>, header, footer, scripts
+  pages/                    index, about, mission-vision, contact, 404,
+                            sectors/{index,[slug]}, opportunities/{index,[slug]}, projects/{index,[slug]}
+  plugins/                  remark/rehype: ::slideshow ::video ::button, external links
+  lib/content.ts            sorting, labels, CTA rules (Upcoming → Ongoing → Past)
+  scripts/                  main.js (AOS, header, counters, menu, back-to-top…), forms.js, slideshow.js, carousel.js, vendor/liquid-effect-pro.js
+  styles/                   main.scss + partials   ← docs/STYLES.md
+public/
+  assets/css/styles.css     your compiled Bootstrap build (served as-is)
+  assets/images, videos     ← copy from the old site (see public/assets/README.md)
+  sectors/sector-detail.html, opportunities/program-detail/   redirect old ?slug= URLs to the new pages
+scripts/                    check-content, check-links, new-content, optimize-images, migrate-json-to-md
+legacy/                     the original JSON (input for scripts/migrate-json-to-md.mjs)
+.github/workflows/deploy.yml
 ```
 
-## Pages
+## Deploy
 
-| Page | Purpose |
-|------|---------|
-| `index.html` | Homepage |
-| `about.html` | About SHE ORBITS |
-| `mission-vision.html` | Mission and vision |
-| `programs.html` | Opportunities hub (9 anchor sections) |
-| `program-detail.html` | Single opportunity detail (`?slug=`) |
-| `sectors.html` | Sectors overview |
-| `sector-detail.html` | Single sector detail (`?slug=`) |
-| `contact.html` | Contact with participant / partner tabs, application forms (UI-only submit) |
+Repo **Settings → Pages → Source: GitHub Actions**. Push to `main`: content check → build → link check → deploy.
+Pull requests run the same checks without deploying. `public/CNAME` carries your custom domain (the canonical URL is read from it).
 
-Legacy opportunity URLs (`courses.html`, `fellowships.html`, etc.) redirect to anchored sections on `programs.html`.
+## Carousels
 
-## Data-driven content
-
-Content for sectors and opportunities lives in JSON and is rendered client-side.
-
-| File | Used by |
-|------|---------|
-| `assets/data/sectors.json` | `sectors-site.js` — homepage grid, sector detail |
-| `assets/data/opportunities.json` | `opportunities-site.js` — homepage preview, programs hub, program detail, contact prefill |
-
-### URL patterns
-
-- Sector detail: `sector-detail.html?slug={slug}`
-- Program detail: `program-detail.html?slug={slug}`
-- Contact prefill: `contact.html?program={slug}&intent=interest|enroll`
-- Partner inquiries: `contact.html?tab=partner` or `contact.html#partner`
-
-## Validation
-
-Run before committing content or navigation changes:
-
-```bash
-node assets/data/validate-sectors.mjs
-node assets/data/validate-opportunities.mjs
-node assets/data/validate-navigation.mjs
-node assets/data/validate-palette.mjs
-node assets/data/validate-contact.mjs
-node assets/data/validate-revision-2.mjs
-```
-
-## Styles
-
-- **Theme tokens:** `assets/scss/variables/_variables.scss` (comfy space palette — indigo primary, navy dark sections)
-- **Global overrides:** `assets/css/she-orbits-theme.css`
-- **Compiled base:** `assets/css/styles.css`
-
-To recompile SCSS (if you use Sass locally):
-
-```bash
-sass assets/scss/styles.scss assets/css/styles.css
-```
-
-## Maintenance scripts
-
-Optional utilities for bulk HTML updates:
-
-- `scripts/apply-nav.py` — sync Opportunities navigation markup
-- `scripts/apply-theme.py` — apply theme CSS links and palette cleanup
-
-## Stack
-
-- Bootstrap 5
-- jQuery
-- AOS (scroll animations)
-- Iconify (icons)
-- Owl Carousel (legacy; homepage featured projects use a static grid)
-
-## Notes
-
-- Forms are UI-only; submission backend is not included in this repo.
-- Partner logos on the contact page use placeholder assets until final brand files are provided.
-- Some sector images (IDs 11–30) use portfolio placeholders until dedicated sector photography is added.
+`<Carousel>` (src/components/Carousel.astro) wraps [Swiper](https://swiperjs.com): no jQuery, loaded only on pages that contain one
+(`src/scripts/carousel.js`). Defaults: 1 slide on phones, 2 from 768 px, 3 from 1200 px; arrows/dots hide themselves when everything fits;
+without JavaScript it falls back to a swipeable scroll-snap row. Pass `options` for autoplay or other Swiper settings
+(autoplay is ignored for visitors who prefer reduced motion). The home page news section uses it.

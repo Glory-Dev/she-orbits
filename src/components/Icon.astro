@@ -1,0 +1,39 @@
+---
+/**
+ * Single place that maps the old Iconify ids to Font Awesome (free) icons.
+ * Usage:  <Icon name="lucide:arrow-up-right" class="fs-8 text-dark" />
+ */
+type Def = { fa: string; brand?: boolean; extra?: string };
+const ICONS: Record<string, Def> = {
+  // Lucide's arrow-up-right isn't in FA Free: arrow-right rotated -45deg (see base/_icons.scss)
+  'lucide:arrow-up-right': { fa: 'arrow-right', extra: 'icon-ne' },
+  'lucide:arrow-up': { fa: 'arrow-up' },
+  'lucide:arrow-right': { fa: 'arrow-right' },
+  'lucide:arrow-down': { fa: 'arrow-down' },
+  'lucide:check-circle': { fa: 'circle-check' },
+  'lucide:globe': { fa: 'globe' },
+  'lucide:users': { fa: 'users' },
+  'lucide:telescope': { fa: 'binoculars' }, // telescope is FA Pro only
+  'lucide:target': { fa: 'bullseye' },
+  'lucide:sparkles': { fa: 'wand-magic-sparkles' }, // sparkles is FA Pro only
+  'lucide:rocket': { fa: 'rocket' },
+  'lucide:phone': { fa: 'phone' },
+  'lucide:mail': { fa: 'envelope' },
+  'lucide:heart-handshake': { fa: 'handshake-angle' },
+  'lucide:graduation-cap': { fa: 'graduation-cap' },
+  'lucide:chevron-left': { fa: 'chevron-left' },
+  'lucide:chevron-right': { fa: 'chevron-right' },
+  'solar:hamburger-menu-line-duotone': { fa: 'bars' },
+  'solar:star-bold': { fa: 'star' },
+  'mdi:instagram': { fa: 'instagram', brand: true },
+  'mdi:linkedin': { fa: 'linkedin-in', brand: true },
+  'mdi:discord': { fa: 'discord', brand: true },
+  'mdi:google-drive': { fa: 'google-drive', brand: true },
+};
+const { name, fa, brand = false, class: className = '', ...rest } = Astro.props;
+// `fa="flask"` uses a Font Awesome icon directly; `name="lucide:..."` goes through the Iconify map above.
+const def: Def | undefined = fa ? { fa, brand } : ICONS[name];
+if (!def) throw new Error(`Icon "${name}" has no Font Awesome mapping. Add it to src/components/Icon.astro`);
+const classes = [def.brand ? 'fa-brands' : 'fa-solid', `fa-${def.fa}`, def.extra, className].filter(Boolean).join(' ');
+---
+<i class={classes} aria-hidden="true" {...rest}></i>

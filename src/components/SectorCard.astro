@@ -1,0 +1,16 @@
+---
+import { SECTOR_STATUS_LABEL, type Sector } from '../lib/content';
+const { entry } = Astro.props as { entry: Sector };
+const d = entry.data;
+const name = d.cardTitle ?? d.title;
+---
+<article class:list={['sector-photo-card', d.status === 'active' ? 'is-active' : 'is-coming-soon']}>
+  <a href={`/sectors/${entry.id}/`} class="sector-photo-link" aria-label={`Discover ${name}`}>
+    <div class="sector-photo-wrap" style={`flex: 1; background-image: url('${d.image}');`} role="img" aria-label={d.title}></div>
+    <div class="sector-photo-body">
+      <h3 class="sector-photo-title">{name}</h3>
+      <p class="sector-photo-status">{SECTOR_STATUS_LABEL[d.status]}</p>
+      <span class="sector-photo-btn">Discover now</span>
+    </div>
+  </a>
+</article>

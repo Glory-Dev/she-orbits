@@ -1,0 +1,22 @@
+---
+/**
+ * Swiper carousel (no jQuery). Every direct child must be a slide: <div class="swiper-slide">…</div>
+ *   <Carousel label="Latest news" options={{ autoplay: { delay: 5000 }, breakpoints: { 1000: { slidesPerView: 4 } } }}>
+ *     <div class="swiper-slide">…</div>
+ *   </Carousel>
+ * Defaults: 1 slide on phones, 2 from 768px, 3 from 1200px. Arrows and dots hide themselves when all slides fit.
+ */
+import Icon from './Icon.astro';
+interface Props { label?: string; options?: Record<string, unknown>; class?: string }
+const { label = 'Carousel', options = {}, class: className } = Astro.props;
+---
+<div class:list={['carousel', className]} data-carousel={JSON.stringify(options)} role="region" aria-roledescription="carousel" aria-label={label}>
+  <div class="swiper">
+    <div class="swiper-wrapper"><slot /></div>
+  </div>
+  <div class="carousel-nav">
+    <button type="button" class="carousel-btn carousel-prev" aria-label="Previous slide"><Icon name="lucide:chevron-left" /></button>
+    <div class="carousel-dots"></div>
+    <button type="button" class="carousel-btn carousel-next" aria-label="Next slide"><Icon name="lucide:chevron-right" /></button>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+// footer — folded from the old per-page inline <style> blocks.
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.footer-link:hover {
+  color: #D1D5DB;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba($indigo-300, 0.15);
+  color: $indigo-300;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  background: rgba($indigo-300, 0.35);
+  transform: translateY(-3px);
+}
+
+.footer h6 {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer img {
+    height: 80px;
+  }
+  .footer-link {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+}

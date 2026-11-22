@@ -1,0 +1,18 @@
+---
+import Icon from './Icon.astro';
+import type { Project } from '../lib/content';
+const { entry } = Astro.props as { entry: Project };
+const d = entry.data;
+const href = `/projects/${entry.id}/`;
+---
+<article class="project-card">
+  <a class="project-card-media" href={href} tabindex="-1" aria-hidden="true">
+    <img src={d.image} alt="" loading="lazy" decoding="async" style={d.imagePosition ? `object-position: ${d.imagePosition}` : undefined} />
+  </a>
+  <div class="project-card-body">
+    {d.keywords.length > 0 && <ul class="project-keywords">{d.keywords.map((k) => <li>{k}</li>)}</ul>}
+    <h3 class="project-card-title"><a href={href}>{d.title}</a></h3>
+    <p class="project-card-summary">{d.summary}</p>
+    <a class="project-card-link" href={href}>Read more <Icon name="lucide:arrow-up-right" /></a>
+  </div>
+</article>

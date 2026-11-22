@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+import type { Project } from '../lib/content';
+const { entry } = Astro.props as { entry: Project };
+const d = entry.data;
+---
+<article class="featured-project-card position-relative" data-aos="fade-up" data-aos-duration="1000">
+  <div class="featured-project-image fit-image">
+    <img src={d.image} alt="" loading="lazy" decoding="async" style={d.imagePosition ? `object-position: ${d.imagePosition}` : undefined} />
+    <div class="featured-project-overlay">
+      <span class="btn bg-primary round-64 rounded-circle hstack justify-content-center" aria-hidden="true">
+        <Icon name="lucide:arrow-up-right" class="fs-8 text-white" />
+      </span>
+    </div>
+  </div>
+  <div class="featured-project-body">
+    <h3 class="featured-project-title"><a href={`/projects/${entry.id}/`} class="stretched-link">{d.title}</a></h3>
+    <p class="mb-0 text-dark text-opacity-70">{d.summary}</p>
+    <div class="featured-project-tags">{d.keywords.map((k) => <span class="badge border">{k}</span>)}</div>
+  </div>
+</article>

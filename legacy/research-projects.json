@@ -1,0 +1,278 @@
+[
+  {
+    "title": "Cyber-Resilient Satellite Collision Avoidance via Deep Reinforcement Learning: An End-to-End PPO Framework with Adversarial Robustness",
+    "description": "An AI-driven research project developing an autonomous satellite collision avoidance framework for Low Earth Orbit (LEO) using Deep Reinforcement Learning and Proximal Policy Optimization (PPO). The system enables intelligent, fuel-efficient maneuver planning while enhancing resilience against adversarial cyber threats, contributing to safer and more autonomous satellite operations.",
+    "image": "/assets/images/research-projects/research-project-1.jpg",
+    "alt": "Cyber-Resilient Satellite Collision Avoidance research",
+    "tags": [
+      "Deep Reinforcement Learning",
+      "Autonomous Satellite Navigation",
+      "Space Cybersecurity"
+    ],
+    "more": false
+  },
+  {
+    "title": "Design and Operations of Small Satellites in Low Earth Orbit",
+    "description": "A Pre-Phase A/Phase A conceptual design study for a generic 12U LEO CubeSat bus, covering orbit selection, subsystem architecture (ADCS, EPS, C&DH, structures/thermal), mass/power budgets, and the full mission lifecycle from fabrication through launch, operations, and end-of-life disposal in compliance with debris mitigation guidelines.",
+    "image": "/assets/images/research-projects/research-project-2.jpg",
+    "alt": "Design and Operations of Small Satellites in LEO",
+    "tags": [
+      "CubeSat design",
+      "LEO mission lifecycle",
+      "Small satellite systems engineering"
+    ],
+    "more": false
+  },
+  {
+    "title": "Dynamics and Control of Spacecraft Formation Flying in Retrograde Orbits",
+    "description": "A technical review examining relative-motion dynamics (HCW, T-H, Yamanaka-Ankersen) and control strategies (PID, LQR, MPC, distributed/cooperative) for spacecraft formation flying in retrograde orbital regimes, with emphasis on J2 and third-body perturbations, collision avoidance, and emerging machine learning/multi-agent RL approaches for autonomous GNC.",
+    "image": "/assets/images/research-projects/research-project-3.jpg",
+    "alt": "Spacecraft Formation Flying in Retrograde Orbits",
+    "tags": [
+      "Spacecraft formation flying",
+      "Retrograde orbit dynamics",
+      "Autonomous GNC"
+    ],
+    "more": false
+  },
+  {
+    "title": "Effects of Space Radiation on Human Health in Low Earth Orbit",
+    "description": "A literature review examining how galactic cosmic rays, solar particle events, and trapped radiation affect astronaut health in LEO (with ISS and Tiangong as case studies), covering molecular, cellular, CNS, cardiovascular, ocular, and reproductive effects, current shielding/countermeasure strategies, and key research gaps such as the lack of long-term human dose-response data.",
+    "image": "/assets/images/research-projects/research-project-4.png",
+    "alt": "Effects of Space Radiation on Human Health",
+    "tags": [
+      "Space radiation biology",
+      "Astronaut health risks",
+      "LEO dosimetry"
+    ],
+    "more": false
+  },
+  {
+    "title": "Exploring Lagrange Points for Space Observation Missions",
+    "description": "A study of the five Lagrange points arising from the Circular Restricted Three-Body Problem, covering their derivation, stability properties (unstable collinear vs. stable triangular points), and their use in real missions—including SOHO and DSCOVR at L1, JWST, WMAP, and Planck at L2, and Chang'e 4's Queqiao relay at Earth-Moon L2—along with future prospects for L4/L5 as sites for stable long-term structures.",
+    "image": "/assets/images/research-projects/research-project-5.png",
+    "alt": "Exploring Lagrange Points for Space Observation",
+    "tags": [
+      "Lagrange points",
+      "Three-body problem",
+      "Space telescope orbits"
+    ],
+    "more": false
+  },
+  {
+    "title": "Satellite Coverage Analysis for Disaster Monitoring: A Review of Orbital Mechanics, Ground Track Analysis and Satellite Observation Techniques",
+    "description": "This study analyzes satellite coverage, ground tracks, and revisit times for disaster monitoring, using RISAT-1 over flood-prone Assam as the primary case study (with MENA and China's Jianghan Plain as secondary regions). It evaluates SAR-based flood detection and satellite pass patterns to assess how effectively different orbital configurations support real-time disaster response.",
+    "image": "/assets/images/research-projects/research-project-6.png",
+    "alt": "Satellite Coverage Analysis for Disaster Monitoring",
+    "tags": [
+      "Satellite Coverage",
+      "SAR Flood Detection",
+      "Revisit Time Analysis"
+    ],
+    "more": false
+  },
+  {
+    "title": "Legal Counsel Memo – Launch of an Italian Private AI-Enabled Earth Observation Satellite",
+    "description": "A legal roadmap for an Italian New Space startup developing an AI-enabled Earth observation satellite, covering authorization, registration, liability, cybersecurity, export controls, debris mitigation, and AI governance.",
+    "image": "/assets/images/portfolio/portfolio-img-07.jpg",
+    "alt": "Legal Counsel Memo – Launch of an Italian Private AI-Enabled Earth Observation Satellite",
+    "tags": [
+      "AI in Space",
+      "Earth Observation",
+      "Space Regulation"
+    ],
+    "more": false
+  },
+  {
+    "title": "The Artemis Accords and Space Resource Extraction",
+    "description": "Examines the legal framework surrounding space resource extraction under the Artemis Accords and the Outer Space Treaty, including resource utilization, safety zones, and competing international approaches.",
+    "image": "/assets/images/portfolio/portfolio-img-08.jpg",
+    "alt": "The Artemis Accords and Space Resource Extraction",
+    "tags": [
+      "Artemis Accords",
+      "Space Resources",
+      "International Law"
+    ],
+    "more": false
+  },
+  {
+    "title": "The End of the ISS? Legal Implications of the Deorbiting of the International Space Station",
+    "description": "Explores the legal and environmental implications of ISS deorbiting, including international responsibility, jurisdiction, liability, safety, and potential marine environmental impacts.",
+    "image": "/assets/images/portfolio/portfolio-img-09.jpg",
+    "alt": "The End of the ISS? Legal Implications of the Deorbiting of the International Space Station",
+    "tags": [
+      "ISS",
+      "Liability",
+      "Space Sustainability"
+    ],
+    "more": false
+  },
+  {
+    "title": "Space Tourism and Criminal Liability: Who Is Responsible When a Crime Happens in Space?",
+    "description": "Investigates criminal jurisdiction in commercial space tourism and proposes an international framework for determining jurisdiction, cooperation, evidence handling, and responsibility for crimes in space.",
+    "image": "/assets/images/portfolio/portfolio-img-10.jpg",
+    "alt": "Space Tourism and Criminal Liability",
+    "tags": [
+      "Space Tourism",
+      "Criminal Law",
+      "Jurisdiction"
+    ],
+    "more": false
+  },
+  {
+    "title": "From Prevention to Action: The Challenge of Space Debris",
+    "description": "Examines the transition from preventing space debris to actively remediating it, addressing ownership, liability, jurisdiction, authorization, and the governance of active debris removal.",
+    "image": "/assets/images/portfolio/portfolio-img-11.jpg",
+    "alt": "From Prevention to Action: The Challenge of Space Debris",
+    "tags": [
+      "Space Debris",
+      "ADR",
+      "Space Sustainability"
+    ],
+    "more": false
+  },
+  {
+    "title": "Iridium 33 – Kosmos 2251",
+    "description": "Analyzes the 2009 collision between Iridium 33 and Kosmos 2251, focusing on fault, negligence, liability, collision avoidance, and the legal challenges created by orbital debris.",
+    "image": "/assets/images/portfolio/portfolio-img-12.gif",
+    "alt": "Iridium 33 – Kosmos 2251",
+    "tags": [
+      "Orbital Collision",
+      "Liability",
+      "Space Debris"
+    ],
+    "more": false
+  },
+  {
+    "title": "Space Insurance",
+    "description": "Explores insurance across the space mission lifecycle, from pre-launch and launch to in-orbit operations and third-party liability, highlighting its role in managing commercial space risks.",
+    "image": "/assets/images/portfolio/portfolio-img-13.jpg",
+    "alt": "Space Insurance",
+    "tags": [
+      "Space Insurance",
+      "Risk Management",
+      "Liability"
+    ],
+    "more": true
+  },
+  {
+    "title": "Before Liftoff: Legal Counsel’s Roadmap for Launching a Commercial Earth-Observation Satellite",
+    "description": "Provides a practical legal roadmap for a commercial Earth-observation mission, covering launch licensing, remote sensing, spectrum, registration, insurance, cybersecurity, export controls, and debris mitigation.",
+    "image": "/assets/images/portfolio/portfolio-img-14.jpg",
+    "alt": "Before Liftoff: Legal Counsel's Roadmap for Launching a Commercial Earth-Observation Satellite",
+    "tags": [
+      "Earth Observation",
+      "Commercial Space",
+      "Licensing"
+    ],
+    "more": true
+  },
+  {
+    "title": "Policy Brief for a First Private Satellite Mission",
+    "description": "Proposes a regulatory framework for a government authorizing its first private satellite mission, addressing licensing, registration, insurance, ITU requirements, cybersecurity, debris, and national security.",
+    "image": "/assets/images/portfolio/portfolio-img-15.jpg",
+    "alt": "Policy Brief for a First Private Satellite Mission",
+    "tags": [
+      "Satellite Licensing",
+      "Regulation",
+      "Policy"
+    ],
+    "more": true
+  },
+  {
+    "title": "Legal Memorandum for a Startup: Pre-Launch Compliance",
+    "description": "Examines the legal requirements facing an Italian Earth-observation startup before launch, including authorization, licensing, registration, insurance, spectrum, export controls, and end-of-life obligations.",
+    "image": "/assets/images/portfolio/portfolio-img-16.jpg",
+    "alt": "Legal Memorandum for a Startup: Pre-Launch Compliance",
+    "tags": [
+      "Compliance",
+      "Licensing",
+      "Earth Observation"
+    ],
+    "more": true
+  },
+  {
+    "title": "Kosmos 954 – Damage Caused by a Space Object",
+    "description": "Analyzes the 1978 Kosmos 954 nuclear satellite accident and the resulting radioactive contamination in Canada under the Outer Space Treaty and Liability Convention.",
+    "image": "/assets/images/portfolio/portfolio-img-17.jpg",
+    "alt": "Kosmos 954 – Damage Caused by a Space Object",
+    "tags": [
+      "Kosmos 954",
+      "Liability",
+      "Nuclear Spacecraft"
+    ],
+    "more": true
+  },
+  {
+    "title": "The 2021 Russian ASAT Test: Space Security, Responsibility, and the Challenge of Protecting the Orbital Environment",
+    "description": "Examines the destruction of Cosmos 1408, the resulting orbital debris, and the international legal questions surrounding state responsibility, liability, and destructive ASAT testing.",
+    "image": "/assets/images/portfolio/portfolio-img-18.jpg",
+    "alt": "The 2021 Russian ASAT Test",
+    "tags": [
+      "ASAT",
+      "Orbital Debris",
+      "State Responsibility"
+    ],
+    "more": true
+  },
+  {
+    "title": "The 2021 Russian ASAT Test and International Legal Governance",
+    "description": "Studies the legal implications of the 2021 Russian ASAT test, focusing on orbital debris, state responsibility, attribution, and the need for stronger international restrictions.",
+    "image": "/assets/images/portfolio/portfolio-img-19.png",
+    "alt": "The 2021 Russian ASAT Test and International Legal Governance",
+    "tags": [
+      "ASAT",
+      "Space Governance",
+      "Orbital Debris"
+    ],
+    "more": true
+  },
+  {
+    "title": "Personal Reflection on AI and Space Law Making",
+    "description": "Explores emerging legal challenges created by autonomous AI systems in space, including collision risks, fault-based liability, safety audits, transparency, and algorithmic decision-making.",
+    "image": "/assets/images/portfolio/portfolio-img-20.jpg",
+    "alt": "Personal Reflection on AI and Space Law Making",
+    "tags": [
+      "AI",
+      "Space Law",
+      "Autonomous Systems"
+    ],
+    "more": true
+  },
+  {
+    "title": "SpaceX Falcon 9 Moon Crash",
+    "description": "Examines the legal implications of a spent Falcon 9 upper stage impacting the Moon, particularly the distinction between physical alteration of celestial bodies and legally compensable damage.",
+    "image": "/assets/images/portfolio/portfolio-img-21.jpg",
+    "alt": "SpaceX Falcon 9 Moon Crash",
+    "tags": [
+      "Lunar Activities",
+      "Liability",
+      "Space Resources"
+    ],
+    "more": true
+  },
+  {
+    "title": "Advising a Government That Wants to Authorize Its First Private Satellite Mission",
+    "description": "Provides a government-focused framework for authorizing and supervising a private satellite mission under international space law and national regulatory requirements.",
+    "image": "/assets/images/portfolio/portfolio-img-22.jpg",
+    "alt": "Advising a Government That Wants to Authorize Its First Private Satellite Mission",
+    "tags": [
+      "Authorization",
+      "Supervision",
+      "Space Regulation"
+    ],
+    "more": true
+  },
+  {
+    "title": "2030 Space Program: The Need for a Stronger Legal Framework",
+    "description": "Analyzes future space initiatives up to 2030, emphasizing regulatory gaps, international cooperation, and policy adaptations required for sustainable space operations.",
+    "image": "/assets/images/portfolio/portfolio-img-23.png",
+    "alt": "2030 Space Program: The Need for a Stronger Legal Framework",
+    "tags": [
+      "Space Policy",
+      "2030 Strategy",
+      "Legal Framework"
+    ],
+    "more": true
+  }
+]

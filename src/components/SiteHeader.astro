@@ -1,0 +1,92 @@
+---
+import Icon from './Icon.astro';
+import { opportunityTypes } from '../lib/content';
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const lifecycleLinks = ['Ongoing', 'Upcoming', 'Previous'];
+---
+<header class="header border-4 border-primary border-top w-100">
+    <div class="container">
+      <div class="header-wrapper d-flex align-items-center justify-content-between">
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="desktop-nav">
+          <div class="desktop-nav-container">
+            <div class="nav-item"><a href="/" class="nav-link">Home</a></div>
+            <div class="nav-item"><a href="/about/" class="nav-link">About</a></div>
+            <div class="nav-item"><a href="/mission-vision/" class="nav-link">Mission & Vision</a></div>
+            <div class="nav-item has-dropdown">
+              <a href="/opportunities/" class="nav-link">Opportunities <span class="dropdown-arrow">▼</span></a>
+              <div class="dropdown-menu-desktop dropdown-menu-opportunities">
+                <div class="dropdown-column">
+                  {opportunityTypes.slice(0,13).map((t) => (<div class="dropdown-item-wrapper"><a class="dropdown-item" href={`/opportunities/#${t.id}`}>{t.navLabel ?? t.label}</a><div class="dropdown-submenu">{lifecycleLinks.map((l) => <a class="dropdown-subitem" href={`/opportunities/#${t.id}`}>{l}</a>)}</div></div>))}
+</div>
+              </div>
+            </div>
+            <div class="nav-item"><a href="/projects/" class="nav-link">Projects</a></div>
+            <div class="nav-item"><a href="/sectors/" class="nav-link">Sectors</a></div>
+            <div class="nav-item"><a href="/contact/" class="nav-link">Contact</a></div>
+            <div class="nav-item"><a href="/contact/" class="nav-link nav-cta">Apply Now</a></div>
+          </div>
+        </nav>
+
+        <!-- MOBILE HAMBURGER MENU -->
+
+        <div class="d-flex align-items-center gap-4 ms-auto">
+          <div class="btn-group">
+            <button
+              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
+              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <Icon name="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark" />
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-4">
+              <div class="d-flex flex-column gap-6">
+                <div class="hstack justify-content-between border-bottom pb-6">
+                  <p class="mb-0 fs-5 text-dark">Menu</p>
+                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
+                    <li class="header-item"><a href="/" aria-current="true"
+                        class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="/assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Home</a></li>
+                    <li class="header-item"><a href="/about/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="/assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">About</a></li>
+                    <li class="header-item"><a href="/mission-vision/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="/assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Mission & Vision</a></li>
+                    <li class="header-item">
+                      <a href="/opportunities/" class:list={["header-link", isActive("/opportunities/") && "active", "hstack gap-2 fs-7 fw-bold text-dark has-submenu"]} aria-current={isActive("/opportunities/") ? "page" : undefined}
+                        data-submenu-toggle><img src="/assets/images/svgs/secondary-leaf.svg" alt=""
+                          width="20" height="20" class="img-fluid animate-spin">Opportunities</a>
+                      <ul class="submenu list-unstyled ps-4 mt-2">
+                        {opportunityTypes.map((t) => (<li class="submenu-item-wrapper"><a class="text-dark text-decoration-none pb-3 d-block" href={`/opportunities/#${t.id}`}>{t.navLabel ?? t.label}</a><ul class="submenu-flyout list-unstyled">{lifecycleLinks.map((l) => <li><a class="text-dark text-decoration-none d-block" href={`/opportunities/#${t.id}`}>{l}</a></li>)}</ul></li>))}
+</ul>
+                    </li>
+                    <li class="header-item"><a href="/projects/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="/assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Projects</a></li>
+                    <li class="header-item"><a href="/sectors/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="/assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Sectors</a></li>
+                    <li class="header-item"><a href="/contact/"
+                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
+                          src="/assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
+                          class="img-fluid animate-spin">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>

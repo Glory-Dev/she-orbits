@@ -1,0 +1,22 @@
+---
+import { LIFECYCLE_LABEL, cta, lifecycleClass, typeLabel, type Opportunity } from '../lib/content';
+interface Props { entry: Opportunity; showType?: boolean; hideLifecycle?: boolean }
+const { entry, showType = false, hideLifecycle = false } = Astro.props;
+const d = entry.data;
+const action = cta(entry);
+---
+<article class:list={['program-card', lifecycleClass(d.status)]}>
+  <div class="program-photo-wrap" style={`background-image: url('${d.image}');`} role="img" aria-label={d.title}></div>
+  <div class="program-card-body">
+    <h3 class="program-card-title">{d.title}</h3>
+    {showType && <p class="program-card-type">{typeLabel(d.type)}</p>}
+    {!hideLifecycle && <p class="program-card-lifecycle">{LIFECYCLE_LABEL[d.status]}</p>}
+    <p class="program-card-description program-card-description-clamp">{d.summary}</p>
+    <div class="program-card-actions">
+      <a href={`/opportunities/${entry.id}/`} class="program-btn program-btn-discover">Discover more</a>
+      {action && (
+        <a href={action.url} class="program-btn program-btn-cta btn border border-white border-opacity-25 text-white" target="_blank" rel="noopener noreferrer">{action.label}</a>
+      )}
+    </div>
+  </div>
+</article>

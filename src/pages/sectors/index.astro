@@ -1,0 +1,103 @@
+---
+import Icon from '../../components/Icon.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import SectorCard from '../../components/SectorCard.astro';
+import { getSectors } from '../../lib/content';
+const sectors = await getSectors();
+---
+<BaseLayout title={"SHE ORBITS - Sectors | 30+ Pathways to Space & STEM"} description={""} bodyClass="page-sectors" fluidCursor>
+
+
+  <!-- Header -->
+  
+  <!--  Page Wrapper -->
+  <div class="page-wrapper overflow-hidden">
+
+    <!--  Banner Section -->
+    <PageBanner title={"Space & STEM Sectors"} video="/assets/videos/sectors.mp4" leadOpacity="70">Explore <span class="text-white">30+ interdisciplinary pathways</span> where girls can lead humanity's journey beyond Earth</PageBanner>
+
+    <!-- Sectors Overview Section -->
+    <section class="sectors-overview py-5 py-lg-11 py-xl-12 bg-light-gray">
+      <div class="container">
+        <div class="row gap-7 gap-xl-0 mb-8">
+          <div class="col-xl-4 col-xxl-4">
+            <div class="d-flex align-items-center gap-7 py-2" data-aos="fade-right" data-aos-delay="100"
+              data-aos-duration="1000">
+              <span
+                class="round-36 flex-shrink-0 text-dark rounded-circle bg-primary hstack justify-content-center fw-medium">30</span>
+              <hr class="border-line">
+              <span class="badge text-bg-dark">Pathways to Space</span>
+            </div>
+          </div>
+          <div class="col-xl-8 col-xxl-7">
+            <div class="d-flex flex-column gap-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+              <h2 class="mb-0">Comprehensive Space & STEM Education</h2>
+              <p class="fs-5 mb-0">At SHE ORBITS, we believe the future of space must be inclusive, interdisciplinary,
+                and global. Our 30+ sectors provide learners with diverse pathways to become innovators, researchers,
+                and decision-makers shaping humanity's cosmic journey.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  All Sectors Grid Section -->
+    <section class="all-sectors py-5 py-lg-11 py-xl-12">
+      <div class="container">
+        <div class="text-center mb-8" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <span class="badge text-bg-dark mb-3">Complete Curriculum</span>
+          <h2 class="mb-4">30+ Sectors of Space Industry</h2>
+          <p class="fs-5 text-muted mb-0">From STEM foundations to interstellar exploration, discover your path to the
+            stars</p>
+        </div>
+
+        <div id="sectorsPageGrid" class="sectors-grid-photo" aria-live="polite">
+{sectors.map((s) => <SectorCard entry={s} />)}
+</div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 py-lg-11 py-xl-12 bg-primary">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+            <h2 class="mb-4 text-white">Ready to Explore Your Path to Space?</h2>
+            <p class="fs-5 mb-0 text-white text-opacity-80">Join SHE ORBITS and discover which of these 30+ sectors
+              resonates with your passion. Every girl has a place in the future of space exploration.</p>
+          </div>
+          <div class="col-lg-4 text-end" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+            <a href="/contact/" class="btn btn-white text-dark fs-6 px-5 py-3 d-inline-block">
+              <span class="btn-text">Start Your Journey</span>
+              <Icon name="lucide:arrow-up-right" class="btn-icon bg-primary text-white round-52 rounded-circle hstack justify-content-center fs-7 shadow-sm" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Professional Footer -->
+  
+
+  <div class="get-template hstack gap-2">
+    
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+</BaseLayout>
