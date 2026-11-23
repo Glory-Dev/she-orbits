@@ -46,7 +46,7 @@ if (participant && partner) {
       heading: 'Partner With Us',
       intro: 'Share how your organization can collaborate with SHE ORBITS through mentorship, programs, sponsorship, or research partnerships.',
       sidebarTitle: 'Partnership Opportunities',
-      sidebarItems: ['Sponsor programs and scholarships', 'Provide mentors and internships', 'Co-host workshops and events', 'Collaborate on research missions', 'Reach girls in 50+ countries'],
+      sidebarItems: ['Sponsor programs and scholarships', 'Provide mentors and internships', 'Co-host workshops and events', 'Collaborate on research missions', 'Reach women in 50+ countries'],
     },
   };
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
